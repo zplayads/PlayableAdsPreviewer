@@ -28,10 +28,12 @@
 #import "QRCameraSwitchButton.h"
 #import "QRCodeReaderView.h"
 #import "QRToggleTorchButton.h"
+#import "QRPhotoAlbumButton.h"
 
 @interface QRCodeReaderViewController ()
 @property (strong, nonatomic) QRCameraSwitchButton *switchCameraButton;
 @property (strong, nonatomic) QRToggleTorchButton *toggleTorchButton;
+@property (strong, nonatomic) QRPhotoAlbumButton *photoAlbumButton;
 @property (strong, nonatomic) QRCodeReaderView     *cameraView;
 @property (strong, nonatomic) UIButton             *cancelButton;
 @property (strong, nonatomic) QRCodeReader         *codeReader;
@@ -240,6 +242,17 @@
     [_toggleTorchButton addTarget:self action:@selector(toggleTorchAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_toggleTorchButton];
   }
+    
+    _photoAlbumButton = [[QRPhotoAlbumButton alloc]init];
+    [_photoAlbumButton setTranslatesAutoresizingMaskIntoConstraints:false];
+    [_photoAlbumButton setTitle:@"album" forState:UIControlStateNormal];
+    _photoAlbumButton.layer.cornerRadius = 10;
+    _photoAlbumButton.layer.masksToBounds = YES;
+    _photoAlbumButton.layer.borderColor = [[UIColor whiteColor] CGColor];
+    _photoAlbumButton.layer.borderWidth = 2;
+    _photoAlbumButton.backgroundColor = [UIColor grayColor];
+    [_photoAlbumButton addTarget:self action:@selector(openPhotoAlbum) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_photoAlbumButton];
 
   self.cancelButton                                       = [[UIButton alloc] init];
   _cancelButton.translatesAutoresizingMaskIntoConstraints = NO;
@@ -261,15 +274,6 @@
    [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_cancelButton]-|" options:0 metrics:nil views:views]];
 
   id topLayoutGuide = self.topLayoutGuide;
-  
-  if (_switchCameraButton) {
-    NSDictionary *switchViews = NSDictionaryOfVariableBindings(_switchCameraButton, topLayoutGuide);
-
-    [self.view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide]-[_switchCameraButton(50)]" options:0 metrics:nil views:switchViews]];
-    [self.view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"H:[_switchCameraButton(70)]|" options:0 metrics:nil views:switchViews]];
-  }
 
   if (_toggleTorchButton) {
     NSDictionary *torchViews = NSDictionaryOfVariableBindings(_toggleTorchButton, topLayoutGuide);
@@ -279,6 +283,23 @@
     [self.view addConstraints:
      [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_toggleTorchButton(70)]" options:0 metrics:nil views:torchViews]];
   }
+    if (_photoAlbumButton) {
+        NSDictionary *photoViews = NSDictionaryOfVariableBindings(_photoAlbumButton,topLayoutGuide);
+        [self.view addConstraints:
+         [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide]-20-[_photoAlbumButton(30)]" options:0 metrics:nil views:photoViews]];
+        [self.view addConstraints:
+         [NSLayoutConstraint constraintsWithVisualFormat:@"H:[_photoAlbumButton(70)]|" options:0 metrics:nil views:photoViews]];
+        
+    }
+    if (_switchCameraButton) {
+        NSDictionary *switchViews = NSDictionaryOfVariableBindings(_switchCameraButton, topLayoutGuide);
+        
+        [self.view addConstraints:
+         [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide]-[_switchCameraButton(50)]" options:0 metrics:nil views:switchViews]];
+        [self.view addConstraints:
+         [NSLayoutConstraint constraintsWithVisualFormat:@"H:[_switchCameraButton(70)]" options:0 metrics:nil views:switchViews]];
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_switchCameraButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    }
 }
 
 - (void)switchDeviceInput
@@ -309,6 +330,10 @@
 - (void)toggleTorchAction:(UIButton *)button
 {
   [_codeReader toggleTorch];
+}
+
+- (void)openPhotoAlbum{
+    
 }
 
 @end

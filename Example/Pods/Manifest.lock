@@ -1,22 +1,25 @@
 PODS:
   - HexColors (2.2.1)
-  - PlayableAdsPreviewer (0.1.0)
+  - PlayableAdsPreviewer (0.6.0)
+  - PlayableAdsPreviewerDemo (0.1.0)
   - TSMessages (0.9.12):
     - HexColors (~> 2.2.0)
 
 DEPENDENCIES:
-  - PlayableAdsPreviewer (from `../`)
+  - PlayableAdsPreviewer (= 0.6.0)
+  - PlayableAdsPreviewerDemo (from `../`)
   - TSMessages
 
 EXTERNAL SOURCES:
-  PlayableAdsPreviewer:
+  PlayableAdsPreviewerDemo:
     :path: ../
 
 SPEC CHECKSUMS:
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
-  PlayableAdsPreviewer: 8a3157a8d207e9337921f62301d279bae7fc2068
+  PlayableAdsPreviewer: 298163caac5b4cedbee7a2bb64eda135cbae574e
+  PlayableAdsPreviewerDemo: 0015f0fa4b90b6d04b07005564edc2216e8d24fa
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
 
-PODFILE CHECKSUM: c12e452d2f5eee12961a538fe68cf924ebb8b8cc
+PODFILE CHECKSUM: 6fe2d14063e51bad1764838f560539127435cfa8
 
 COCOAPODS: 1.3.1

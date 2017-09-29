@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		2979BCCCA93194CA469E0A6B /* Pods-PlayableAdsPreviewer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayableAdsPreviewer_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayableAdsPreviewer_Example/Pods-PlayableAdsPreviewer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		31AF390F357EF5B15A5135A4 /* Pods-PlayableAdsPreviewer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayableAdsPreviewer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayableAdsPreviewer_Tests/Pods-PlayableAdsPreviewer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4D16ECDE9E5FB00D8740FF69 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4D16ECDE9E5FB00D8740FF69 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PlayableAdsPreviewer_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayableAdsPreviewer_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,8 +60,8 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		75B2F8830D9A4B5E06F6E683 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		85AB64EA3D26C0DD4ADBA152 /* PlayableAdsPreviewer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PlayableAdsPreviewer.podspec; path = ../PlayableAdsPreviewer.podspec; sourceTree = "<group>"; };
+		75B2F8830D9A4B5E06F6E683 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		85AB64EA3D26C0DD4ADBA152 /* PlayableAdsPreviewerDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PlayableAdsPreviewerDemo.podspec; path = ../PlayableAdsPreviewerDemo.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E568F9D9B6E459A8D5B9BE5 /* Pods-PlayableAdsPreviewer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayableAdsPreviewer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayableAdsPreviewer_Example/Pods-PlayableAdsPreviewer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		94C6A30676BD2FC4B33CC0FB /* Pods_PlayableAdsPreviewer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayableAdsPreviewer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,7 +189,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				85AB64EA3D26C0DD4ADBA152 /* PlayableAdsPreviewer.podspec */,
+				85AB64EA3D26C0DD4ADBA152 /* PlayableAdsPreviewerDemo.podspec */,
 				75B2F8830D9A4B5E06F6E683 /* README.md */,
 				4D16ECDE9E5FB00D8740FF69 /* LICENSE */,
 			);
@@ -250,6 +250,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "wzy2010416033@163.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = VG25A6M88T;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -305,13 +308,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PlayableAdsPreviewer_Example/Pods-PlayableAdsPreviewer_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
-				"${BUILT_PRODUCTS_DIR}/PlayableAdsPreviewer/PlayableAdsPreviewer.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayableAdsPreviewerDemo/PlayableAdsPreviewerDemo.framework",
 				"${BUILT_PRODUCTS_DIR}/TSMessages/TSMessages.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayableAdsPreviewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayableAdsPreviewerDemo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSMessages.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +540,7 @@
 			baseConfigurationReference = 8E568F9D9B6E459A8D5B9BE5 /* Pods-PlayableAdsPreviewer_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VG25A6M88T;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlayableAdsPreviewer/PlayableAdsPreviewer-Prefix.pch";
 				INFOPLIST_FILE = "PlayableAdsPreviewer/PlayableAdsPreviewer-Info.plist";
@@ -552,6 +556,7 @@
 			baseConfigurationReference = 2979BCCCA93194CA469E0A6B /* Pods-PlayableAdsPreviewer_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VG25A6M88T;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlayableAdsPreviewer/PlayableAdsPreviewer-Prefix.pch";
 				INFOPLIST_FILE = "PlayableAdsPreviewer/PlayableAdsPreviewer-Info.plist";

@@ -55,7 +55,7 @@ THE SOFTWARE.
 			<key>License</key>
 			<string>MIT</string>
 			<key>Title</key>
-			<string>PlayableAdsPreviewer</string>
+			<string>PlayableAdsPreviewerDemo</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

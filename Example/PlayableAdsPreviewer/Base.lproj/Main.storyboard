@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your App ID here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cev-Ww-djJ">
-                                <rect key="frame" x="87.5" y="144" width="200" height="30"/>
+                                <rect key="frame" x="87.5" y="80" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FP8-ee-VhA"/>
                                     <constraint firstAttribute="width" constant="200" id="Wbr-hM-tKh"/>
@@ -32,7 +32,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Ad Unit ID Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsu-CZ-qtx">
-                                <rect key="frame" x="87" y="204" width="200" height="30"/>
+                                <rect key="frame" x="87.5" y="140" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="E6b-8z-ruS"/>
                                     <constraint firstAttribute="width" constant="200" id="z0v-E0-7U1"/>
@@ -44,7 +44,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Cev-Ww-djJ" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="124" id="ZLl-Ne-aUv"/>
+                            <constraint firstItem="Cev-Ww-djJ" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="60" id="ZLl-Ne-aUv"/>
                             <constraint firstItem="hsu-CZ-qtx" firstAttribute="top" secondItem="Cev-Ww-djJ" secondAttribute="bottom" constant="30" id="cYQ-AL-exN"/>
                             <constraint firstItem="hsu-CZ-qtx" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="mFq-YS-49e"/>
                             <constraint firstItem="Cev-Ww-djJ" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="oyv-Me-m0T"/>

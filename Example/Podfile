@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'PlayableAdsPreviewer_Example' do
   pod 'PlayableAdsPreviewer', :path => '../'
+  pod 'TSMessages'
 
   target 'PlayableAdsPreviewer_Tests' do
     inherit! :search_paths

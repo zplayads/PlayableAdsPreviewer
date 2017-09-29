@@ -29,8 +29,9 @@
 #import "QRCodeReaderView.h"
 #import "QRToggleTorchButton.h"
 #import "QRPhotoAlbumButton.h"
+#import <TSMessages/TSMessage.h>
 
-@interface QRCodeReaderViewController ()
+@interface QRCodeReaderViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (strong, nonatomic) QRCameraSwitchButton *switchCameraButton;
 @property (strong, nonatomic) QRToggleTorchButton *toggleTorchButton;
 @property (strong, nonatomic) QRPhotoAlbumButton *photoAlbumButton;
@@ -333,7 +334,69 @@
 }
 
 - (void)openPhotoAlbum{
-    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]){
+
+        UIImagePickerController *controller = [[UIImagePickerController alloc] init];
+        controller.delegate = self;
+        controller.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        controller.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:controller animated:YES completion:NULL];
+        
+    }else{
+        [TSMessage showNotificationInViewController:self
+                                              title:@"The device does not support access to the album, please set it in Settings -> privacy -> photos!"
+                                           subtitle:nil
+                                              image:nil
+                                               type:TSMessageNotificationTypeWarning
+                                           duration:TSMessageNotificationDurationAutomatic
+                                           callback:nil
+                                        buttonTitle:nil
+                                     buttonCallback:nil
+                                         atPosition:TSMessageNotificationPositionTop
+                               canBeDismissedByUser:YES];
+    }
+}
+
+#pragma mark-> imagePickerController delegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    CIDetector*detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh }];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:image.CGImage]];
+        if (features.count >=1) {
+            CIQRCodeFeature *feature = [features objectAtIndex:0];
+            NSString *scannedResult = feature.messageString;
+            UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"扫描结果" message:scannedResult delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alertView show];
+            [TSMessage showNotificationInViewController:self
+                                                  title:@"scan successed"
+                                               subtitle:nil
+                                                  image:nil
+                                                   type:TSMessageNotificationTypeSuccess
+                                               duration:TSMessageNotificationDurationAutomatic
+                                               callback:nil
+                                            buttonTitle:nil
+                                         buttonCallback:nil
+                                             atPosition:TSMessageNotificationPositionTop
+                                   canBeDismissedByUser:YES];
+        }
+        else{
+            UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"该图片没有包含一个二维码！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alertView show];
+            [TSMessage showNotificationInViewController:self
+                                                  title:@"scan successed"
+                                               subtitle:nil
+                                                  image:nil
+                                                   type:TSMessageNotificationTypeSuccess
+                                               duration:TSMessageNotificationDurationAutomatic
+                                               callback:nil
+                                            buttonTitle:nil
+                                         buttonCallback:nil
+                                             atPosition:TSMessageNotificationPositionTop
+                                   canBeDismissedByUser:YES];
+        }
+    }];
 }
 
 @end

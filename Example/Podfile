@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PlayableAdsPreviewer_Example' do
+  pod 'PlayableAdsPreviewer', :path => '../'
+
+  target 'PlayableAdsPreviewer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

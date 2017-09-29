@@ -15,6 +15,7 @@
 #import "QRCodeReaderDelegate.h"
 #import "QRCodeReaderView.h"
 #import "QRCodeReaderViewController.h"
+#import "QRPhotoAlbumButton.h"
 #import "QRToggleTorchButton.h"
 
 FOUNDATION_EXPORT double PlayableAdsPreviewerDemoVersionNumber;

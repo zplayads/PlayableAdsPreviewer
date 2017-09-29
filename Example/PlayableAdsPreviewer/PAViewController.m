@@ -25,7 +25,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
 }
 
 - (IBAction)scanButtonDidPress:(id)sender {
@@ -94,17 +93,28 @@
 #pragma mark - QRCodeReader Delegate Methods
 - (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result
 {
-    [reader stopScanning];
+    self.appIDText.text = result;
     
-    [self dismissViewControllerAnimated:YES completion:^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+    [reader stopScanning];
+    [reader dismissViewControllerAnimated:YES completion:^{
+        [TSMessage showNotificationInViewController:self
+                                              title:@"Sending ad request..."
+                                           subtitle:nil
+                                              image:nil
+                                               type:TSMessageNotificationTypeMessage
+                                           duration:TSMessageNotificationDurationAutomatic
+                                           callback:nil
+                                        buttonTitle:nil
+                                     buttonCallback:nil
+                                         atPosition:TSMessageNotificationPositionTop
+                               canBeDismissedByUser:YES];
+        [self requestAd];
     }];
 }
 
 - (void)readerDidCancel:(QRCodeReaderViewController *)reader
 {
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [reader dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark - lazyLoad

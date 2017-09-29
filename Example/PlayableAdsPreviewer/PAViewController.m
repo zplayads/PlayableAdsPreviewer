@@ -10,6 +10,13 @@
 
 @interface PAViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *appIDText;
+@property (weak, nonatomic) IBOutlet UITextField *unitIDText;
+@property (weak, nonatomic) IBOutlet UIButton *scanButton;
+@property (weak, nonatomic) IBOutlet UIButton *requestButton;
+@property (weak, nonatomic) IBOutlet UIButton *presentButton;
+@property (weak, nonatomic) IBOutlet UIButton *staticAdButton;
+
 @end
 
 @implementation PAViewController
@@ -17,7 +24,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self setUpUI];
+	
+}
+
+- (void)setUpUI{
+    
+    self.presentButton.enabled = NO;
 }
 
 - (void)didReceiveMemoryWarning

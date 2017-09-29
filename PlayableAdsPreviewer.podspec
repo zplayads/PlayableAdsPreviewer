@@ -21,16 +21,16 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/wzy2010416033@163.com/PlayableAdsPreviewer'
+  s.homepage         = 'https://github.com/JiaDingYi/PlayableAdsPreviewerDemo.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wzy2010416033@163.com' => 'wzy2010416033@163.com' }
-  s.source           = { :git => 'https://github.com/wzy2010416033@163.com/PlayableAdsPreviewer.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/JiaDingYi/PlayableAdsPreviewerDemo.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'PlayableAdsPreviewer/Classes/**/*'
+  s.source_files = 'PlayableAdsPreviewer/QRCodeReaderViewController/**/*'
   
   # s.resource_bundles = {
   #   'PlayableAdsPreviewer' => ['PlayableAdsPreviewer/Assets/*.png']

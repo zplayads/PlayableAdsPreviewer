@@ -98,10 +98,10 @@
     [reader stopScanning];
     [reader dismissViewControllerAnimated:YES completion:^{
         [TSMessage showNotificationInViewController:self
-                                              title:@"Sending ad request..."
-                                           subtitle:nil
+                                              title:@"Successed"
+                                           subtitle:result
                                               image:nil
-                                               type:TSMessageNotificationTypeMessage
+                                               type:TSMessageNotificationTypeSuccess
                                            duration:TSMessageNotificationDurationAutomatic
                                            callback:nil
                                         buttonTitle:nil

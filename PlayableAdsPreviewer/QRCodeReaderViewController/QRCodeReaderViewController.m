@@ -367,28 +367,15 @@
         if (features.count >=1) {
             CIQRCodeFeature *feature = [features objectAtIndex:0];
             NSString *scannedResult = feature.messageString;
-            UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"扫描结果" message:scannedResult delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alertView show];
-            [TSMessage showNotificationInViewController:self
-                                                  title:@"scan successed"
-                                               subtitle:nil
-                                                  image:nil
-                                                   type:TSMessageNotificationTypeSuccess
-                                               duration:TSMessageNotificationDurationAutomatic
-                                               callback:nil
-                                            buttonTitle:nil
-                                         buttonCallback:nil
-                                             atPosition:TSMessageNotificationPositionTop
-                                   canBeDismissedByUser:YES];
+            
+            [self.delegate reader:self didScanResult:scannedResult];
         }
         else{
-            UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"该图片没有包含一个二维码！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alertView show];
             [TSMessage showNotificationInViewController:self
-                                                  title:@"scan successed"
-                                               subtitle:nil
+                                                  title:@"Warning"
+                                               subtitle:@"This image does not contain a QRCode!"
                                                   image:nil
-                                                   type:TSMessageNotificationTypeSuccess
+                                                   type:TSMessageNotificationTypeWarning
                                                duration:TSMessageNotificationDurationAutomatic
                                                callback:nil
                                             buttonTitle:nil

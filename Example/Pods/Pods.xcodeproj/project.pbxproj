@@ -7,75 +7,91 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03FA60B8FF42014C0403B77FE88E2EBF /* PlayableAdsPreviewerDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E526F22352D2258AC479398242869FBF /* PlayableAdsPreviewerDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		08EBEA876257FF34ABDA47403D7EA560 /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F056992C426A4AA268AA1BAD3034F253 /* TSMessage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0B7FCED1AB573D03EF5E0B2D4AA64198 /* NotificationBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7525F87E3FF7EC7FB338755C082A2C32 /* NotificationBackgroundWarningIcon.png */; };
-		101E5411C1BA46025E3448BC68F416B3 /* NotificationBackgroundMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9454B2324A101F67A2BBAC5D0F85C2AA /* NotificationBackgroundMessage@2x.png */; };
+		05EBC3DC5EF755C9EEC7E7A9C42BBBE5 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E09537B008160022959F75CD0A09CE6 /* QRCodeReader.m */; };
+		06ECBD0C55FF087B01711BE82959046D /* TSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B3C8F6B2469CA49EE8C42F03F477231 /* TSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F35C0BF81A9E3463AD6EE861328B88E /* TSMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5165343B7107C846013961188E48F0 /* TSMessages-dummy.m */; };
+		13882D9F56DAC809A39FF3593B1A728F /* QRCodeReaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2AFAEBBDCDEE47FFBDB79991B8D962 /* QRCodeReaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		178B1A8449DBAB7DAA2A6EF157BA06FA /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB245571207C9692F8E797670C201399 /* HexColor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		19431CBEFC3184D690CD28848FB134F4 /* QRCodeReaderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A698E18C1E77B675F19EC5689A82A2 /* QRCodeReaderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A21255163A348F75A92C73276CD7F75 /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEDF5DB1EB97BBAEA507AFE2FB109B9 /* NotificationBackgroundError.png */; };
-		1A35A4F9343F39F6712F687200EE8B2B /* NotificationBackgroundSuccessIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E86C61FDF2AB35129E71DDDA858090B4 /* NotificationBackgroundSuccessIcon.png */; };
-		2B1CCFD3DDD75E80BDF34E92ECA2B2E4 /* NotificationButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7EF4C9F6E5DE6701CF250510A327F3 /* NotificationButtonBackground.png */; };
-		2CA647CC75641934BF966AC174D62AB4 /* NotificationBackgroundMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 727384B29A4DF1CE3A9B12C00ED2A4CB /* NotificationBackgroundMessage.png */; };
-		3C667786F745E0AD7DCF8B4F7AE07173 /* NotificationBackgroundSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = C833553FE9E89F5CE87A37CC0FA56A64 /* NotificationBackgroundSuccess.png */; };
-		5218E75C0C4FDBA13CB371368A7CEC46 /* TSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B3C8F6B2469CA49EE8C42F03F477231 /* TSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B157626210AAA5D7DC2615831F53CAA /* NotificationBackgroundErrorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA776253E6C14816B0D564BBDAD3D0A3 /* NotificationBackgroundErrorIcon.png */; };
-		5ECAB8C15C909E0775540BE035000D37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */; };
-		64F01C675720B7FB63FC09D797FF4CF5 /* NotificationBackgroundSuccessIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A4C4F09A729519811FF957650AAF8D /* NotificationBackgroundSuccessIcon@2x.png */; };
-		6FC5276C15DDD1A21A5A86B6E032F235 /* NotificationBackgroundWarningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D5B1C65BBBCC4C155BE0472F057F9FD /* NotificationBackgroundWarningIcon@2x.png */; };
+		18884E203ABD412DB12CE675C47BA433 /* QRCodeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA2F2B4898608A53FEA1942073DE95A /* QRCodeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B861EA37FA736131D4108E629B9A571 /* TSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE0381DB3CC7A0BBD5D14F208BB99CA /* TSBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D276F5A841DBA855280DEF2D29D546 /* NotificationBackgroundSuccessIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E86C61FDF2AB35129E71DDDA858090B4 /* NotificationBackgroundSuccessIcon.png */; };
+		27CCC4059BA3886E6CCC4F91A487F0E7 /* QRCodeReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 43901FC6C14AE63F554B94ACEA1288F2 /* QRCodeReaderViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		299DC027E7BC0A0F7217B3D9E3E3D551 /* QRCodeReaderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A698E18C1E77B675F19EC5689A82A2 /* QRCodeReaderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		353CAB1E32622584F304A8784F73CDA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2A78A1216B8FA024E0553A2911E3B4 /* Foundation.framework */; };
+		35B12C511322E371FF679E5466B874F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2A78A1216B8FA024E0553A2911E3B4 /* Foundation.framework */; };
+		38C4AEF0204120F3479C1BC5925102DB /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 813EDC18EEA6163F14DAEF8924DAD516 /* QRCodeReaderView.m */; };
+		3B60C620EDEFF0F278DF7EE247638DEA /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CB79EC77A0F9F91F73C43254502362D3 /* QRCameraSwitchButton.m */; };
+		3E5CCB0730D9DF2E938B6568D983726F /* PlayableAdsPreviewerDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E526F22352D2258AC479398242869FBF /* PlayableAdsPreviewerDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		403E94702077DDF687283C8F59D85B2D /* TSMessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0495D89A70BEB969BF9576B3ABCE0142 /* TSMessageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40F218048663E6FFFA27FCE510A57A00 /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DD590952F33B617E3711F3D3220E7 /* TSBlurView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		43BFB0ECEE9D3A000F672B55DF80680F /* TSMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F5D832F14725B45669916505536F4E /* TSMessages.framework */; };
+		5ECAB8C15C909E0775540BE035000D37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2A78A1216B8FA024E0553A2911E3B4 /* Foundation.framework */; };
+		5FAD5B3E44572B746405D6A792FCB9A4 /* NotificationBackgroundError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E0B91F9736A0182AD558E7CD161589 /* NotificationBackgroundError@2x.png */; };
+		641A53338BC62EE39CBBDD839CA7A783 /* NotificationButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7EF4C9F6E5DE6701CF250510A327F3 /* NotificationButtonBackground.png */; };
+		675EB9C9483DA4653AC2056FD888ECBB /* PlayableAdsPreviewerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 624DC0A6096C7754B242B74FA2504A4B /* PlayableAdsPreviewerDemo-dummy.m */; };
+		6AE5484AAA7BA5CD7647C4D34A62882F /* NotificationBackgroundWarningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D5B1C65BBBCC4C155BE0472F057F9FD /* NotificationBackgroundWarningIcon@2x.png */; };
+		7292B3926797519695AD87FF691A5C70 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076BEC748815090284C8D34AF8486393 /* QRCodeReaderViewController.m */; };
 		7702614FE5C7F498E3FCF1F3FCC948C9 /* Pods-PlayableAdsPreviewer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2BD961CF4DE7F43E0D1B4A5F3965A36 /* Pods-PlayableAdsPreviewer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		784FD8DB7CB854B40EF5224FB0B6C197 /* QRCameraSwitchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7602CB2B74C894B4171BF28EF4EB8 /* QRCameraSwitchButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B4C630C39944CC852A5148FA620F0CD /* NotificationBackgroundWarning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5833739B71D8C9E601986CEF633F1B23 /* NotificationBackgroundWarning@2x.png */; };
-		7F9A0646B49BA50AEFF6408C4628E9E2 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076BEC748815090284C8D34AF8486393 /* QRCodeReaderViewController.m */; };
-		7FA738B10F2E47058FC88E4DCD185AEC /* QRCodeReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 43901FC6C14AE63F554B94ACEA1288F2 /* QRCodeReaderViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		855C2C0842D38C591A7DDE4D59080340 /* PlayableAdsPreviewerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 624DC0A6096C7754B242B74FA2504A4B /* PlayableAdsPreviewerDemo-dummy.m */; };
-		87FB4AF05411F89BFEA8C709046E66A3 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E09537B008160022959F75CD0A09CE6 /* QRCodeReader.m */; };
+		7D9087E2374349042E7D02BA9EC6DA7F /* TSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD64CE96351ADF989ECB0C9287A2DC0 /* TSMessageView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8099A46ED5FA161942D90310DC115E7C /* NotificationBackgroundErrorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA776253E6C14816B0D564BBDAD3D0A3 /* NotificationBackgroundErrorIcon.png */; };
+		82EF77E026E0C770553D8FE491431BBF /* NotificationBackgroundErrorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 523008B43854EC96457FBCBB3F145161 /* NotificationBackgroundErrorIcon@2x.png */; };
 		889B71FABFF60BE44582A370FF84CBAE /* Pods-PlayableAdsPreviewer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF60EEE8DDBCCCEE5B9FCA2BF86ACC6B /* Pods-PlayableAdsPreviewer_Example-dummy.m */; };
-		8E66B958412D6812517AF200C92B7206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */; };
-		A0208A0AA4962B3B2E28EF9169A6DC7A /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BDC7807D50FC959FBCF0C900D3C185F /* TSMessagesDefaultDesign.json */; };
-		A81E7B9C95602C0092134F8DF1EAD9B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */; };
-		A8AF8D3BE7DEB773861E9B303C168FC7 /* NotificationBackgroundError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E0B91F9736A0182AD558E7CD161589 /* NotificationBackgroundError@2x.png */; };
+		8E66B958412D6812517AF200C92B7206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2A78A1216B8FA024E0553A2911E3B4 /* Foundation.framework */; };
+		94A8A34B435E5B5F4D3E7C80DDF78595 /* NotificationBackgroundSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = C833553FE9E89F5CE87A37CC0FA56A64 /* NotificationBackgroundSuccess.png */; };
+		9584EFF6B2E062D0E13E62E40FB20A7A /* QRToggleTorchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA96AFBE673E366F5233654C23AF852 /* QRToggleTorchButton.m */; };
+		96C4FC916AD76330462C87D7130A69B7 /* QRPhotoAlbumButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B68A5263EE753F53E0BE6EDF97E4F13D /* QRPhotoAlbumButton.m */; };
+		9D3EB8F12EC272D651AA4739A193E835 /* NotificationBackgroundWarning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5833739B71D8C9E601986CEF633F1B23 /* NotificationBackgroundWarning@2x.png */; };
+		9F0155E9CD8290814EAA325D60E0EA65 /* NotificationBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7525F87E3FF7EC7FB338755C082A2C32 /* NotificationBackgroundWarningIcon.png */; };
+		A38D01EF5565C1FA4EAFC9AE14388561 /* NotificationBackgroundSuccessIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A4C4F09A729519811FF957650AAF8D /* NotificationBackgroundSuccessIcon@2x.png */; };
+		AAA7CAC4C804036A37C341A59F28B1F3 /* NotificationButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A18D8B410B1C5987270CD8C846D91E9 /* NotificationButtonBackground@2x.png */; };
+		AC5B425CF00639031544261AACF5A039 /* QRPhotoAlbumButton.h in Headers */ = {isa = PBXBuildFile; fileRef = D57BB4EB908DF26D75FAE5938C7B2CF4 /* QRPhotoAlbumButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC73195EC403B064517BDF23E16E1CB7 /* NotificationBackgroundSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C70BD5239988E692C85FA4B7D78DA256 /* NotificationBackgroundSuccess@2x.png */; };
 		B207541F8C2143CF508DEC95A376A5B6 /* HexColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 296AE1675F3D708D29CC6F44157BD8F7 /* HexColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9543182D148899322F89815E981DF44 /* TSMessages-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4671E8B2FF97F4F71AB517D22564E6A /* TSMessages-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD249B044977AFE12FEF1D33706D3512 /* TSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE0381DB3CC7A0BBD5D14F208BB99CA /* TSBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B93EE5B782A056EEF6CC9A7934AEFB36 /* NotificationBackgroundMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 727384B29A4DF1CE3A9B12C00ED2A4CB /* NotificationBackgroundMessage.png */; };
+		C10B3356B1AB64F683F4EB0E063B7B3E /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEDF5DB1EB97BBAEA507AFE2FB109B9 /* NotificationBackgroundError.png */; };
 		C16FF76F99E2FF855604AEAE40A891EE /* HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 173DB3D259B85D10AF506E6C8C29260E /* HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2736CA03A8A6BF2EB4691EA237458F8 /* QRPhotoAlbumButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B68A5263EE753F53E0BE6EDF97E4F13D /* QRPhotoAlbumButton.m */; };
-		C4C0322E89C4ADE77F9C5E8FBC95C873 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */; };
-		C53DEE641DA928ADA1C89570DA1D12E0 /* NotificationBackgroundWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACC144B853C8562D6DA82C715BBC38 /* NotificationBackgroundWarning.png */; };
-		CA25B8BAD80F2709ACCF22EC14D625B7 /* TSMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5165343B7107C846013961188E48F0 /* TSMessages-dummy.m */; };
-		CC2C79431BC63FD95D51B68AC7521BA9 /* QRToggleTorchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397E5F783D7FF190C0FD819ACC86DAB /* QRToggleTorchButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC9C17838E2D8882DDC4FDD6A0720F73 /* TSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD64CE96351ADF989ECB0C9287A2DC0 /* TSMessageView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CD02C3AE9CAB2279EC67B122971E50E5 /* HexColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED95C9854C5A1E9D1863834AA6302259 /* HexColors.framework */; };
+		C4C0322E89C4ADE77F9C5E8FBC95C873 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2A78A1216B8FA024E0553A2911E3B4 /* Foundation.framework */; };
+		C868F31824C4E93D62A984174EE60AFE /* HexColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D419DB34F55330AA5242BD922497EF0D /* HexColors.framework */; };
 		CDB7885F0FB665B3947F533565ECB48C /* HexColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E95FE966D3286D9BD5D63D0D758E87A1 /* HexColors-dummy.m */; };
-		CDE5702F7F6F52B6B7FC728E9E711709 /* QRPhotoAlbumButton.h in Headers */ = {isa = PBXBuildFile; fileRef = D57BB4EB908DF26D75FAE5938C7B2CF4 /* QRPhotoAlbumButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D157AAC33451D99ECFA6BAEADFB1F6BF /* TSMessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0495D89A70BEB969BF9576B3ABCE0142 /* TSMessageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5567BBDA236D1E5676D8D95369AB370 /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DD590952F33B617E3711F3D3220E7 /* TSBlurView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		DCC7C763EDA1160EA90C64132DFC4BDE /* QRCodeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA2F2B4898608A53FEA1942073DE95A /* QRCodeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6582394E08FF599001D169CA4A0748E /* NotificationBackgroundWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACC144B853C8562D6DA82C715BBC38 /* NotificationBackgroundWarning.png */; };
 		DE522A7A7E4381C9E411905B204EA50C /* Pods-PlayableAdsPreviewer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51274BDF8497CC6C9D3DC4FE15AB0612 /* Pods-PlayableAdsPreviewer_Tests-dummy.m */; };
-		E2041315E6ABE09766301C795F9325B9 /* NotificationBackgroundSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C70BD5239988E692C85FA4B7D78DA256 /* NotificationBackgroundSuccess@2x.png */; };
+		DFBCD268FE67C655F1513FEE6F6D651B /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BDC7807D50FC959FBCF0C900D3C185F /* TSMessagesDefaultDesign.json */; };
 		E22DDFE5AEC148D457E11AF841064CC5 /* Pods-PlayableAdsPreviewer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF73D152C1958248E196B2EAD6D4EE24 /* Pods-PlayableAdsPreviewer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6B3F3DA3E211FB875589D27F0CE6A31 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CB79EC77A0F9F91F73C43254502362D3 /* QRCameraSwitchButton.m */; };
-		EA4CC358724C6067F48330A8B6AB0BA4 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 813EDC18EEA6163F14DAEF8924DAD516 /* QRCodeReaderView.m */; };
-		EA5E53B82A2A28AF1AE7E434861DBD7B /* NotificationBackgroundErrorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 523008B43854EC96457FBCBB3F145161 /* NotificationBackgroundErrorIcon@2x.png */; };
-		EE3C42CE0C0F5797ED54456FE924409D /* NotificationButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A18D8B410B1C5987270CD8C846D91E9 /* NotificationButtonBackground@2x.png */; };
-		F1C4178F637915AFC461C5DD7328F821 /* QRToggleTorchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA96AFBE673E366F5233654C23AF852 /* QRToggleTorchButton.m */; };
-		FAB1346CBAB76FB199D218BBDFB94DF7 /* QRCodeReaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2AFAEBBDCDEE47FFBDB79991B8D962 /* QRCodeReaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE89E3F72149B163B551859BB5EF1344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */; };
+		E2E90228CBD2EF8489F78E81A06494EC /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F056992C426A4AA268AA1BAD3034F253 /* TSMessage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E615682FE71D71FA440821C368608417 /* QRToggleTorchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397E5F783D7FF190C0FD819ACC86DAB /* QRToggleTorchButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6AB30E0B2C972457603F07F7D570DCC /* TSMessages-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4671E8B2FF97F4F71AB517D22564E6A /* TSMessages-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F75711398FC9C7E0DFF5DEA6B5CE8061 /* QRCameraSwitchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7602CB2B74C894B4171BF28EF4EB8 /* QRCameraSwitchButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB1CE94DB477F0CE4B17DA64E70ACBCE /* HexColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D419DB34F55330AA5242BD922497EF0D /* HexColors.framework */; };
+		FF99B88285B29D62B667914F10E33D21 /* NotificationBackgroundMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9454B2324A101F67A2BBAC5D0F85C2AA /* NotificationBackgroundMessage@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4B07FBE7F62887FF95EC27B5BC847914 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94BB4238726A54F824DE7933F2794183;
+			remoteInfo = TSMessages;
+		};
 		6FB272E7EF04BC24FB37953994DA5A31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DFB84BAC401E722C08CACC32AC026126;
+			remoteGlobalIDString = 1A0B045E837C65FF6E60132236799381;
 			remoteInfo = PlayableAdsPreviewerDemo;
+		};
+		73C51FC9DD65387A7792B3A247F139B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB57EF7D8B23701455085EC663E5FA40;
+			remoteInfo = HexColors;
 		};
 		9D6E19CDF930A5080667CA9E78D644C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F0463DAC9F4264A75D4BAE5BCE977704;
+			remoteGlobalIDString = 94BB4238726A54F824DE7933F2794183;
 			remoteInfo = TSMessages;
 		};
 		C290F55AB9B8963E076BCA40B8F3317E /* PBXContainerItemProxy */ = {
@@ -85,7 +101,7 @@
 			remoteGlobalIDString = AB57EF7D8B23701455085EC663E5FA40;
 			remoteInfo = HexColors;
 		};
-		EBF24D10C54F8810627C54C55DE2CA05 /* PBXContainerItemProxy */ = {
+		F1FD8374ED236245DC33D89409A3C05C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -99,6 +115,7 @@
 		0495D89A70BEB969BF9576B3ABCE0142 /* TSMessageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSMessageView.h; path = Pod/Classes/TSMessageView.h; sourceTree = "<group>"; };
 		076BEC748815090284C8D34AF8486393 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderViewController.m; path = PlayableAdsPreviewer/QRCodeReaderViewController/QRCodeReaderViewController.m; sourceTree = "<group>"; };
 		0C2134E1B9245DBCD2258BD7A0081B93 /* TSMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TSMessages.framework; path = TSMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D2A78A1216B8FA024E0553A2911E3B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		0D53A82E965908281F804E3BC356FF41 /* PlayableAdsPreviewerDemo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayableAdsPreviewerDemo-prefix.pch"; sourceTree = "<group>"; };
 		0FB7AEAC967AE97471B97091988263CB /* Pods-PlayableAdsPreviewer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PlayableAdsPreviewer_Example.modulemap"; sourceTree = "<group>"; };
 		173DB3D259B85D10AF506E6C8C29260E /* HexColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HexColor.h; path = Classes/HexColor.h; sourceTree = "<group>"; };
@@ -116,6 +133,7 @@
 		51274BDF8497CC6C9D3DC4FE15AB0612 /* Pods-PlayableAdsPreviewer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PlayableAdsPreviewer_Tests-dummy.m"; sourceTree = "<group>"; };
 		51ACC144B853C8562D6DA82C715BBC38 /* NotificationBackgroundWarning.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundWarning.png; path = Pod/Assets/NotificationBackgroundWarning.png; sourceTree = "<group>"; };
 		523008B43854EC96457FBCBB3F145161 /* NotificationBackgroundErrorIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundErrorIcon@2x.png"; path = "Pod/Assets/NotificationBackgroundErrorIcon@2x.png"; sourceTree = "<group>"; };
+		54F5D832F14725B45669916505536F4E /* TSMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5833739B71D8C9E601986CEF633F1B23 /* NotificationBackgroundWarning@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundWarning@2x.png"; path = "Pod/Assets/NotificationBackgroundWarning@2x.png"; sourceTree = "<group>"; };
 		58C22BC12EEFC93C4DE7CC52061AA81A /* Pods_PlayableAdsPreviewer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PlayableAdsPreviewer_Tests.framework; path = "Pods-PlayableAdsPreviewer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDC7807D50FC959FBCF0C900D3C185F /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; includeInIndex = 1; name = TSMessagesDefaultDesign.json; path = Pod/Assets/TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
@@ -140,7 +158,6 @@
 		9AA96AFBE673E366F5233654C23AF852 /* QRToggleTorchButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRToggleTorchButton.m; path = PlayableAdsPreviewer/QRCodeReaderViewController/QRToggleTorchButton.m; sourceTree = "<group>"; };
 		9D5B1C65BBBCC4C155BE0472F057F9FD /* NotificationBackgroundWarningIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundWarningIcon@2x.png"; path = "Pod/Assets/NotificationBackgroundWarningIcon@2x.png"; sourceTree = "<group>"; };
 		A34F9891BB72EE1807C994B4AF9DCBEE /* Pods-PlayableAdsPreviewer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlayableAdsPreviewer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		AAC02728B4114A18DEFE89F8328E53CE /* Pods-PlayableAdsPreviewer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PlayableAdsPreviewer_Tests.modulemap"; sourceTree = "<group>"; };
 		AAEDF5DB1EB97BBAEA507AFE2FB109B9 /* NotificationBackgroundError.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundError.png; path = Pod/Assets/NotificationBackgroundError.png; sourceTree = "<group>"; };
 		AB4217ADA433F49DF9301A58B1DA8F9B /* Pods-PlayableAdsPreviewer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlayableAdsPreviewer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +178,7 @@
 		CB6089009CBF44666B0807C64F56B614 /* Pods-PlayableAdsPreviewer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlayableAdsPreviewer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CB79EC77A0F9F91F73C43254502362D3 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCameraSwitchButton.m; path = PlayableAdsPreviewer/QRCodeReaderViewController/QRCameraSwitchButton.m; sourceTree = "<group>"; };
 		CC5165343B7107C846013961188E48F0 /* TSMessages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TSMessages-dummy.m"; sourceTree = "<group>"; };
+		D419DB34F55330AA5242BD922497EF0D /* HexColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4671E8B2FF97F4F71AB517D22564E6A /* TSMessages-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSMessages-umbrella.h"; sourceTree = "<group>"; };
 		D4A698E18C1E77B675F19EC5689A82A2 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderDelegate.h; path = PlayableAdsPreviewer/QRCodeReaderViewController/QRCodeReaderDelegate.h; sourceTree = "<group>"; };
 		D57BB4EB908DF26D75FAE5938C7B2CF4 /* QRPhotoAlbumButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRPhotoAlbumButton.h; path = PlayableAdsPreviewer/QRCodeReaderViewController/QRPhotoAlbumButton.h; sourceTree = "<group>"; };
@@ -174,7 +192,6 @@
 		E96B53A44CF7D4ED04D18CD442F5C5B9 /* HexColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-prefix.pch"; sourceTree = "<group>"; };
 		EA776253E6C14816B0D564BBDAD3D0A3 /* NotificationBackgroundErrorIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundErrorIcon.png; path = Pod/Assets/NotificationBackgroundErrorIcon.png; sourceTree = "<group>"; };
 		EC1736B7D5A504F0D124D199BFD7A062 /* PlayableAdsPreviewerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PlayableAdsPreviewerDemo.framework; path = PlayableAdsPreviewerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED95C9854C5A1E9D1863834AA6302259 /* HexColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF73D152C1958248E196B2EAD6D4EE24 /* Pods-PlayableAdsPreviewer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PlayableAdsPreviewer_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F056992C426A4AA268AA1BAD3034F253 /* TSMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSMessage.m; path = Pod/Classes/TSMessage.m; sourceTree = "<group>"; };
 		F1312209F2661527183BC5F29F4BC540 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -191,11 +208,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41235E20CFFF51876D7DD68A904EFF22 /* Frameworks */ = {
+		2A1325C304EA0E0FC971449E50D6F0A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A81E7B9C95602C0092134F8DF1EAD9B8 /* Foundation.framework in Frameworks */,
+				353CAB1E32622584F304A8784F73CDA6 /* Foundation.framework in Frameworks */,
+				C868F31824C4E93D62A984174EE60AFE /* HexColors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,12 +225,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFD18D0DAACA183C123473391A92D27B /* Frameworks */ = {
+		9D662A51B6AA07E459BED853A08C9FA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE89E3F72149B163B551859BB5EF1344 /* Foundation.framework in Frameworks */,
-				CD02C3AE9CAB2279EC67B122971E50E5 /* HexColors.framework in Frameworks */,
+				35B12C511322E371FF679E5466B874F7 /* Foundation.framework in Frameworks */,
+				FB1CE94DB477F0CE4B17DA64E70ACBCE /* HexColors.framework in Frameworks */,
+				43BFB0ECEE9D3A000F672B55DF80680F /* TSMessages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,15 +246,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04DC935C3F51D0E46520DD78439CCA1B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ED95C9854C5A1E9D1863834AA6302259 /* HexColors.framework */,
-				E22B9DC5A4CC7CB374E52701F7FD9D52 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		099816A33F324F7717ABDAE2FEEEAD60 /* PlayableAdsPreviewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,7 +395,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				D5C8D38FBD76FDDD477911FE55860A93 /* Development Pods */,
-				04DC935C3F51D0E46520DD78439CCA1B /* Frameworks */,
+				FD1BF8C705C8255DDC9B7EB28971F7E6 /* Frameworks */,
 				E65B9DC940944DA7D0FDD94CD0BFB348 /* Pods */,
 				678C7D5D32FA053364280DE421D90C34 /* Products */,
 				A51B9A7A44EF7C43F92FDBDA88257AD3 /* Targets Support Files */,
@@ -445,14 +455,6 @@
 			path = "../Target Support Files/TSMessages";
 			sourceTree = "<group>";
 		};
-		E22B9DC5A4CC7CB374E52701F7FD9D52 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		E65B9DC940944DA7D0FDD94CD0BFB348 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,17 +465,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EFE194BD148BD14FFAA9418DCDF91CEA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0D2A78A1216B8FA024E0553A2911E3B4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FD1BF8C705C8255DDC9B7EB28971F7E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D419DB34F55330AA5242BD922497EF0D /* HexColors.framework */,
+				54F5D832F14725B45669916505536F4E /* TSMessages.framework */,
+				EFE194BD148BD14FFAA9418DCDF91CEA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		108C2ABFC9AA01C1581C075B0B687224 /* Headers */ = {
+		1C89A4186B522D869EEB2AA47CC3A343 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD249B044977AFE12FEF1D33706D3512 /* TSBlurView.h in Headers */,
-				5218E75C0C4FDBA13CB371368A7CEC46 /* TSMessage.h in Headers */,
-				B9543182D148899322F89815E981DF44 /* TSMessages-umbrella.h in Headers */,
-				D157AAC33451D99ECFA6BAEADFB1F6BF /* TSMessageView.h in Headers */,
+				3E5CCB0730D9DF2E938B6568D983726F /* PlayableAdsPreviewerDemo-umbrella.h in Headers */,
+				F75711398FC9C7E0DFF5DEA6B5CE8061 /* QRCameraSwitchButton.h in Headers */,
+				18884E203ABD412DB12CE675C47BA433 /* QRCodeReader.h in Headers */,
+				299DC027E7BC0A0F7217B3D9E3E3D551 /* QRCodeReaderDelegate.h in Headers */,
+				13882D9F56DAC809A39FF3593B1A728F /* QRCodeReaderView.h in Headers */,
+				27CCC4059BA3886E6CCC4F91A487F0E7 /* QRCodeReaderViewController.h in Headers */,
+				AC5B425CF00639031544261AACF5A039 /* QRPhotoAlbumButton.h in Headers */,
+				E615682FE71D71FA440821C368608417 /* QRToggleTorchButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,24 +526,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB8BA3B1745D2DAFCE7E83B41A514EA3 /* Headers */ = {
+		90C93ABAD4ECC5BE3EE224FC37082910 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03FA60B8FF42014C0403B77FE88E2EBF /* PlayableAdsPreviewerDemo-umbrella.h in Headers */,
-				784FD8DB7CB854B40EF5224FB0B6C197 /* QRCameraSwitchButton.h in Headers */,
-				DCC7C763EDA1160EA90C64132DFC4BDE /* QRCodeReader.h in Headers */,
-				19431CBEFC3184D690CD28848FB134F4 /* QRCodeReaderDelegate.h in Headers */,
-				FAB1346CBAB76FB199D218BBDFB94DF7 /* QRCodeReaderView.h in Headers */,
-				7FA738B10F2E47058FC88E4DCD185AEC /* QRCodeReaderViewController.h in Headers */,
-				CDE5702F7F6F52B6B7FC728E9E711709 /* QRPhotoAlbumButton.h in Headers */,
-				CC2C79431BC63FD95D51B68AC7521BA9 /* QRToggleTorchButton.h in Headers */,
+				1B861EA37FA736131D4108E629B9A571 /* TSBlurView.h in Headers */,
+				06ECBD0C55FF087B01711BE82959046D /* TSMessage.h in Headers */,
+				F6AB30E0B2C972457603F07F7D570DCC /* TSMessages-umbrella.h in Headers */,
+				403E94702077DDF687283C8F59D85B2D /* TSMessageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1A0B045E837C65FF6E60132236799381 /* PlayableAdsPreviewerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E8E70EF9E5E2DE137E1D71CBB27DD7F /* Build configuration list for PBXNativeTarget "PlayableAdsPreviewerDemo" */;
+			buildPhases = (
+				CC7569D88406D4C72166E2A1B19F8C72 /* Sources */,
+				9D662A51B6AA07E459BED853A08C9FA5 /* Frameworks */,
+				1C89A4186B522D869EEB2AA47CC3A343 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				371F653AD128653A9A1A4E9FC614D37A /* PBXTargetDependency */,
+				D31BF8598E7A39BCFD10D5339D7AB657 /* PBXTargetDependency */,
+			);
+			name = PlayableAdsPreviewerDemo;
+			productName = PlayableAdsPreviewerDemo;
+			productReference = EC1736B7D5A504F0D124D199BFD7A062 /* PlayableAdsPreviewerDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		2BB5C4D903B38D1DCB03FC609EBDC96E /* Pods-PlayableAdsPreviewer_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA3EC2D8BF8A3E56FB58C341A179972B /* Build configuration list for PBXNativeTarget "Pods-PlayableAdsPreviewer_Tests" */;
@@ -557,6 +596,25 @@
 			productReference = 725D417A300C5FBC0E1C68B1CAD65F47 /* Pods_PlayableAdsPreviewer_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		94BB4238726A54F824DE7933F2794183 /* TSMessages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54D79A37100A939FC04FBDFDF49E61FD /* Build configuration list for PBXNativeTarget "TSMessages" */;
+			buildPhases = (
+				75C3059994DC4F845A7D5A1BF0FD09B1 /* Sources */,
+				2A1325C304EA0E0FC971449E50D6F0A6 /* Frameworks */,
+				90C93ABAD4ECC5BE3EE224FC37082910 /* Headers */,
+				BF6AD7E63B01531B16953737E31C5E1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F4E43E7131B6A684DC5BFB17886B33E /* PBXTargetDependency */,
+			);
+			name = TSMessages;
+			productName = TSMessages;
+			productReference = 0C2134E1B9245DBCD2258BD7A0081B93 /* TSMessages.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		AB57EF7D8B23701455085EC663E5FA40 /* HexColors */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D4EFCCB7B17044F4337738D60FE8F8F /* Build configuration list for PBXNativeTarget "HexColors" */;
@@ -572,42 +630,6 @@
 			name = HexColors;
 			productName = HexColors;
 			productReference = 8E80AEDB457D538112FE9550C6CFA93E /* HexColors.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		DFB84BAC401E722C08CACC32AC026126 /* PlayableAdsPreviewerDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 65A4A6748466DC01343BA6434AC56294 /* Build configuration list for PBXNativeTarget "PlayableAdsPreviewerDemo" */;
-			buildPhases = (
-				31AF81E90A20B457F1776C1A185F428A /* Sources */,
-				41235E20CFFF51876D7DD68A904EFF22 /* Frameworks */,
-				BB8BA3B1745D2DAFCE7E83B41A514EA3 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PlayableAdsPreviewerDemo;
-			productName = PlayableAdsPreviewerDemo;
-			productReference = EC1736B7D5A504F0D124D199BFD7A062 /* PlayableAdsPreviewerDemo.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F0463DAC9F4264A75D4BAE5BCE977704 /* TSMessages */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 341B72F4FC5012DDCB8B2A5A10F958E6 /* Build configuration list for PBXNativeTarget "TSMessages" */;
-			buildPhases = (
-				68DB90C008FF1EF26AC8F434FCCC683C /* Sources */,
-				BFD18D0DAACA183C123473391A92D27B /* Frameworks */,
-				108C2ABFC9AA01C1581C075B0B687224 /* Headers */,
-				93D69D3B1A59FEC3D5A4CCBFFACD249A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FD176C8C9E26492B9696BAD31B391B23 /* PBXTargetDependency */,
-			);
-			name = TSMessages;
-			productName = TSMessages;
-			productReference = 0C2134E1B9245DBCD2258BD7A0081B93 /* TSMessages.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -632,36 +654,36 @@
 			projectRoot = "";
 			targets = (
 				AB57EF7D8B23701455085EC663E5FA40 /* HexColors */,
-				DFB84BAC401E722C08CACC32AC026126 /* PlayableAdsPreviewerDemo */,
+				1A0B045E837C65FF6E60132236799381 /* PlayableAdsPreviewerDemo */,
 				5B926AA483DFC8EB3EC66E387607999E /* Pods-PlayableAdsPreviewer_Example */,
 				2BB5C4D903B38D1DCB03FC609EBDC96E /* Pods-PlayableAdsPreviewer_Tests */,
-				F0463DAC9F4264A75D4BAE5BCE977704 /* TSMessages */,
+				94BB4238726A54F824DE7933F2794183 /* TSMessages */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		93D69D3B1A59FEC3D5A4CCBFFACD249A /* Resources */ = {
+		BF6AD7E63B01531B16953737E31C5E1F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A21255163A348F75A92C73276CD7F75 /* NotificationBackgroundError.png in Resources */,
-				A8AF8D3BE7DEB773861E9B303C168FC7 /* NotificationBackgroundError@2x.png in Resources */,
-				5B157626210AAA5D7DC2615831F53CAA /* NotificationBackgroundErrorIcon.png in Resources */,
-				EA5E53B82A2A28AF1AE7E434861DBD7B /* NotificationBackgroundErrorIcon@2x.png in Resources */,
-				2CA647CC75641934BF966AC174D62AB4 /* NotificationBackgroundMessage.png in Resources */,
-				101E5411C1BA46025E3448BC68F416B3 /* NotificationBackgroundMessage@2x.png in Resources */,
-				3C667786F745E0AD7DCF8B4F7AE07173 /* NotificationBackgroundSuccess.png in Resources */,
-				E2041315E6ABE09766301C795F9325B9 /* NotificationBackgroundSuccess@2x.png in Resources */,
-				1A35A4F9343F39F6712F687200EE8B2B /* NotificationBackgroundSuccessIcon.png in Resources */,
-				64F01C675720B7FB63FC09D797FF4CF5 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
-				C53DEE641DA928ADA1C89570DA1D12E0 /* NotificationBackgroundWarning.png in Resources */,
-				7B4C630C39944CC852A5148FA620F0CD /* NotificationBackgroundWarning@2x.png in Resources */,
-				0B7FCED1AB573D03EF5E0B2D4AA64198 /* NotificationBackgroundWarningIcon.png in Resources */,
-				6FC5276C15DDD1A21A5A86B6E032F235 /* NotificationBackgroundWarningIcon@2x.png in Resources */,
-				2B1CCFD3DDD75E80BDF34E92ECA2B2E4 /* NotificationButtonBackground.png in Resources */,
-				EE3C42CE0C0F5797ED54456FE924409D /* NotificationButtonBackground@2x.png in Resources */,
-				A0208A0AA4962B3B2E28EF9169A6DC7A /* TSMessagesDefaultDesign.json in Resources */,
+				C10B3356B1AB64F683F4EB0E063B7B3E /* NotificationBackgroundError.png in Resources */,
+				5FAD5B3E44572B746405D6A792FCB9A4 /* NotificationBackgroundError@2x.png in Resources */,
+				8099A46ED5FA161942D90310DC115E7C /* NotificationBackgroundErrorIcon.png in Resources */,
+				82EF77E026E0C770553D8FE491431BBF /* NotificationBackgroundErrorIcon@2x.png in Resources */,
+				B93EE5B782A056EEF6CC9A7934AEFB36 /* NotificationBackgroundMessage.png in Resources */,
+				FF99B88285B29D62B667914F10E33D21 /* NotificationBackgroundMessage@2x.png in Resources */,
+				94A8A34B435E5B5F4D3E7C80DDF78595 /* NotificationBackgroundSuccess.png in Resources */,
+				AC73195EC403B064517BDF23E16E1CB7 /* NotificationBackgroundSuccess@2x.png in Resources */,
+				22D276F5A841DBA855280DEF2D29D546 /* NotificationBackgroundSuccessIcon.png in Resources */,
+				A38D01EF5565C1FA4EAFC9AE14388561 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
+				D6582394E08FF599001D169CA4A0748E /* NotificationBackgroundWarning.png in Resources */,
+				9D3EB8F12EC272D651AA4739A193E835 /* NotificationBackgroundWarning@2x.png in Resources */,
+				9F0155E9CD8290814EAA325D60E0EA65 /* NotificationBackgroundWarningIcon.png in Resources */,
+				6AE5484AAA7BA5CD7647C4D34A62882F /* NotificationBackgroundWarningIcon@2x.png in Resources */,
+				641A53338BC62EE39CBBDD839CA7A783 /* NotificationButtonBackground.png in Resources */,
+				AAA7CAC4C804036A37C341A59F28B1F3 /* NotificationButtonBackground@2x.png in Resources */,
+				DFBCD268FE67C655F1513FEE6F6D651B /* TSMessagesDefaultDesign.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,36 +699,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31AF81E90A20B457F1776C1A185F428A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				855C2C0842D38C591A7DDE4D59080340 /* PlayableAdsPreviewerDemo-dummy.m in Sources */,
-				E6B3F3DA3E211FB875589D27F0CE6A31 /* QRCameraSwitchButton.m in Sources */,
-				87FB4AF05411F89BFEA8C709046E66A3 /* QRCodeReader.m in Sources */,
-				EA4CC358724C6067F48330A8B6AB0BA4 /* QRCodeReaderView.m in Sources */,
-				7F9A0646B49BA50AEFF6408C4628E9E2 /* QRCodeReaderViewController.m in Sources */,
-				C2736CA03A8A6BF2EB4691EA237458F8 /* QRPhotoAlbumButton.m in Sources */,
-				F1C4178F637915AFC461C5DD7328F821 /* QRToggleTorchButton.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68DB90C008FF1EF26AC8F434FCCC683C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5567BBDA236D1E5676D8D95369AB370 /* TSBlurView.m in Sources */,
-				08EBEA876257FF34ABDA47403D7EA560 /* TSMessage.m in Sources */,
-				CA25B8BAD80F2709ACCF22EC14D625B7 /* TSMessages-dummy.m in Sources */,
-				CC9C17838E2D8882DDC4FDD6A0720F73 /* TSMessageView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		73940ACA40A6E0E813D08AA194B24693 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				889B71FABFF60BE44582A370FF84CBAE /* Pods-PlayableAdsPreviewer_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C3059994DC4F845A7D5A1BF0FD09B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F218048663E6FFFA27FCE510A57A00 /* TSBlurView.m in Sources */,
+				E2E90228CBD2EF8489F78E81A06494EC /* TSMessage.m in Sources */,
+				0F35C0BF81A9E3463AD6EE861328B88E /* TSMessages-dummy.m in Sources */,
+				7D9087E2374349042E7D02BA9EC6DA7F /* TSMessageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,20 +726,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC7569D88406D4C72166E2A1B19F8C72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				675EB9C9483DA4653AC2056FD888ECBB /* PlayableAdsPreviewerDemo-dummy.m in Sources */,
+				3B60C620EDEFF0F278DF7EE247638DEA /* QRCameraSwitchButton.m in Sources */,
+				05EBC3DC5EF755C9EEC7E7A9C42BBBE5 /* QRCodeReader.m in Sources */,
+				38C4AEF0204120F3479C1BC5925102DB /* QRCodeReaderView.m in Sources */,
+				7292B3926797519695AD87FF691A5C70 /* QRCodeReaderViewController.m in Sources */,
+				96C4FC916AD76330462C87D7130A69B7 /* QRPhotoAlbumButton.m in Sources */,
+				9584EFF6B2E062D0E13E62E40FB20A7A /* QRToggleTorchButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1F4E43E7131B6A684DC5BFB17886B33E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HexColors;
+			target = AB57EF7D8B23701455085EC663E5FA40 /* HexColors */;
+			targetProxy = 73C51FC9DD65387A7792B3A247F139B3 /* PBXContainerItemProxy */;
+		};
+		371F653AD128653A9A1A4E9FC614D37A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HexColors;
+			target = AB57EF7D8B23701455085EC663E5FA40 /* HexColors */;
+			targetProxy = F1FD8374ED236245DC33D89409A3C05C /* PBXContainerItemProxy */;
+		};
 		82BBB26009F0C9D3C528961DC18B311B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PlayableAdsPreviewerDemo;
-			target = DFB84BAC401E722C08CACC32AC026126 /* PlayableAdsPreviewerDemo */;
+			target = 1A0B045E837C65FF6E60132236799381 /* PlayableAdsPreviewerDemo */;
 			targetProxy = 6FB272E7EF04BC24FB37953994DA5A31 /* PBXContainerItemProxy */;
 		};
 		A756B221A6C7980F488EA3B686BBE032 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TSMessages;
-			target = F0463DAC9F4264A75D4BAE5BCE977704 /* TSMessages */;
+			target = 94BB4238726A54F824DE7933F2794183 /* TSMessages */;
 			targetProxy = 9D6E19CDF930A5080667CA9E78D644C6 /* PBXContainerItemProxy */;
+		};
+		D31BF8598E7A39BCFD10D5339D7AB657 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TSMessages;
+			target = 94BB4238726A54F824DE7933F2794183 /* TSMessages */;
+			targetProxy = 4B07FBE7F62887FF95EC27B5BC847914 /* PBXContainerItemProxy */;
 		};
 		EDA60354CD8F5CE12148B7B2585783D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -739,15 +779,38 @@
 			target = AB57EF7D8B23701455085EC663E5FA40 /* HexColors */;
 			targetProxy = C290F55AB9B8963E076BCA40B8F3317E /* PBXContainerItemProxy */;
 		};
-		FD176C8C9E26492B9696BAD31B391B23 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HexColors;
-			target = AB57EF7D8B23701455085EC663E5FA40 /* HexColors */;
-			targetProxy = EBF24D10C54F8810627C54C55DE2CA05 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		161ADAED056EE09CCE0FA98B63347734 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CEC6AD1CEEF9625BF9D21CE10EBDEA6 /* TSMessages.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TSMessages/TSMessages-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TSMessages/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TSMessages/TSMessages.modulemap";
+				PRODUCT_NAME = TSMessages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		1CDAB5613991E411E5990BAF694995C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -805,35 +868,6 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		2EDA8EFBA74586FE56953F5C0D6BC237 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 886DF265FB86934A57B120F36FB04C59 /* PlayableAdsPreviewerDemo.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PlayableAdsPreviewerDemo/PlayableAdsPreviewerDemo-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PlayableAdsPreviewerDemo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PlayableAdsPreviewerDemo/PlayableAdsPreviewerDemo.modulemap";
-				PRODUCT_NAME = PlayableAdsPreviewerDemo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1017,7 +1051,66 @@
 			};
 			name = Debug;
 		};
-		A6AD02939FC40B3B91BAEC16B732C53B /* Release */ = {
+		820BDE49D8BB345B723086D6C62DD9A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 886DF265FB86934A57B120F36FB04C59 /* PlayableAdsPreviewerDemo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PlayableAdsPreviewerDemo/PlayableAdsPreviewerDemo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlayableAdsPreviewerDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlayableAdsPreviewerDemo/PlayableAdsPreviewerDemo.modulemap";
+				PRODUCT_NAME = PlayableAdsPreviewerDemo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		94A265402DB703D21118D4DA2A7656AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 886DF265FB86934A57B120F36FB04C59 /* PlayableAdsPreviewerDemo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PlayableAdsPreviewerDemo/PlayableAdsPreviewerDemo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlayableAdsPreviewerDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlayableAdsPreviewerDemo/PlayableAdsPreviewerDemo.modulemap";
+				PRODUCT_NAME = PlayableAdsPreviewerDemo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A71549CB02D29D8E655AA6FEC802C1AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CEC6AD1CEEF9625BF9D21CE10EBDEA6 /* TSMessages.xcconfig */;
 			buildSettings = {
@@ -1046,35 +1139,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		ABDE35DDFB12FD0C5695B96A5AE1CC87 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CEC6AD1CEEF9625BF9D21CE10EBDEA6 /* TSMessages.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TSMessages/TSMessages-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TSMessages/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TSMessages/TSMessages.modulemap";
-				PRODUCT_NAME = TSMessages;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		B87AE35633E30C61303702D6B78186EC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1140,36 +1204,6 @@
 			};
 			name = Debug;
 		};
-		FD79F63BF84F65FCD08B471243311C06 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 886DF265FB86934A57B120F36FB04C59 /* PlayableAdsPreviewerDemo.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PlayableAdsPreviewerDemo/PlayableAdsPreviewerDemo-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PlayableAdsPreviewerDemo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PlayableAdsPreviewerDemo/PlayableAdsPreviewerDemo.modulemap";
-				PRODUCT_NAME = PlayableAdsPreviewerDemo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1191,20 +1225,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		341B72F4FC5012DDCB8B2A5A10F958E6 /* Build configuration list for PBXNativeTarget "TSMessages" */ = {
+		54D79A37100A939FC04FBDFDF49E61FD /* Build configuration list for PBXNativeTarget "TSMessages" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ABDE35DDFB12FD0C5695B96A5AE1CC87 /* Debug */,
-				A6AD02939FC40B3B91BAEC16B732C53B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		65A4A6748466DC01343BA6434AC56294 /* Build configuration list for PBXNativeTarget "PlayableAdsPreviewerDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2EDA8EFBA74586FE56953F5C0D6BC237 /* Debug */,
-				FD79F63BF84F65FCD08B471243311C06 /* Release */,
+				161ADAED056EE09CCE0FA98B63347734 /* Debug */,
+				A71549CB02D29D8E655AA6FEC802C1AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1214,6 +1239,15 @@
 			buildConfigurations = (
 				8142DB0C000AC1B4148E52426C2C6F01 /* Debug */,
 				69CF5642CF1FEEB2F0704B244A4E889E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E8E70EF9E5E2DE137E1D71CBB27DD7F /* Build configuration list for PBXNativeTarget "PlayableAdsPreviewerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94A265402DB703D21118D4DA2A7656AD /* Debug */,
+				820BDE49D8BB345B723086D6C62DD9A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

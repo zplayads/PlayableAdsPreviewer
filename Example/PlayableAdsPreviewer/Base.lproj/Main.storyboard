@@ -41,7 +41,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Ad Unit ID Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsu-CZ-qtx">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Ad URL Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsu-CZ-qtx">
                                 <rect key="frame" x="87.5" y="140" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="E6b-8z-ruS"/>
@@ -141,8 +141,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="URLText" destination="hsu-CZ-qtx" id="d6f-e2-wBh"/>
                         <outlet property="appIDText" destination="Cev-Ww-djJ" id="rFf-rp-zvD"/>
-                        <outlet property="unitIDText" destination="hsu-CZ-qtx" id="ddC-tk-gol"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>

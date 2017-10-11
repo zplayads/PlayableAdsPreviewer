@@ -14,7 +14,7 @@
 @interface PAViewController ()<QRCodeReaderDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *appIDText;
-@property (weak, nonatomic) IBOutlet UITextField *unitIDText;
+@property (weak, nonatomic) IBOutlet UITextField *URLText;
 
 @property (nonatomic) PlayableAdsPreviewer *previewer;
 
@@ -25,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.appIDText.text = @"CABFFBFF-C5D6-D9B0-8A5C-60417538FC51";
 }
 
 - (IBAction)scanButtonDidPress:(id)sender {
@@ -53,7 +54,7 @@
 }
 
 - (IBAction)requestButtonDidPress:(id)sender {
-    if (!self.unitIDText.text.length || !self.appIDText.text.length) {
+    if (!self.appIDText.text.length) {
         [TSMessage showNotificationInViewController:self
                                               title:@"Error"
                                            subtitle:@"Ad Unit ID and App ID should not be empty"
@@ -72,21 +73,17 @@
 
 - (void)requestAd{
     [self.previewer presentFromRootViewController:self withAdID:self.appIDText.text success:^{
-        
     } dismiss:^{
-        
     } failure:^(NSError * _Nonnull error) {
-        
+        NSLog(@"%@",error);
     }];
 }
 
 - (IBAction)staticAdButtonDidPress:(id)sender {
-    [self.previewer presentFromRootViewController:self withURL:@"" success:^{
-        
+    [self.previewer presentFromRootViewController:self withURL:self.URLText.text success:^{
     } dismiss:^{
-        
     } failure:^(NSError * _Nonnull error) {
-        
+        NSLog(@"%@",error);
     }];
 }
 

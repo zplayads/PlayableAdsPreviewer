@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5B9C6B491F7DFE680024D699 /* PAUIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C6B481F7DFE680024D699 /* PAUIView+CornerRadius.m */; };
+		5BAA36951F8DC3A200D4F404 /* PAQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA36931F8DC3A200D4F404 /* PAQRCodeViewController.m */; };
+		5BAA369A1F8DC92E00D4F404 /* img_animation_scan_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA36981F8DC92E00D4F404 /* img_animation_scan_line.png */; };
+		5BAA369B1F8DC92E00D4F404 /* img_animation_scan_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA36991F8DC92E00D4F404 /* img_animation_scan_pic.png */; };
 		5BFB4BF21F7E1D7A00826D90 /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE11F7E1D7A00826D90 /* NotificationBackgroundError.png */; };
 		5BFB4BF31F7E1D7A00826D90 /* NotificationBackgroundError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE21F7E1D7A00826D90 /* NotificationBackgroundError@2x.png */; };
 		5BFB4BF41F7E1D7A00826D90 /* NotificationBackgroundErrorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE31F7E1D7A00826D90 /* NotificationBackgroundErrorIcon.png */; };
@@ -60,6 +63,10 @@
 		4D16ECDE9E5FB00D8740FF69 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5B9C6B471F7DFE680024D699 /* PAUIView+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PAUIView+CornerRadius.h"; sourceTree = "<group>"; };
 		5B9C6B481F7DFE680024D699 /* PAUIView+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PAUIView+CornerRadius.m"; sourceTree = "<group>"; };
+		5BAA36921F8DC3A200D4F404 /* PAQRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAQRCodeViewController.h; sourceTree = "<group>"; };
+		5BAA36931F8DC3A200D4F404 /* PAQRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAQRCodeViewController.m; sourceTree = "<group>"; };
+		5BAA36981F8DC92E00D4F404 /* img_animation_scan_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_animation_scan_line.png; sourceTree = "<group>"; };
+		5BAA36991F8DC92E00D4F404 /* img_animation_scan_pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_animation_scan_pic.png; sourceTree = "<group>"; };
 		5BFB4BE11F7E1D7A00826D90 /* NotificationBackgroundError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundError.png; sourceTree = "<group>"; };
 		5BFB4BE21F7E1D7A00826D90 /* NotificationBackgroundError@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotificationBackgroundError@2x.png"; sourceTree = "<group>"; };
 		5BFB4BE31F7E1D7A00826D90 /* NotificationBackgroundErrorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundErrorIcon.png; sourceTree = "<group>"; };
@@ -143,6 +150,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5BAA36971F8DC92E00D4F404 /* QRCodeResources */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA36981F8DC92E00D4F404 /* img_animation_scan_line.png */,
+				5BAA36991F8DC92E00D4F404 /* img_animation_scan_pic.png */,
+			);
+			path = QRCodeResources;
+			sourceTree = "<group>";
+		};
 		5BFB4BE01F7E1D7A00826D90 /* TSMessageAssets */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,9 +220,10 @@
 		6003F593195388D20070C39A /* Example for PlayableAdsPreviewer */ = {
 			isa = PBXGroup;
 			children = (
+				5BAA36971F8DC92E00D4F404 /* QRCodeResources */,
 				5BFB4BE01F7E1D7A00826D90 /* TSMessageAssets */,
-				6003F59C195388D20070C39A /* PAAppDelegate.h */,
-				6003F59D195388D20070C39A /* PAAppDelegate.m */,
+				5BAA36921F8DC3A200D4F404 /* PAQRCodeViewController.h */,
+				5BAA36931F8DC3A200D4F404 /* PAQRCodeViewController.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* PAViewController.h */,
 				6003F5A6195388D20070C39A /* PAViewController.m */,
@@ -215,6 +232,8 @@
 				6003F594195388D20070C39A /* Supporting Files */,
 				5B9C6B471F7DFE680024D699 /* PAUIView+CornerRadius.h */,
 				5B9C6B481F7DFE680024D699 /* PAUIView+CornerRadius.m */,
+				6003F59C195388D20070C39A /* PAAppDelegate.h */,
+				6003F59D195388D20070C39A /* PAAppDelegate.m */,
 			);
 			name = "Example for PlayableAdsPreviewer";
 			path = PlayableAdsPreviewer;
@@ -347,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				5BAA369A1F8DC92E00D4F404 /* img_animation_scan_line.png in Resources */,
 				5BFB4C021F7E1D7A00826D90 /* TSMessagesDefaultDesign.json in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				5BFB4C001F7E1D7A00826D90 /* NotificationButtonBackground.png in Resources */,
@@ -360,6 +380,7 @@
 				5BFB4BF71F7E1D7A00826D90 /* NotificationBackgroundMessage@2x.png in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				5BFB4BF31F7E1D7A00826D90 /* NotificationBackgroundError@2x.png in Resources */,
+				5BAA369B1F8DC92E00D4F404 /* img_animation_scan_pic.png in Resources */,
 				5BFB4BF51F7E1D7A00826D90 /* NotificationBackgroundErrorIcon@2x.png in Resources */,
 				5BFB4BF41F7E1D7A00826D90 /* NotificationBackgroundErrorIcon.png in Resources */,
 				5BFB4C011F7E1D7A00826D90 /* NotificationButtonBackground@2x.png in Resources */,
@@ -493,6 +514,7 @@
 			files = (
 				5B9C6B491F7DFE680024D699 /* PAUIView+CornerRadius.m in Sources */,
 				6003F59E195388D20070C39A /* PAAppDelegate.m in Sources */,
+				5BAA36951F8DC3A200D4F404 /* PAQRCodeViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* PAViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

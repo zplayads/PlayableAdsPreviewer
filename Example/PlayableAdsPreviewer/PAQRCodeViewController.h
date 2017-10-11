@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PAQRCodeViewController : UINavigationController
+@interface PAQRCodeViewController : UIViewController
 
 - (id)initWithCompletion:(void(^)(BOOL succeeded, NSString * result))completion;
 
 - (void)start;
 - (void)stop;
-- (void)dealWithResult:(NSString *)result;
 - (void)cancel;
 
 @end

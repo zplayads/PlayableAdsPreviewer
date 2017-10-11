@@ -28,6 +28,8 @@
 @property (nonatomic, strong) UIImage *lineImage;
 @property (nonatomic, strong) UIButton *albumButton;
 @property (nonatomic, strong) UILabel *bottomLabel;
+@property (nonatomic, strong) UILabel *warningLabel;
+@property (nonatomic, strong) UILabel *topLabel;
 @property (nonatomic) BOOL needsScanAnnimation;
 @property (nonatomic) BOOL isReading;
 
@@ -80,9 +82,6 @@
         _scanImage = [UIImage imageNamed:@"img_animation_scan_pic" inBundle:[NSBundle bundleForClass:[PAQRCodeViewController class]] compatibleWithTraitCollection:nil];
         _lineImage = [UIImage imageNamed:@"img_animation_scan_line" inBundle:[NSBundle bundleForClass:[PAQRCodeViewController class]] compatibleWithTraitCollection:nil];
        
-        _albumButton = [[UIButton alloc]init];
-        _albumButton.titleLabel.text = @"Album";
-        [_albumButton addTarget:self action:@selector(pickImage) forControlEvents:UIControlEventAllEvents];
     }
     return self;
 }
@@ -120,10 +119,6 @@
     _imagePicker = [[UIImagePickerController alloc] init];
     _imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     _imagePicker.delegate = self;
-    
-    self.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationItem.title = @"Zplay Ads 可玩广告";
-    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     
     // Initially make the captureSession object nil.
     _captureSession = nil;
@@ -173,7 +168,7 @@
                                                                  toItem:_viewPreview
                                                               attribute:NSLayoutAttributeTop
                                                              multiplier:1.0
-                                                               constant:50.0]];
+                                                               constant:0.0]];
         [self.view addConstraint:[NSLayoutConstraint constraintWithItem:scanView
                                                               attribute:NSLayoutAttributeBottom
                                                               relatedBy:NSLayoutRelationEqual
@@ -197,16 +192,12 @@
                                                                constant:0.0]];
         
         CGFloat frameWidth = SCREEN_WIDTH * 2 / 3;
-        
         //create path
         UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         
         [path appendPath:[[UIBezierPath bezierPathWithRoundedRect:CGRectMake(SCREEN_WIDTH / 6, SCREEN_HEIGHT / 2 - SCREEN_WIDTH / 3, frameWidth, frameWidth) cornerRadius:0] bezierPathByReversingPath]];
-        
         CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-        
         shapeLayer.path = path.CGPath;
-        
         [scanView.layer setMask:shapeLayer];
         
         UIImageView * imageView = [[UIImageView alloc] init];
@@ -245,7 +236,162 @@
         [_lineImageView setFrame:_lineRect0];
         [_lineImageView setImage:_lineImage];
         [imageView addSubview:_lineImageView];
+        
+        [self addAlbumButtonConstraint];
+        [self addBottomLabelConstraint];
+        [self addTopLabelConstraint];
+        [self addWarningLabelConstraint];
     }
+}
+
+- (void)addAlbumButtonConstraint{
+    CGFloat frameWidth = SCREEN_WIDTH * 2 / 3;
+    
+    _albumButton = [[UIButton alloc]init];
+    _albumButton.titleLabel.font = [UIFont fontWithName:@"Arial" size:15];
+    //attribute
+    NSString *str = @"您可在Zplay Ads广告平台获得二维码或者前往相册选择二维码";
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc]initWithString:str];
+    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, str.length)];
+    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(25, 2)];
+    [_albumButton setAttributedTitle:attrStr forState:UIControlStateNormal];
+    
+    _albumButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    _albumButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    
+    [_albumButton addTarget:self action:@selector(pickImage) forControlEvents:UIControlEventAllEvents];
+    [_albumButton setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:_albumButton];
+    
+    [_albumButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[_albumButton(==%f)]", 60.0]
+                                                                      options:0
+                                                                      metrics:0
+                                                                        views:@{@"_albumButton":_albumButton}]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[_albumButton(==%f)]", frameWidth]
+                                                                      options:0
+                                                                      metrics:0
+                                                                        views:@{@"_albumButton":_albumButton}]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_albumButton
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_viewPreview
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_albumButton
+                                                          attribute:NSLayoutAttributeCenterY
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_viewPreview
+                                                          attribute:NSLayoutAttributeCenterY
+                                                         multiplier:1.0
+                                                           constant:frameWidth/2 + 30]];
+}
+
+- (void)addBottomLabelConstraint{
+    _bottomLabel = [[UILabel alloc]init];
+    _bottomLabel.text = @"© 2010 ～ 2017 Power By Zplay Ads";
+    _bottomLabel.font = [UIFont fontWithName:@"Arial" size:12];
+    _bottomLabel.textColor = [UIColor whiteColor];
+    _bottomLabel.textAlignment = NSTextAlignmentCenter;
+    _bottomLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
+    [self.view addSubview:_bottomLabel];
+    
+    [_bottomLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[_bottomLabel(==%f)]", 30.0]
+                                                                      options:0
+                                                                      metrics:0
+                                                                        views:@{@"_bottomLabel":_bottomLabel}]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[_bottomLabel(==%f)]", SCREEN_WIDTH]
+                                                                      options:0
+                                                                      metrics:0
+                                                                        views:@{@"_bottomLabel":_bottomLabel}]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_bottomLabel
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_bottomLabel
+                                                          attribute:NSLayoutAttributeBottom
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeBottom
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+}
+
+- (void)addTopLabelConstraint{
+    _topLabel = [[UILabel alloc]init];
+    _topLabel.text = @"Zplay Ads 可玩广告";
+    _topLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
+    _topLabel.textColor = [UIColor whiteColor];
+    _topLabel.textAlignment = NSTextAlignmentCenter;
+    _topLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
+    [self.view addSubview:_topLabel];
+    
+    [_topLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[_topLabel(==%f)]", 60.0]
+                                                                      options:0
+                                                                      metrics:0
+                                                                        views:@{@"_topLabel":_topLabel}]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[_topLabel(==%f)]", SCREEN_WIDTH]
+                                                                      options:0
+                                                                      metrics:0
+                                                                        views:@{@"_topLabel":_topLabel}]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_topLabel
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_topLabel
+                                                          attribute:NSLayoutAttributeTop
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeTop
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+}
+
+- (void)addWarningLabelConstraint{
+    CGFloat frameWidth = SCREEN_WIDTH * 2 / 3;
+    
+    _warningLabel = [[UILabel alloc]init];
+    _warningLabel.text = @"将二维码／条码放入框内，即可自动扫描";
+    _warningLabel.font = [UIFont fontWithName:@"Arial" size:15];
+    _warningLabel.textColor = [UIColor whiteColor];
+    _warningLabel.textAlignment = NSTextAlignmentCenter;
+    _warningLabel.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:_warningLabel];
+    
+    [_warningLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[_warningLabel(==%f)]", 30.0]
+                                                                      options:0
+                                                                      metrics:0
+                                                                        views:@{@"_warningLabel":_warningLabel}]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[_warningLabel(==%f)]", frameWidth]
+                                                                      options:0
+                                                                      metrics:0
+                                                                        views:@{@"_warningLabel":_warningLabel}]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_warningLabel
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_viewPreview
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_warningLabel
+                                                          attribute:NSLayoutAttributeCenterY
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_viewPreview
+                                                          attribute:NSLayoutAttributeCenterY
+                                                         multiplier:1.0
+                                                           constant:-(frameWidth/2)-15]];
+    
 }
 
 - (void)cancel{
@@ -305,7 +451,7 @@
             dispatch_queue_t dispatchQueue;
             dispatchQueue = dispatch_queue_create("myQueue", NULL);
             [captureMetadataOutput setMetadataObjectsDelegate:self queue:dispatchQueue];
-            [captureMetadataOutput setMetadataObjectTypes:[NSArray arrayWithObject:AVMetadataObjectTypeQRCode]];
+            [captureMetadataOutput setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code]];
             
             _videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_captureSession];
             [_videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
@@ -358,6 +504,7 @@
                     [self dealWithResult:[metadataObj stringValue]];
                 }
             };
+            
             if ([NSThread isMainThread]) {
                 block();
             } else {

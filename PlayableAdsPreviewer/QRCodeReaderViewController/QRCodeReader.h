@@ -24,8 +24,8 @@
  *
  */
 
-#import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 /**
@@ -86,7 +86,7 @@
  * process.
  * @since 3.0.0
  */
-@property (strong, nonatomic, readonly) NSArray * _Nonnull metadataObjectTypes;
+@property (strong, nonatomic, readonly) NSArray *_Nonnull metadataObjectTypes;
 
 #pragma mark - Viewing the Camera
 /** @name Viewing the Camera */
@@ -96,7 +96,7 @@
  * by an input device.
  * @since 3.0.0
  */
-@property (strong, nonatomic, readonly) AVCaptureVideoPreviewLayer * _Nonnull previewLayer;
+@property (strong, nonatomic, readonly) AVCaptureVideoPreviewLayer *_Nonnull previewLayer;
 
 #pragma mark - Controlling the Reader
 /** @name Controlling the Reader */
@@ -153,18 +153,18 @@
 /** @name Getting Inputs and Outputs */
 
 /**
- * @abstract Accessing to the `AVCaptureDeviceInput` object representing 
+ * @abstract Accessing to the `AVCaptureDeviceInput` object representing
  * the default device input (generally the back camera).
  * @since 3.5.0
  */
-@property (readonly) AVCaptureDeviceInput * _Nonnull defaultDeviceInput;
+@property (readonly) AVCaptureDeviceInput *_Nonnull defaultDeviceInput;
 
 /**
  * @abstract Accessing to the `AVCaptureDeviceInput` object representing
  * the front device input.
  * @since 3.5.0
  */
-@property (readonly) AVCaptureDeviceInput * _Nullable frontDeviceInput;
+@property (readonly) AVCaptureDeviceInput *_Nullable frontDeviceInput;
 
 /**
  * @abstract Accessing to the `AVCaptureMetadataOutput` object.
@@ -172,7 +172,7 @@
  * the scan to the overlay one for example.
  * @since 3.5.0
  */
-@property (readonly) AVCaptureMetadataOutput * _Nonnull metadataOutput;
+@property (readonly) AVCaptureMetadataOutput *_Nonnull metadataOutput;
 
 #pragma mark - Managing the Orientation
 /** @name Managing the Orientation */
@@ -198,6 +198,6 @@
  * is nil.
  * @since 3.0.0
  */
-- (void)setCompletionWithBlock:(nullable void (^) (NSString * _Nullable resultAsString))completionBlock;
+- (void)setCompletionWithBlock:(nullable void (^)(NSString *_Nullable resultAsString))completionBlock;
 
 @end

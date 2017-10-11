@@ -9,49 +9,42 @@
 
 @implementation QRPhotoAlbumButton
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
-        _edgeColor            = [UIColor whiteColor];
-        _fillColor            = [UIColor darkGrayColor];
+        _edgeColor = [UIColor whiteColor];
+        _fillColor = [UIColor darkGrayColor];
         _edgeHighlightedColor = [UIColor whiteColor];
         _fillHighlightedColor = [UIColor blackColor];
     }
     return self;
 }
 
-- (void)drawRect:(CGRect)rect
-{
-
+- (void)drawRect:(CGRect)rect {
 }
 
 // MARK: - UIResponder Methods
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    
+
     [self setNeedsDisplay];
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesMoved:touches withEvent:event];
-    
+
     [self setNeedsDisplay];
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesEnded:touches withEvent:event];
-    
+
     [self setNeedsDisplay];
 }
 
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesCancelled:touches withEvent:event];
-    
+
     [self setNeedsDisplay];
 }
 

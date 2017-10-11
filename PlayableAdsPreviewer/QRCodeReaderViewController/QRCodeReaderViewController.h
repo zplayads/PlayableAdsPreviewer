@@ -24,9 +24,9 @@
  *
  */
 
-#import <UIKit/UIKit.h>
-#import "QRCodeReaderDelegate.h"
 #import "QRCodeReader.h"
+#import "QRCodeReaderDelegate.h"
+#import <UIKit/UIKit.h>
 
 /**
  * Convenient controller to display a view to scan/read 1D or 2D bar codes like
@@ -86,7 +86,8 @@
  * @see initWithCancelButtonTitle:codeReader:
  * @since 2.0.0
  */
-- (nonnull id)initWithCancelButtonTitle:(nullable NSString *)cancelTitle metadataObjectTypes:(nonnull NSArray *)metadataObjectTypes;
+- (nonnull id)initWithCancelButtonTitle:(nullable NSString *)cancelTitle
+                    metadataObjectTypes:(nonnull NSArray *)metadataObjectTypes;
 
 /**
  * @abstract Creates a view controller to read wanted metadata object types
@@ -96,7 +97,8 @@
  * @see initWithCancelButtonTitle:metadataObjectTypes:
  * @since 2.0.0
  */
-+ (nonnull instancetype)readerWithCancelButtonTitle:(nullable NSString *)cancelTitle metadataObjectTypes:(nonnull NSArray *)metadataObjectTypes;
++ (nonnull instancetype)readerWithCancelButtonTitle:(nullable NSString *)cancelTitle
+                                metadataObjectTypes:(nonnull NSArray *)metadataObjectTypes;
 
 /**
  * @abstract Initializes a view controller using a cancel button title and
@@ -116,7 +118,8 @@
  * @see initWithCancelButtonTitle:codeReader:
  * @since 3.0.0
  */
-+ (nonnull instancetype)readerWithCancelButtonTitle:(nullable NSString *)cancelTitle codeReader:(nonnull QRCodeReader *)codeReader;
++ (nonnull instancetype)readerWithCancelButtonTitle:(nullable NSString *)cancelTitle
+                                         codeReader:(nonnull QRCodeReader *)codeReader;
 
 /**
  * @abstract Initializes a view controller using a cancel button title and
@@ -128,7 +131,9 @@
  * @see initWithCancelButtonTitle:codeReader:
  * @since 3.0.0
  */
-- (nonnull id)initWithCancelButtonTitle:(nullable NSString *)cancelTitle codeReader:(nonnull QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad;
+- (nonnull id)initWithCancelButtonTitle:(nullable NSString *)cancelTitle
+                             codeReader:(nonnull QRCodeReader *)codeReader
+                    startScanningAtLoad:(BOOL)startScanningAtLoad;
 
 /**
  * @abstract Initializes a view controller using a cancel button title and
@@ -140,7 +145,9 @@
  * @see initWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:
  * @since 3.0.0
  */
-+ (nonnull instancetype)readerWithCancelButtonTitle:(nullable NSString *)cancelTitle codeReader:(nonnull QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad;
++ (nonnull instancetype)readerWithCancelButtonTitle:(nullable NSString *)cancelTitle
+                                         codeReader:(nonnull QRCodeReader *)codeReader
+                                startScanningAtLoad:(BOOL)startScanningAtLoad;
 
 /**
  * @abstract Initializes a view controller using a cancel button title and
@@ -154,7 +161,11 @@
  * scanning the codes when the view will appear.
  * @since 4.0.0
  */
-- (nonnull id)initWithCancelButtonTitle:(nullable NSString *)cancelTitle codeReader:(nonnull QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad showSwitchCameraButton:(BOOL)showSwitchCameraButton showTorchButton:(BOOL)showTorchButton;
+- (nonnull id)initWithCancelButtonTitle:(nullable NSString *)cancelTitle
+                             codeReader:(nonnull QRCodeReader *)codeReader
+                    startScanningAtLoad:(BOOL)startScanningAtLoad
+                 showSwitchCameraButton:(BOOL)showSwitchCameraButton
+                        showTorchButton:(BOOL)showTorchButton;
 
 /**
  * @abstract Initializes a view controller using a cancel button title and
@@ -169,7 +180,11 @@
  * @see initWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:
  * @since 4.0.0
  */
-+ (nonnull instancetype)readerWithCancelButtonTitle:(nullable NSString *)cancelTitle codeReader:(nonnull QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad showSwitchCameraButton:(BOOL)showSwitchCameraButton showTorchButton:(BOOL)showTorchButton;
++ (nonnull instancetype)readerWithCancelButtonTitle:(nullable NSString *)cancelTitle
+                                         codeReader:(nonnull QRCodeReader *)codeReader
+                                startScanningAtLoad:(BOOL)startScanningAtLoad
+                             showSwitchCameraButton:(BOOL)showSwitchCameraButton
+                                    showTorchButton:(BOOL)showTorchButton;
 
 #pragma mark - Controlling the Reader
 /** @name Controlling the Reader */
@@ -205,7 +220,7 @@
  * is nil.
  * @since 1.0.1
  */
-- (void)setCompletionWithBlock:(nullable void (^) (NSString * __nullable resultAsString))completionBlock;
+- (void)setCompletionWithBlock:(nullable void (^)(NSString *__nullable resultAsString))completionBlock;
 
 #pragma mark - Managing the Reader
 /** @name Managing the Reader */
@@ -214,6 +229,6 @@
  * @abstract The default code reader created with the controller.
  * @since 3.0.0
  */
-@property (strong, nonatomic, readonly) QRCodeReader * __nonnull codeReader;
+@property (strong, nonatomic, readonly) QRCodeReader *__nonnull codeReader;
 
 @end

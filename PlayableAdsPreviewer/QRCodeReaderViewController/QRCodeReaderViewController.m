@@ -27,324 +27,357 @@
 #import "QRCodeReaderViewController.h"
 #import "QRCameraSwitchButton.h"
 #import "QRCodeReaderView.h"
-#import "QRToggleTorchButton.h"
 #import "QRPhotoAlbumButton.h"
+#import "QRToggleTorchButton.h"
 #import <TSMessages/TSMessage.h>
 
-@interface QRCodeReaderViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface QRCodeReaderViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) QRCameraSwitchButton *switchCameraButton;
 @property (strong, nonatomic) QRToggleTorchButton *toggleTorchButton;
 @property (strong, nonatomic) QRPhotoAlbumButton *photoAlbumButton;
-@property (strong, nonatomic) QRCodeReaderView     *cameraView;
-@property (strong, nonatomic) UIButton             *cancelButton;
-@property (strong, nonatomic) QRCodeReader         *codeReader;
-@property (assign, nonatomic) BOOL                 startScanningAtLoad;
-@property (assign, nonatomic) BOOL                 showSwitchCameraButton;
-@property (assign, nonatomic) BOOL                 showTorchButton;
+@property (strong, nonatomic) QRCodeReaderView *cameraView;
+@property (strong, nonatomic) UIButton *cancelButton;
+@property (strong, nonatomic) QRCodeReader *codeReader;
+@property (assign, nonatomic) BOOL startScanningAtLoad;
+@property (assign, nonatomic) BOOL showSwitchCameraButton;
+@property (assign, nonatomic) BOOL showTorchButton;
 
-@property (copy, nonatomic) void (^completionBlock) (NSString * __nullable);
+@property (copy, nonatomic) void (^completionBlock)(NSString *__nullable);
 
 @end
 
 @implementation QRCodeReaderViewController
 
-- (void)dealloc
-{
-  [self stopScanning];
+- (void)dealloc {
+    [self stopScanning];
 
-  [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (id)init
-{
-  return [self initWithCancelButtonTitle:nil];
+- (id)init {
+    return [self initWithCancelButtonTitle:nil];
+}
+
+- (id)initWithCancelButtonTitle:(NSString *)cancelTitle {
+    return [self initWithCancelButtonTitle:cancelTitle metadataObjectTypes:@[ AVMetadataObjectTypeQRCode ]];
+}
+
+- (id)initWithMetadataObjectTypes:(NSArray *)metadataObjectTypes {
+    return [self initWithCancelButtonTitle:nil metadataObjectTypes:metadataObjectTypes];
+}
+
+- (id)initWithCancelButtonTitle:(NSString *)cancelTitle metadataObjectTypes:(NSArray *)metadataObjectTypes {
+    QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:metadataObjectTypes];
+
+    return [self initWithCancelButtonTitle:cancelTitle codeReader:reader];
+}
+
+- (id)initWithCancelButtonTitle:(NSString *)cancelTitle codeReader:(QRCodeReader *)codeReader {
+    return [self initWithCancelButtonTitle:cancelTitle codeReader:codeReader startScanningAtLoad:true];
 }
 
 - (id)initWithCancelButtonTitle:(NSString *)cancelTitle
-{
-  return [self initWithCancelButtonTitle:cancelTitle metadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+                     codeReader:(QRCodeReader *)codeReader
+            startScanningAtLoad:(BOOL)startScanningAtLoad {
+    return [self initWithCancelButtonTitle:cancelTitle
+                                codeReader:codeReader
+                       startScanningAtLoad:startScanningAtLoad
+                    showSwitchCameraButton:YES
+                           showTorchButton:NO];
 }
 
-- (id)initWithMetadataObjectTypes:(NSArray *)metadataObjectTypes
-{
-  return [self initWithCancelButtonTitle:nil metadataObjectTypes:metadataObjectTypes];
-}
+- (id)initWithCancelButtonTitle:(nullable NSString *)cancelTitle
+                     codeReader:(nonnull QRCodeReader *)codeReader
+            startScanningAtLoad:(BOOL)startScanningAtLoad
+         showSwitchCameraButton:(BOOL)showSwitchCameraButton
+                showTorchButton:(BOOL)showTorchButton {
+    if ((self = [super init])) {
+        self.view.backgroundColor = [UIColor blackColor];
+        self.codeReader = codeReader;
+        self.startScanningAtLoad = startScanningAtLoad;
+        self.showSwitchCameraButton = showSwitchCameraButton;
+        self.showTorchButton = showTorchButton;
 
-- (id)initWithCancelButtonTitle:(NSString *)cancelTitle metadataObjectTypes:(NSArray *)metadataObjectTypes
-{
-  QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:metadataObjectTypes];
+        if (cancelTitle == nil) {
+            cancelTitle = NSLocalizedString(@"Cancel", @"Cancel");
+        }
 
-  return [self initWithCancelButtonTitle:cancelTitle codeReader:reader];
-}
+        [self setupUIComponentsWithCancelButtonTitle:cancelTitle];
+        [self setupAutoLayoutConstraints];
 
-- (id)initWithCancelButtonTitle:(NSString *)cancelTitle codeReader:(QRCodeReader *)codeReader
-{
-  return [self initWithCancelButtonTitle:cancelTitle codeReader:codeReader startScanningAtLoad:true];
-}
+        [_cameraView.layer insertSublayer:_codeReader.previewLayer atIndex:0];
 
-- (id)initWithCancelButtonTitle:(NSString *)cancelTitle codeReader:(QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad
-{
-  return [self initWithCancelButtonTitle:cancelTitle codeReader:codeReader startScanningAtLoad:startScanningAtLoad showSwitchCameraButton:YES showTorchButton:NO];
-}
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(orientationChanged:)
+                                                     name:UIApplicationDidChangeStatusBarOrientationNotification
+                                                   object:nil];
 
-- (id)initWithCancelButtonTitle:(nullable NSString *)cancelTitle codeReader:(nonnull QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad showSwitchCameraButton:(BOOL)showSwitchCameraButton showTorchButton:(BOOL)showTorchButton
-{
-  if ((self = [super init])) {
-    self.view.backgroundColor   = [UIColor blackColor];
-    self.codeReader             = codeReader;
-    self.startScanningAtLoad    = startScanningAtLoad;
-    self.showSwitchCameraButton = showSwitchCameraButton;
-    self.showTorchButton        = showTorchButton;
+        __weak __typeof__(self) weakSelf = self;
 
-    if (cancelTitle == nil) {
-      cancelTitle = NSLocalizedString(@"Cancel", @"Cancel");
+        [codeReader setCompletionWithBlock:^(NSString *resultAsString) {
+            if (weakSelf.completionBlock != nil) {
+                weakSelf.completionBlock(resultAsString);
+            }
+
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(reader:didScanResult:)]) {
+                [weakSelf.delegate reader:weakSelf didScanResult:resultAsString];
+            }
+        }];
     }
+    return self;
+}
 
-    [self setupUIComponentsWithCancelButtonTitle:cancelTitle];
-    [self setupAutoLayoutConstraints];
++ (instancetype)readerWithCancelButtonTitle:(NSString *)cancelTitle {
+    return [[self alloc] initWithCancelButtonTitle:cancelTitle];
+}
 
-    [_cameraView.layer insertSublayer:_codeReader.previewLayer atIndex:0];
++ (instancetype)readerWithMetadataObjectTypes:(NSArray *)metadataObjectTypes {
+    return [[self alloc] initWithMetadataObjectTypes:metadataObjectTypes];
+}
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
++ (instancetype)readerWithCancelButtonTitle:(NSString *)cancelTitle metadataObjectTypes:(NSArray *)metadataObjectTypes {
+    return [[self alloc] initWithCancelButtonTitle:cancelTitle metadataObjectTypes:metadataObjectTypes];
+}
 
-    __weak __typeof__(self) weakSelf = self;
-
-    [codeReader setCompletionWithBlock:^(NSString *resultAsString) {
-      if (weakSelf.completionBlock != nil) {
-        weakSelf.completionBlock(resultAsString);
-      }
-
-      if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(reader:didScanResult:)]) {
-        [weakSelf.delegate reader:weakSelf didScanResult:resultAsString];
-      }
-    }];
-  }
-  return self;
++ (instancetype)readerWithCancelButtonTitle:(NSString *)cancelTitle codeReader:(QRCodeReader *)codeReader {
+    return [[self alloc] initWithCancelButtonTitle:cancelTitle codeReader:codeReader];
 }
 
 + (instancetype)readerWithCancelButtonTitle:(NSString *)cancelTitle
-{
-  return [[self alloc] initWithCancelButtonTitle:cancelTitle];
+                                 codeReader:(QRCodeReader *)codeReader
+                        startScanningAtLoad:(BOOL)startScanningAtLoad {
+    return [[self alloc] initWithCancelButtonTitle:cancelTitle
+                                        codeReader:codeReader
+                               startScanningAtLoad:startScanningAtLoad];
 }
 
-+ (instancetype)readerWithMetadataObjectTypes:(NSArray *)metadataObjectTypes
-{
-  return [[self alloc] initWithMetadataObjectTypes:metadataObjectTypes];
++ (instancetype)readerWithCancelButtonTitle:(NSString *)cancelTitle
+                                 codeReader:(QRCodeReader *)codeReader
+                        startScanningAtLoad:(BOOL)startScanningAtLoad
+                     showSwitchCameraButton:(BOOL)showSwitchCameraButton
+                            showTorchButton:(BOOL)showTorchButton {
+    return [[self alloc] initWithCancelButtonTitle:cancelTitle
+                                        codeReader:codeReader
+                               startScanningAtLoad:startScanningAtLoad
+                            showSwitchCameraButton:showSwitchCameraButton
+                                   showTorchButton:showTorchButton];
 }
 
-+ (instancetype)readerWithCancelButtonTitle:(NSString *)cancelTitle metadataObjectTypes:(NSArray *)metadataObjectTypes
-{
-  return [[self alloc] initWithCancelButtonTitle:cancelTitle metadataObjectTypes:metadataObjectTypes];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    if (_startScanningAtLoad) {
+        [self startScanning];
+    }
 }
 
-+ (instancetype)readerWithCancelButtonTitle:(NSString *)cancelTitle codeReader:(QRCodeReader *)codeReader
-{
-  return [[self alloc] initWithCancelButtonTitle:cancelTitle codeReader:codeReader];
+- (void)viewWillDisappear:(BOOL)animated {
+    [self stopScanning];
+
+    [super viewWillDisappear:animated];
 }
 
-+ (instancetype)readerWithCancelButtonTitle:(NSString *)cancelTitle codeReader:(QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad
-{
-  return [[self alloc] initWithCancelButtonTitle:cancelTitle codeReader:codeReader startScanningAtLoad:startScanningAtLoad];
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+
+    _codeReader.previewLayer.frame = self.view.bounds;
 }
 
-+ (instancetype)readerWithCancelButtonTitle:(NSString *)cancelTitle codeReader:(QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad showSwitchCameraButton:(BOOL)showSwitchCameraButton showTorchButton:(BOOL)showTorchButton
-{
-  return [[self alloc] initWithCancelButtonTitle:cancelTitle codeReader:codeReader startScanningAtLoad:startScanningAtLoad showSwitchCameraButton:showSwitchCameraButton showTorchButton:showTorchButton];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-  [super viewWillAppear:animated];
-
-  if (_startScanningAtLoad) {
-    [self startScanning];
-  }
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-  [self stopScanning];
-
-  [super viewWillDisappear:animated];
-}
-
-- (void)viewWillLayoutSubviews
-{
-  [super viewWillLayoutSubviews];
-
-  _codeReader.previewLayer.frame = self.view.bounds;
-}
-
-- (BOOL)shouldAutorotate
-{
-  return YES;
+- (BOOL)shouldAutorotate {
+    return YES;
 }
 
 #pragma mark - Controlling the Reader
 
 - (void)startScanning {
-  [_codeReader startScanning];
+    [_codeReader startScanning];
 }
 
 - (void)stopScanning {
-  [_codeReader stopScanning];
+    [_codeReader stopScanning];
 }
 
 #pragma mark - Managing the Orientation
 
-- (void)orientationChanged:(NSNotification *)notification
-{
-  [_cameraView setNeedsDisplay];
+- (void)orientationChanged:(NSNotification *)notification {
+    [_cameraView setNeedsDisplay];
 
-  if (_codeReader.previewLayer.connection.isVideoOrientationSupported) {
-    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (_codeReader.previewLayer.connection.isVideoOrientationSupported) {
+        UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
 
-    _codeReader.previewLayer.connection.videoOrientation = [QRCodeReader videoOrientationFromInterfaceOrientation:
-                                                            orientation];
-  }
+        _codeReader.previewLayer.connection.videoOrientation =
+            [QRCodeReader videoOrientationFromInterfaceOrientation:orientation];
+    }
 }
 
 #pragma mark - Managing the Block
 
-- (void)setCompletionWithBlock:(void (^) (NSString *resultAsString))completionBlock
-{
-  self.completionBlock = completionBlock;
+- (void)setCompletionWithBlock:(void (^)(NSString *resultAsString))completionBlock {
+    self.completionBlock = completionBlock;
 }
 
 #pragma mark - Initializing the AV Components
 
-- (void)setupUIComponentsWithCancelButtonTitle:(NSString *)cancelButtonTitle
-{
-  self.cameraView                                       = [[QRCodeReaderView alloc] init];
-  _cameraView.translatesAutoresizingMaskIntoConstraints = NO;
-  _cameraView.clipsToBounds                             = YES;
-  [self.view addSubview:_cameraView];
+- (void)setupUIComponentsWithCancelButtonTitle:(NSString *)cancelButtonTitle {
+    self.cameraView = [[QRCodeReaderView alloc] init];
+    _cameraView.translatesAutoresizingMaskIntoConstraints = NO;
+    _cameraView.clipsToBounds = YES;
+    [self.view addSubview:_cameraView];
 
-  [_codeReader.previewLayer setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [_codeReader.previewLayer setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 
-  if ([_codeReader.previewLayer.connection isVideoOrientationSupported]) {
-    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if ([_codeReader.previewLayer.connection isVideoOrientationSupported]) {
+        UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
 
-    _codeReader.previewLayer.connection.videoOrientation = [QRCodeReader videoOrientationFromInterfaceOrientation:orientation];
-  }
+        _codeReader.previewLayer.connection.videoOrientation =
+            [QRCodeReader videoOrientationFromInterfaceOrientation:orientation];
+    }
 
-  if (_showSwitchCameraButton && [_codeReader hasFrontDevice]) {
-    _switchCameraButton = [[QRCameraSwitchButton alloc] init];
-    
-    [_switchCameraButton setTranslatesAutoresizingMaskIntoConstraints:false];
-    [_switchCameraButton addTarget:self action:@selector(switchCameraAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_switchCameraButton];
-  }
+    if (_showSwitchCameraButton && [_codeReader hasFrontDevice]) {
+        _switchCameraButton = [[QRCameraSwitchButton alloc] init];
 
-  if (_showTorchButton && [_codeReader isTorchAvailable]) {
-    _toggleTorchButton = [[QRToggleTorchButton alloc] init];
+        [_switchCameraButton setTranslatesAutoresizingMaskIntoConstraints:false];
+        [_switchCameraButton addTarget:self
+                                action:@selector(switchCameraAction:)
+                      forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_switchCameraButton];
+    }
 
-    [_toggleTorchButton setTranslatesAutoresizingMaskIntoConstraints:false];
-    [_toggleTorchButton addTarget:self action:@selector(toggleTorchAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_toggleTorchButton];
-  }
-    
-    _photoAlbumButton = [[QRPhotoAlbumButton alloc]init];
-    [_photoAlbumButton setTranslatesAutoresizingMaskIntoConstraints:false];
-    [_photoAlbumButton setTitle:@"album" forState:UIControlStateNormal];
-    _photoAlbumButton.layer.cornerRadius = 10;
-    _photoAlbumButton.layer.masksToBounds = YES;
-    _photoAlbumButton.layer.borderColor = [[UIColor whiteColor] CGColor];
-    _photoAlbumButton.layer.borderWidth = 2;
-    _photoAlbumButton.backgroundColor = [UIColor grayColor];
-    [_photoAlbumButton addTarget:self action:@selector(openPhotoAlbum) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_photoAlbumButton];
+    if (_showTorchButton && [_codeReader isTorchAvailable]) {
+        _toggleTorchButton = [[QRToggleTorchButton alloc] init];
 
-  self.cancelButton                                       = [[UIButton alloc] init];
-  _cancelButton.translatesAutoresizingMaskIntoConstraints = NO;
-  [_cancelButton setTitle:cancelButtonTitle forState:UIControlStateNormal];
-  [_cancelButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-  [_cancelButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
-  [self.view addSubview:_cancelButton];
+        [_toggleTorchButton setTranslatesAutoresizingMaskIntoConstraints:false];
+        [_toggleTorchButton addTarget:self
+                               action:@selector(toggleTorchAction:)
+                     forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_toggleTorchButton];
+    }
+
+    self.cancelButton = [[UIButton alloc] init];
+    _cancelButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [_cancelButton setTitle:cancelButtonTitle forState:UIControlStateNormal];
+    [_cancelButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [_cancelButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_cancelButton];
 }
 
-- (void)setupAutoLayoutConstraints
-{
-  NSDictionary *views = NSDictionaryOfVariableBindings(_cameraView, _cancelButton);
+- (void)setupAutoLayoutConstraints {
+    NSDictionary *views = NSDictionaryOfVariableBindings(_cameraView, _cancelButton);
 
-  [self.view addConstraints:
-   [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_cameraView][_cancelButton(40)]|" options:0 metrics:nil views:views]];
-  [self.view addConstraints:
-   [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_cameraView]|" options:0 metrics:nil views:views]];
-  [self.view addConstraints:
-   [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_cancelButton]-|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_cameraView][_cancelButton(40)]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_cameraView]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_cancelButton]-|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
 
-  id topLayoutGuide = self.topLayoutGuide;
+    id topLayoutGuide = self.topLayoutGuide;
 
-  if (_toggleTorchButton) {
-    NSDictionary *torchViews = NSDictionaryOfVariableBindings(_toggleTorchButton, topLayoutGuide);
+    if (_toggleTorchButton) {
+        NSDictionary *torchViews = NSDictionaryOfVariableBindings(_toggleTorchButton, topLayoutGuide);
+        NSDictionary *views = NSDictionaryOfVariableBindings(_cameraView, _cancelButton);
 
-    [self.view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide]-[_toggleTorchButton(50)]" options:0 metrics:nil views:torchViews]];
-    [self.view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_toggleTorchButton(70)]" options:0 metrics:nil views:torchViews]];
-  }
-    if (_photoAlbumButton) {
-        NSDictionary *photoViews = NSDictionaryOfVariableBindings(_photoAlbumButton,topLayoutGuide);
-        [self.view addConstraints:
-         [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide]-20-[_photoAlbumButton(30)]" options:0 metrics:nil views:photoViews]];
-        [self.view addConstraints:
-         [NSLayoutConstraint constraintsWithVisualFormat:@"H:[_photoAlbumButton(70)]|" options:0 metrics:nil views:photoViews]];
-        
+        [self.view addConstraints:[NSLayoutConstraint
+                                      constraintsWithVisualFormat:@"V:[topLayoutGuide]-[_toggleTorchButton(50)]"
+                                                          options:0
+                                                          metrics:nil
+                                                            views:torchViews]];
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_cameraView][_cancelButton(40)]|" options:0 metrics:nil views:views]];
+     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_toggleTorchButton(70)]"
+                                                                       options:0
+                                                                       metrics:nil
+                                                                         views:torchViews]];
     }
-    if (_switchCameraButton) {
-        NSDictionary *switchViews = NSDictionaryOfVariableBindings(_switchCameraButton, topLayoutGuide);
-        
-        [self.view addConstraints:
-         [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide]-[_switchCameraButton(50)]" options:0 metrics:nil views:switchViews]];
-        [self.view addConstraints:
-         [NSLayoutConstraint constraintsWithVisualFormat:@"H:[_switchCameraButton(70)]" options:0 metrics:nil views:switchViews]];
-        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_switchCameraButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
-    }
+     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_cameraView]|" options:0 metrics:nil views:views]];
+     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_cancelButton]-|"
+                                                                       options:0
+                                                                       metrics:nil
+                                                                         views:views]];
+
+     id topLayoutGuide = self.topLayoutGuide;
+
+     if (_switchCameraButton) {
+         NSDictionary *switchViews = NSDictionaryOfVariableBindings(_switchCameraButton, topLayoutGuide);
+
+         [self.view addConstraints:[NSLayoutConstraint
+                                       constraintsWithVisualFormat:@"V:[topLayoutGuide]-[_switchCameraButton(50)]"
+                                                           options:0
+                                                           metrics:nil
+                                                             views:switchViews]];
+         [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_switchCameraButton(70)]"
+                                                                           options:0
+                                                                           metrics:nil
+                                                                             views:switchViews]];
+         [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_switchCameraButton
+                                                               attribute:NSLayoutAttributeCenterX
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.view
+                                                               attribute:NSLayoutAttributeCenterX
+                                                              multiplier:1
+                                                                constant:0]];
+         [NSLayoutConstraint constraintsWithVisualFormat:@"H:[_switchCameraButton(70)]|" options:0 metrics:nil views:switchViews]];
+     }
+
+     if (_toggleTorchButton) {
+         NSDictionary *torchViews = NSDictionaryOfVariableBindings(_toggleTorchButton, topLayoutGuide);
+
+         [self.view addConstraints:[NSLayoutConstraint
+                                       constraintsWithVisualFormat:@"V:[topLayoutGuide]-[_toggleTorchButton(50)]"
+                                                           options:0
+                                                           metrics:nil
+                                                             views:torchViews]];
+         [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_toggleTorchButton(70)]"
+                                                                           options:0
+                                                                           metrics:nil
+                                                                             views:torchViews]];
+     }
 }
 
-- (void)switchDeviceInput
-{
-  [_codeReader switchDeviceInput];
+- (void)switchDeviceInput {
+    [_codeReader switchDeviceInput];
 }
 
 #pragma mark - Catching Button Events
 
-- (void)cancelAction:(UIButton *)button
-{
-  [_codeReader stopScanning];
+- (void)cancelAction:(UIButton *)button {
+    [_codeReader stopScanning];
 
-  if (_completionBlock) {
-    _completionBlock(nil);
-  }
+    if (_completionBlock) {
+        _completionBlock(nil);
+    }
 
-  if (_delegate && [_delegate respondsToSelector:@selector(readerDidCancel:)]) {
-    [_delegate readerDidCancel:self];
-  }
+    if (_delegate && [_delegate respondsToSelector:@selector(readerDidCancel:)]) {
+        [_delegate readerDidCancel:self];
+    }
 }
 
-- (void)switchCameraAction:(UIButton *)button
-{
-  [self switchDeviceInput];
+- (void)switchCameraAction:(UIButton *)button {
+    [self switchDeviceInput];
 }
 
-- (void)toggleTorchAction:(UIButton *)button
-{
-  [_codeReader toggleTorch];
+- (void)toggleTorchAction:(UIButton *)button {
+    [_codeReader toggleTorch];
 }
 
-- (void)openPhotoAlbum{
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]){
+- (void)openPhotoAlbum {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
 
         UIImagePickerController *controller = [[UIImagePickerController alloc] init];
         controller.delegate = self;
         controller.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-        controller.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+        controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:controller animated:YES completion:NULL];
-        
-    }else{
+
+    } else {
         [TSMessage showNotificationInViewController:self
-                                              title:@"The device does not support access to the album, please set it in Settings -> privacy -> photos!"
+                                              title:@"The device does not support access to the album, please set it "
+                                                    @"in Settings -> privacy -> photos!"
                                            subtitle:nil
                                               image:nil
                                                type:TSMessageNotificationTypeWarning
@@ -358,32 +391,34 @@
 }
 
 #pragma mark-> imagePickerController delegate
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-    CIDetector*detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh }];
-    [picker dismissViewControllerAnimated:YES completion:^{
-        NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:image.CGImage]];
-        if (features.count >=1) {
-            CIQRCodeFeature *feature = [features objectAtIndex:0];
-            NSString *scannedResult = feature.messageString;
-            
-            [self.delegate reader:self didScanResult:scannedResult];
-        }
-        else{
-            [TSMessage showNotificationInViewController:self
-                                                  title:@"Warning"
-                                               subtitle:@"This image does not contain a QRCode!"
-                                                  image:nil
-                                                   type:TSMessageNotificationTypeWarning
-                                               duration:TSMessageNotificationDurationAutomatic
-                                               callback:nil
-                                            buttonTitle:nil
-                                         buttonCallback:nil
-                                             atPosition:TSMessageNotificationPositionTop
-                                   canBeDismissedByUser:YES];
-        }
-    }];
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode
+                                              context:nil
+                                              options:@{CIDetectorAccuracy : CIDetectorAccuracyHigh}];
+    [picker
+        dismissViewControllerAnimated:YES
+                           completion:^{
+                               NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:image.CGImage]];
+                               if (features.count >= 1) {
+                                   CIQRCodeFeature *feature = [features objectAtIndex:0];
+                                   NSString *scannedResult = feature.messageString;
+
+                                   [self.delegate reader:self didScanResult:scannedResult];
+                               } else {
+                                   [TSMessage showNotificationInViewController:self
+                                                                         title:@"Warning"
+                                                                      subtitle:@"This image does not contain a QRCode!"
+                                                                         image:nil
+                                                                          type:TSMessageNotificationTypeWarning
+                                                                      duration:TSMessageNotificationDurationAutomatic
+                                                                      callback:nil
+                                                                   buttonTitle:nil
+                                                                buttonCallback:nil
+                                                                    atPosition:TSMessageNotificationPositionTop
+                                                          canBeDismissedByUser:YES];
+                               }
+                           }];
 }
 
 @end

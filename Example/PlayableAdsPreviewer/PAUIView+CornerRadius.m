@@ -10,13 +10,11 @@
 
 @implementation UIView (CornerRadius)
 
-- (void)setCornerRadius:(CGFloat)cornerRadius
-{
+- (void)setCornerRadius:(CGFloat)cornerRadius {
     self.layer.cornerRadius = cornerRadius;
 }
 
-- (CGFloat)cornerRadius
-{
+- (CGFloat)cornerRadius {
     return self.layer.cornerRadius;
 }
 

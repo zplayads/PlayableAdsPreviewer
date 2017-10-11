@@ -410,13 +410,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PlayableAdsPreviewer_Example/Pods-PlayableAdsPreviewer_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
-				"${BUILT_PRODUCTS_DIR}/PlayableAdsPreviewerDemo/PlayableAdsPreviewerDemo.framework",
 				"${BUILT_PRODUCTS_DIR}/TSMessages/TSMessages.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayableAdsPreviewerDemo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSMessages.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

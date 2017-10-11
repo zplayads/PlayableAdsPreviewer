@@ -7,12 +7,11 @@
 //
 
 #import "PAViewController.h"
-#import "QRCodeReaderViewController.h"
 #import <PlayableAdsPreviewer/PlayableAdsPreviewer.h>
 #import <TSMessages/TSMessage.h>
 #import "PAQRCodeViewController.h"
 
-@interface PAViewController () <QRCodeReaderDelegate>
+@interface PAViewController ()
 
 @property (nonatomic) NSString *appID;
 @property (nonatomic) PlayableAdsPreviewer *previewer;

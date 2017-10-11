@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="wQg-tq-qST">
@@ -25,125 +20,8 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your App ID here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cev-Ww-djJ">
-                                <rect key="frame" x="87.5" y="80" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="FP8-ee-VhA"/>
-                                    <constraint firstAttribute="width" constant="200" id="Wbr-hM-tKh"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Ad URL Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsu-CZ-qtx">
-                                <rect key="frame" x="87.5" y="140" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="E6b-8z-ruS"/>
-                                    <constraint firstAttribute="width" constant="200" id="z0v-E0-7U1"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLN-NV-dsk">
-                                <rect key="frame" x="142.5" y="200" width="90" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="LJr-XN-WFN"/>
-                                    <constraint firstAttribute="height" constant="30" id="jAC-95-tmJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Request"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="requestButtonDidPress:" destination="whP-gf-Uak" eventType="touchUpInside" id="nZp-EM-e0f"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edq-BJ-TiX">
-                                <rect key="frame" x="32.5" y="200" width="80" height="30"/>
-                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4th-fl-nBj"/>
-                                    <constraint firstAttribute="width" constant="80" id="ar3-02-p4x"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Scan">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="hahaha"/>
-                                <state key="highlighted" title="Scan">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="scanButtonDidPress:" destination="whP-gf-Uak" eventType="touchUpInside" id="dCC-bd-wOi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fip-Le-hbb">
-                                <rect key="frame" x="262.5" y="200" width="80" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="RSU-Wf-riX"/>
-                                    <constraint firstAttribute="height" constant="30" id="hYy-gA-ml5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="StaticAd"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="staticAdButtonDidPress:" destination="whP-gf-Uak" eventType="touchUpInside" id="o77-ad-N2L"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Edq-BJ-TiX" firstAttribute="top" secondItem="hsu-CZ-qtx" secondAttribute="bottom" constant="30" id="7D8-MP-4TC"/>
-                            <constraint firstItem="tLN-NV-dsk" firstAttribute="leading" secondItem="Edq-BJ-TiX" secondAttribute="trailing" constant="30" id="NLY-OM-gtw"/>
-                            <constraint firstItem="Cev-Ww-djJ" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="60" id="ZLl-Ne-aUv"/>
-                            <constraint firstItem="Fip-Le-hbb" firstAttribute="top" secondItem="hsu-CZ-qtx" secondAttribute="bottom" constant="30" id="aUT-ue-oJu"/>
-                            <constraint firstItem="hsu-CZ-qtx" firstAttribute="top" secondItem="Cev-Ww-djJ" secondAttribute="bottom" constant="30" id="cYQ-AL-exN"/>
-                            <constraint firstItem="Fip-Le-hbb" firstAttribute="leading" secondItem="tLN-NV-dsk" secondAttribute="trailing" constant="30" id="ifM-4L-T5O"/>
-                            <constraint firstItem="hsu-CZ-qtx" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="mFq-YS-49e"/>
-                            <constraint firstItem="tLN-NV-dsk" firstAttribute="top" secondItem="hsu-CZ-qtx" secondAttribute="bottom" constant="30" id="nro-EV-joA"/>
-                            <constraint firstItem="Cev-Ww-djJ" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="oyv-Me-m0T"/>
-                            <constraint firstItem="tLN-NV-dsk" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="wBl-RR-8te"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="URLText" destination="hsu-CZ-qtx" id="d6f-e2-wBh"/>
-                        <outlet property="appIDText" destination="Cev-Ww-djJ" id="rFf-rp-zvD"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,0 +1,16 @@
+# Build your own clang-format here https://clangformat.com/
+# 
+ 
+# http://llvm.org/docs/CodingStandards.html
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+ColumnLimit: 120
+ObjCBlockIndentWidth: 4
+AllowShortIfStatementsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: false
+MaxEmptyLinesToKeep: 1
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+IndentCaseLabels: true
+BreakBeforeBraces: Attach
+ObjCSpaceAfterProperty: true

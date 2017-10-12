@@ -76,6 +76,7 @@
             [self startScan];
         }
         failure:^(NSError *_Nonnull error) {
+            [self startScan];
             [TSMessage showNotificationInViewController:self
                                                   title:@"Error"
                                                subtitle:nil

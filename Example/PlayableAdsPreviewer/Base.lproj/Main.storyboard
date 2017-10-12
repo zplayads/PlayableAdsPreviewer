@@ -20,8 +20,24 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-nh-S12">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="vBO-02-bCa"/>
+                                    <constraint firstAttribute="height" constant="200" id="vJs-H4-qpV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bfz-nh-S12" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="1wq-Qp-3ql"/>
+                            <constraint firstItem="Bfz-nh-S12" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="p6D-oQ-SyT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="QRImage" destination="Bfz-nh-S12" id="3wH-fz-v7X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

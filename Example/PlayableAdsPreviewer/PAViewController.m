@@ -16,6 +16,8 @@
 @property (nonatomic) NSString *appID;
 @property (nonatomic) PlayableAdsPreviewer *previewer;
 @property (nonatomic) PAQRCodeViewController *qrVC;
+@property (weak, nonatomic) IBOutlet UIImageView *QRImage;
+@property (nonatomic, assign) BOOL isShow;
 
 @end
 
@@ -23,8 +25,11 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    [self startScan];
+    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
+    if (!_isShow) {
+        [self startScan];
+        _isShow = YES;
+    }
 }
 
 - (void)startScan{
@@ -57,7 +62,7 @@
                                    canBeDismissedByUser:YES];
         }
     }];
-    [self presentViewController:self.qrVC animated:YES completion:NULL];
+    [self presentViewController:self.qrVC animated:NO completion:NULL];
 }
 
 - (void)requestAd {
@@ -65,6 +70,7 @@
         withAdID:self.appID
         success:^{
             [self.qrVC stop];
+            [self.qrVC cancel];
         }
         dismiss:^{
             [self startScan];
@@ -82,6 +88,18 @@
                                              atPosition:TSMessageNotificationPositionTop
                                    canBeDismissedByUser:YES];
         }];
+}
+
+- (void)createQRCodeImage{
+    UIImage *image = [[[PAQRCodeViewController alloc]init] generateQRCode:@"CABFFBFF-C5D6-D9B0-8A5C-60417538FC51" width:200.0 height:200.0];
+    self.QRImage.image = image;
+}
+
+- (PlayableAdsPreviewer *)previewer{
+    if (!_previewer) {
+        _previewer = [[PlayableAdsPreviewer alloc]init];
+    }
+    return _previewer;
 }
 
 @end

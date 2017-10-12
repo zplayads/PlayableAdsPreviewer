@@ -362,6 +362,7 @@
     
     _warningLabel = [[UILabel alloc]init];
     _warningLabel.text = @"将二维码／条码放入框内，即可自动扫描";
+    _warningLabel.numberOfLines = 0;
     _warningLabel.font = [UIFont fontWithName:@"Arial" size:15];
     _warningLabel.textColor = [UIColor whiteColor];
     _warningLabel.textAlignment = NSTextAlignmentCenter;
@@ -369,10 +370,7 @@
     [self.view addSubview:_warningLabel];
     
     [_warningLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[_warningLabel(==%f)]", 30.0]
-                                                                      options:0
-                                                                      metrics:0
-                                                                        views:@{@"_warningLabel":_warningLabel}]];
+    
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[_warningLabel(==%f)]", frameWidth]
                                                                       options:0
                                                                       metrics:0
@@ -390,8 +388,8 @@
                                                              toItem:_viewPreview
                                                           attribute:NSLayoutAttributeCenterY
                                                          multiplier:1.0
-                                                           constant:-(frameWidth/2)-15]];
-    
+                                                           constant:-(frameWidth/2)-17]];
+    [_warningLabel sizeToFit];
 }
 
 - (void)cancel{
@@ -516,4 +514,44 @@
     }
 }
 
+#pragma mark - 生成条形码以及二维码
+
+// 参考文档
+// https://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html
+
+- (UIImage *)generateQRCode:(NSString *)code width:(CGFloat)width height:(CGFloat)height {
+    
+    // 生成二维码图片
+    CIImage *qrcodeImage;
+    NSData *data = [code dataUsingEncoding:NSISOLatin1StringEncoding allowLossyConversion:false];
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    
+    [filter setValue:data forKey:@"inputMessage"];
+    [filter setValue:@"H" forKey:@"inputCorrectionLevel"];
+    qrcodeImage = [filter outputImage];
+    
+    // 消除模糊
+    CGFloat scaleX = width / qrcodeImage.extent.size.width; // extent 返回图片的frame
+    CGFloat scaleY = height / qrcodeImage.extent.size.height;
+    CIImage *transformedImage = [qrcodeImage imageByApplyingTransform:CGAffineTransformScale(CGAffineTransformIdentity, scaleX, scaleY)];
+    
+    return [UIImage imageWithCIImage:transformedImage];
+}
+
+- (UIImage *)generateBarCode:(NSString *)code width:(CGFloat)width height:(CGFloat)height {
+    // 生成二维码图片
+    CIImage *barcodeImage;
+    NSData *data = [code dataUsingEncoding:NSISOLatin1StringEncoding allowLossyConversion:false];
+    CIFilter *filter = [CIFilter filterWithName:@"CICode128BarcodeGenerator"];
+    
+    [filter setValue:data forKey:@"inputMessage"];
+    barcodeImage = [filter outputImage];
+    
+    // 消除模糊
+    CGFloat scaleX = width / barcodeImage.extent.size.width; // extent 返回图片的frame
+    CGFloat scaleY = height / barcodeImage.extent.size.height;
+    CIImage *transformedImage = [barcodeImage imageByApplyingTransform:CGAffineTransformScale(CGAffineTransformIdentity, scaleX, scaleY)];
+    
+    return [UIImage imageWithCIImage:transformedImage];
+}
 @end

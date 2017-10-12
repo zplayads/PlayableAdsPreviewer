@@ -16,4 +16,6 @@
 - (void)stop;
 - (void)cancel;
 
+- (UIImage *)generateQRCode:(NSString *)code width:(CGFloat)width height:(CGFloat)height;
+
 @end

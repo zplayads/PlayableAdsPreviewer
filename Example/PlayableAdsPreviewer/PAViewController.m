@@ -10,6 +10,7 @@
 #import <PlayableAdsPreviewer/PlayableAdsPreviewer.h>
 #import <TSMessages/TSMessage.h>
 #import "PAQRCodeViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface PAViewController ()
 
@@ -18,6 +19,8 @@
 @property (nonatomic) PAQRCodeViewController *qrVC;
 @property (weak, nonatomic) IBOutlet UIImageView *QRImage;
 @property (nonatomic, assign) BOOL isShow;
+@property (nonatomic) MBProgressHUD *hud;
+@property (nonatomic) int count;
 
 @end
 
@@ -26,6 +29,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
+    [self addObserver];
     if (!_isShow) {
         [self startScan];
         _isShow = YES;
@@ -33,12 +37,39 @@
 }
 
 - (void)startScan{
+    __weak typeof(self) weakSelf = self;
     self.qrVC = [[PAQRCodeViewController alloc] initWithCompletion:^(BOOL succeeded, NSString *result) {
         if (succeeded) {
-            self.appID = result;
-            [TSMessage showNotificationInViewController:self
+            weakSelf.appID = result;
+            NSString *str = @"CABFFBFF-C5D6-D9B0-8A5C-60417538FC51";
+            if (self.appID.length != str.length ) {
+                [TSMessage showNotificationInViewController:weakSelf
+                                                      title:@"Error"
+                                                   subtitle:@"QRCode Error"
+                                                      image:nil
+                                                       type:TSMessageNotificationTypeError
+                                                   duration:TSMessageNotificationDurationAutomatic
+                                                   callback:nil
+                                                buttonTitle:nil
+                                             buttonCallback:nil
+                                                 atPosition:TSMessageNotificationPositionTop
+                                       canBeDismissedByUser:YES];
+                [self.qrVC cancel];
+                dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2*NSEC_PER_SEC));
+                dispatch_queue_t queue = dispatch_get_main_queue();
+                dispatch_after(time, queue, ^{
+                    weakSelf.qrVC = nil;
+                    [weakSelf startScan];
+                });
+                return;
+            }
+            
+            self.hud.label.text = @"Loading";
+            self.hud.hidden = NO;
+            
+            [TSMessage showNotificationInViewController:weakSelf
                                                   title:@"Successed"
-                                               subtitle:result
+                                               subtitle:nil
                                                   image:nil
                                                    type:TSMessageNotificationTypeSuccess
                                            duration:TSMessageNotificationDurationAutomatic
@@ -47,11 +78,11 @@
                                          buttonCallback:nil
                                              atPosition:TSMessageNotificationPositionTop
                                    canBeDismissedByUser:YES];
-            [self requestAd];
+            [weakSelf requestAd];
         } else {
-            [TSMessage showNotificationInViewController:self
+            [TSMessage showNotificationInViewController:weakSelf
                                                   title:@"Error"
-                                               subtitle:result
+                                               subtitle:@"QRCode Error"
                                                   image:nil
                                                    type:TSMessageNotificationTypeError
                                            duration:TSMessageNotificationDurationAutomatic
@@ -60,40 +91,64 @@
                                          buttonCallback:nil
                                              atPosition:TSMessageNotificationPositionTop
                                    canBeDismissedByUser:YES];
+            
+            dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2*NSEC_PER_SEC));
+            dispatch_queue_t queue = dispatch_get_main_queue();
+            dispatch_after(time, queue, ^{
+                weakSelf.qrVC = nil;
+                [weakSelf startScan];
+            });
         }
     }];
-    [self presentViewController:self.qrVC animated:NO completion:NULL];
+    
+    [self presentViewController:self.qrVC animated:NO completion:nil];
 }
 
 - (void)requestAd {
-    [self.previewer presentFromRootViewController:self
-        withAdID:self.appID
-        success:^{
-            [self.qrVC stop];
-            [self.qrVC cancel];
-        }
-        dismiss:^{
-            [self startScan];
-        }
-        failure:^(NSError *_Nonnull error) {
-            [self startScan];
-            [TSMessage showNotificationInViewController:self
-                                                  title:@"Error"
-                                               subtitle:nil
-                                                  image:nil
-                                                   type:TSMessageNotificationTypeError
-                                           duration:TSMessageNotificationDurationAutomatic
-                                               callback:nil
-                                            buttonTitle:nil
-                                         buttonCallback:nil
-                                             atPosition:TSMessageNotificationPositionTop
-                                   canBeDismissedByUser:YES];
-        }];
+    __weak typeof(self) weakSelf = self;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.previewer presentFromRootViewController:self
+                                             withAdID:self.appID
+                                              success:^{
+                                                  weakSelf.qrVC = nil;
+                                                  [weakSelf.qrVC cancel];
+                                                  weakSelf.hud.hidden = YES;
+                                              }
+                                              dismiss:^{
+                                                  [weakSelf startScan];
+                                              }
+                                              failure:^(NSError *_Nonnull error) {
+                                                  [TSMessage showNotificationInViewController:weakSelf
+                                                                                        title:@"Error"
+                                                                                     subtitle:@"Load Error"
+                                                                                        image:nil
+                                                                                         type:TSMessageNotificationTypeError
+                                                                                     duration:TSMessageNotificationDurationAutomatic
+                                                                                     callback:nil
+                                                                                  buttonTitle:nil
+                                                                               buttonCallback:nil
+                                                                                   atPosition:TSMessageNotificationPositionTop
+                                                                         canBeDismissedByUser:YES];
+                                                  dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2*NSEC_PER_SEC));
+                                                  dispatch_queue_t queue = dispatch_get_main_queue();
+                                                  dispatch_after(time, queue, ^{
+                                                      weakSelf.qrVC = nil;
+                                                      [weakSelf startScan];
+                                                  });
+                                              }];
+    });
 }
 
 - (void)createQRCodeImage{
     UIImage *image = [[[PAQRCodeViewController alloc]init] generateQRCode:@"CABFFBFF-C5D6-D9B0-8A5C-60417538FC51" width:200.0 height:200.0];
     self.QRImage.image = image;
+}
+
+- (void)addObserver{
+    [[NSNotificationCenter defaultCenter]addObserverForName:UIApplicationWillEnterForegroundNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        [self startScan];
+    }];
 }
 
 - (PlayableAdsPreviewer *)previewer{
@@ -103,4 +158,16 @@
     return _previewer;
 }
 
+- (MBProgressHUD *)hud {
+    if (!_hud) {
+        UIView *view = self.view;
+        _hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+        _hud.mode = MBProgressHUDModeIndeterminate;
+    }
+    return _hud;
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
+}
 @end

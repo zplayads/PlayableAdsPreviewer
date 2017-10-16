@@ -7,161 +7,196 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03D75AE0899CAD2364834389D13ABACB /* TSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B3C8F6B2469CA49EE8C42F03F477231 /* TSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		103EC0855C588110A203F93A000A8979 /* TSMessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0495D89A70BEB969BF9576B3ABCE0142 /* TSMessageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1258E37D8EF286A64E2B77565B4088EA /* NotificationBackgroundMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9454B2324A101F67A2BBAC5D0F85C2AA /* NotificationBackgroundMessage@2x.png */; };
-		137C824EA1D6A345971181DF56A5F8B9 /* NotificationBackgroundSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = C833553FE9E89F5CE87A37CC0FA56A64 /* NotificationBackgroundSuccess.png */; };
-		13D49AE896341480C9F397A6EF38DF53 /* TSMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5165343B7107C846013961188E48F0 /* TSMessages-dummy.m */; };
-		1462438AF8F96624B491357A46220CCB /* Pods-PlayableAdsPreviewer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2BD961CF4DE7F43E0D1B4A5F3965A36 /* Pods-PlayableAdsPreviewer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		178B1A8449DBAB7DAA2A6EF157BA06FA /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB245571207C9692F8E797670C201399 /* HexColor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1BA54127D1C64F9B375F642DC1408F57 /* HexColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED95C9854C5A1E9D1863834AA6302259 /* HexColors.framework */; };
-		3574915CB8253B84A83DBB59A5AF9A5D /* NotificationBackgroundWarningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D5B1C65BBBCC4C155BE0472F057F9FD /* NotificationBackgroundWarningIcon@2x.png */; };
-		35C26FB87AABBCBD1BFDC86BA33F4B3B /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F056992C426A4AA268AA1BAD3034F253 /* TSMessage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3E05C971D141A016A419D024BBD639F6 /* NotificationBackgroundSuccessIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E86C61FDF2AB35129E71DDDA858090B4 /* NotificationBackgroundSuccessIcon.png */; };
-		5369612B6A78BB128C4CDE7802719269 /* NotificationBackgroundWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACC144B853C8562D6DA82C715BBC38 /* NotificationBackgroundWarning.png */; };
-		5ECAB8C15C909E0775540BE035000D37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */; };
-		76EE1EBD46436E6CA5C960C704DC6D68 /* TSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE0381DB3CC7A0BBD5D14F208BB99CA /* TSBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7914FBF44987C885DF2233708FB98361 /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEDF5DB1EB97BBAEA507AFE2FB109B9 /* NotificationBackgroundError.png */; };
-		7C025FA4A7A05988DBE9041CA32EC31E /* NotificationBackgroundMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 727384B29A4DF1CE3A9B12C00ED2A4CB /* NotificationBackgroundMessage.png */; };
-		7DAC1B32F8AFEA347E5EA69D8F072CAB /* Pods-PlayableAdsPreviewer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF60EEE8DDBCCCEE5B9FCA2BF86ACC6B /* Pods-PlayableAdsPreviewer_Example-dummy.m */; };
-		94226A2B722F89E52A34AC2B0E2E16D3 /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BDC7807D50FC959FBCF0C900D3C185F /* TSMessagesDefaultDesign.json */; };
-		95DD5B26604043B0B4C9B5A5DAC2E825 /* NotificationBackgroundSuccessIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A4C4F09A729519811FF957650AAF8D /* NotificationBackgroundSuccessIcon@2x.png */; };
-		9BC55E8C10908E2C1DF87B7A024FF9CD /* TSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD64CE96351ADF989ECB0C9287A2DC0 /* TSMessageView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9DAF712B80B2407175841F1A05C8AF0A /* NotificationBackgroundSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C70BD5239988E692C85FA4B7D78DA256 /* NotificationBackgroundSuccess@2x.png */; };
-		ABD8B7D7E0B838BBE362E967E163CB8E /* NotificationBackgroundWarning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5833739B71D8C9E601986CEF633F1B23 /* NotificationBackgroundWarning@2x.png */; };
-		ADDD917CA9101E370B3ABA48F90802FA /* NotificationBackgroundErrorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 523008B43854EC96457FBCBB3F145161 /* NotificationBackgroundErrorIcon@2x.png */; };
-		B207541F8C2143CF508DEC95A376A5B6 /* HexColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 296AE1675F3D708D29CC6F44157BD8F7 /* HexColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B449D9B176B94E4BA7AA1744D7D0BEAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */; };
-		B5B7E6A7DF9D824645176253297B3DC6 /* NotificationButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7EF4C9F6E5DE6701CF250510A327F3 /* NotificationButtonBackground.png */; };
-		C083A4F8243DEFA0BCF0002C2CC9D6C9 /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DD590952F33B617E3711F3D3220E7 /* TSBlurView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C1557F67E6033C8091490A8D33B47D12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */; };
-		C16FF76F99E2FF855604AEAE40A891EE /* HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 173DB3D259B85D10AF506E6C8C29260E /* HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4C0322E89C4ADE77F9C5E8FBC95C873 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */; };
-		C6C3F245D87B6474A55A0662BEFE7397 /* TSMessages-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4671E8B2FF97F4F71AB517D22564E6A /* TSMessages-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDB7885F0FB665B3947F533565ECB48C /* HexColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E95FE966D3286D9BD5D63D0D758E87A1 /* HexColors-dummy.m */; };
-		DAF9E45DAB06CF87880F9F07EF4ADB55 /* NotificationBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7525F87E3FF7EC7FB338755C082A2C32 /* NotificationBackgroundWarningIcon.png */; };
+		080671DB155859DFFA34068A47B3C630 /* NotificationBackgroundSuccessIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2F929841797F4F01EDDC2365F9F29D /* NotificationBackgroundSuccessIcon.png */; };
+		0968524ED4DE8DF7834055C5B6089D72 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE59739F3049E5F9B7CE40DB350CE34 /* MBProgressHUD-dummy.m */; };
+		111FF7ECAF5E45FC787A58BE066FC0E7 /* NotificationBackgroundSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13B70FEE14E1FAFC0F0C71CCFDA87D /* NotificationBackgroundSuccess@2x.png */; };
+		14CA32AACADBC7D008311E6F720D583D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FF0F60C541B16BFC9DCCD0DF0577C4 /* Foundation.framework */; };
+		178B1A8449DBAB7DAA2A6EF157BA06FA /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23B32ACA4788C5C27484AB4D90F620 /* HexColor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1CD6D70BD90FDBD222F26BBF173B2254 /* TSMessages-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E66190F54BC58C8E9520F3F797C539E /* TSMessages-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20EB3D2AFDFD756D00C5EFE5CB0A13D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FF0F60C541B16BFC9DCCD0DF0577C4 /* Foundation.framework */; };
+		21D29D4E81933585B3C53CDF0CE2453E /* NotificationBackgroundMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9127B71D4F6ED1F55D71D2D391F5CC8B /* NotificationBackgroundMessage@2x.png */; };
+		28A794912ED1E06B05D96DF5ED0AED19 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 469B7295E0751444029990647828DC71 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F673A1C29B18E505F6CD6701B29C0DA /* NotificationBackgroundMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A69C68C1CBAD2F1184CAEF3606D4B3 /* NotificationBackgroundMessage.png */; };
+		5BF35D83D2464487F8F4269D5B1090AD /* NotificationBackgroundErrorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD5EE8F0834E270AAED19A4A2012ED5 /* NotificationBackgroundErrorIcon@2x.png */; };
+		5ECAB8C15C909E0775540BE035000D37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FF0F60C541B16BFC9DCCD0DF0577C4 /* Foundation.framework */; };
+		5EFE3C1316AE3DF65B81286439987953 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB4968C074ECCE8AA1FF167C985831B /* QuartzCore.framework */; };
+		74ED63562E32CE8BD623CF61866A49F4 /* NotificationBackgroundWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 941B3FCA01B2F14CD1B1C3E6579F5CBB /* NotificationBackgroundWarning.png */; };
+		7A05D37EA8FCB5007A7049A477092546 /* HexColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3682535D31B8AC3159466018A8F00ED /* HexColors.framework */; };
+		7E5CAA251DE0BC646E85E49117B17911 /* NotificationBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5313F490423354E07BFA5CF90843C78 /* NotificationBackgroundWarningIcon.png */; };
+		7F12CD1BBD974638CA9456D911395E5A /* TSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E79515235203350C8135047DD68990 /* TSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		861058D86E1623C14F7647334092DB02 /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DF722FDBBEEBB2898ECD354D14F7061 /* NotificationBackgroundError.png */; };
+		897C38C8E3C31950E2E93A4D6937CCC4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF58BF5E950EA7D2A2F947D26103ADA /* MBProgressHUD.m */; };
+		8EDDD75D3A28A2A72346283F52771621 /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D21D3C4A6AFF297DE1464CADFA2D57 /* TSMessage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		985DCBD302CAE59ACD6E8B8BB840A687 /* NotificationBackgroundSuccessIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EFFDE9D740BEFB8A7210F2E3153DBA /* NotificationBackgroundSuccessIcon@2x.png */; };
+		98E6CC5FEFC0A47C22CC47C70A55F725 /* TSMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD0CC00E7DBBCE58E50CB61047E39CF /* TSMessages-dummy.m */; };
+		9B37F83D8322BADA333924FECDF8A617 /* NotificationBackgroundSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 7089A9A294F2BBF3367BC9FAD86B2D26 /* NotificationBackgroundSuccess.png */; };
+		9D825318243A46A40BA1DF783A48F503 /* TSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB295F2A199A53AC06A93EC3D4B0F3B /* TSBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F27DADDBCCEBEEA307395C927C347B3 /* TSMessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 12BCD57ADC2FB40B45B0BE6D94B75F49 /* TSMessageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5BF8DBDD8660DBCFE712657F3D82BDA /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E27BB0E37A51998DF14C33B9B3BF44 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7F5768184B87F8A9D5A389B245D061F /* NotificationBackgroundErrorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E719AAA04F3571B9629F5FE90E833E /* NotificationBackgroundErrorIcon.png */; };
+		A89707C07C838147039249FF304E5DE7 /* TSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B10E549B4A1F0D165E46127D6C5902 /* TSMessageView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ACCA9B004C25CD515F16464E38EAF4B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FF0F60C541B16BFC9DCCD0DF0577C4 /* Foundation.framework */; };
+		B09752CEF0BBA9C6036DCA13A1CAA082 /* NotificationBackgroundWarning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 370F4B225AFA3BF20704ADE1A3A3A042 /* NotificationBackgroundWarning@2x.png */; };
+		B207541F8C2143CF508DEC95A376A5B6 /* HexColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB524E8AF8D944CBEFBE7506175FBA2 /* HexColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDF1A736FD8A4715CDCA0167F29FB783 /* NotificationBackgroundError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 293C1B89E7FCA2B930757C40B2F302A0 /* NotificationBackgroundError@2x.png */; };
+		BFC3AAFFCCFE94270FA4A3040449FA18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50FF9E1101EC449CA0B272E5844AAB1 /* CoreGraphics.framework */; };
+		C16FF76F99E2FF855604AEAE40A891EE /* HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = FD8D1818AE8982187B4A5E741D4F4B39 /* HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4C0322E89C4ADE77F9C5E8FBC95C873 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FF0F60C541B16BFC9DCCD0DF0577C4 /* Foundation.framework */; };
+		C992FDB2C317F21CCE823E47C3AD4751 /* NotificationButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C8E190EB5622FB4E4834DC1AA9B5F7 /* NotificationButtonBackground@2x.png */; };
+		CDB7885F0FB665B3947F533565ECB48C /* HexColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A25E7F17BCDFAA9BF55C73D61D0A9 /* HexColors-dummy.m */; };
+		D02532E3E1CB6776E3352E9D93D69F18 /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA66935BE80D57B9C111792398A190 /* TSBlurView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D9234E0AC6C5866036E90F5DF839A697 /* Pods-PlayableAdsPreviewer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF60EEE8DDBCCCEE5B9FCA2BF86ACC6B /* Pods-PlayableAdsPreviewer_Example-dummy.m */; };
 		DE522A7A7E4381C9E411905B204EA50C /* Pods-PlayableAdsPreviewer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51274BDF8497CC6C9D3DC4FE15AB0612 /* Pods-PlayableAdsPreviewer_Tests-dummy.m */; };
 		E22DDFE5AEC148D457E11AF841064CC5 /* Pods-PlayableAdsPreviewer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF73D152C1958248E196B2EAD6D4EE24 /* Pods-PlayableAdsPreviewer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7D1BEC624DA18B0E74602C2CC3FECB6 /* NotificationBackgroundErrorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA776253E6C14816B0D564BBDAD3D0A3 /* NotificationBackgroundErrorIcon.png */; };
-		EF5BC2F015E3F45269DD00DCC4F45D99 /* NotificationBackgroundError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E0B91F9736A0182AD558E7CD161589 /* NotificationBackgroundError@2x.png */; };
-		F381F37EA8284FB179C5C0F567CEF999 /* NotificationButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A18D8B410B1C5987270CD8C846D91E9 /* NotificationButtonBackground@2x.png */; };
+		ECA371151941A1C6C294564729E42836 /* NotificationBackgroundWarningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DF0B08A2B941B9E9FC2E6F503E0B87 /* NotificationBackgroundWarningIcon@2x.png */; };
+		F6F5D28DA80F7B16FA1BFB486B924F92 /* NotificationButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 1901C491F4F0E0E352EC21CB94A5DBA6 /* NotificationButtonBackground.png */; };
+		F83B109A85428414C7B73FBAE16F06E4 /* Pods-PlayableAdsPreviewer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2BD961CF4DE7F43E0D1B4A5F3965A36 /* Pods-PlayableAdsPreviewer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F99BB9E564618C430AD8C826E116BC70 /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C7123F3F7F7DA9994980FAD2C218A1A /* TSMessagesDefaultDesign.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		464FCBBCF4A166262B39ADA78BD2ED0E /* PBXContainerItemProxy */ = {
+		94BCE85C9DC51EC15DF71A96AA1A68AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 04C67279458E7D8FD696D0A719D09075;
+			remoteGlobalIDString = 01698261C2F2EAF427B85070B3A64228;
 			remoteInfo = TSMessages;
 		};
-		95520C7177E27996530F229965F5247D /* PBXContainerItemProxy */ = {
+		A12C4E6185D6D051C126C8A11483F873 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AB57EF7D8B23701455085EC663E5FA40;
 			remoteInfo = HexColors;
 		};
-		D52C75A167C34A571AFAC425199F4224 /* PBXContainerItemProxy */ = {
+		C955DB9E810BB6C8F47319F08AC519F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AB57EF7D8B23701455085EC663E5FA40;
 			remoteInfo = HexColors;
+		};
+		E0EA3CB4BAAE8FF8194A6CD0C8D5474C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41FA54D12162DAD51D02FC58A2CD5034;
+			remoteInfo = MBProgressHUD;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03FD114746C79734E2B18C20F0497DBE /* PlayableAdsPreviewer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlayableAdsPreviewer.framework; sourceTree = "<group>"; };
-		0495D89A70BEB969BF9576B3ABCE0142 /* TSMessageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSMessageView.h; path = Pod/Classes/TSMessageView.h; sourceTree = "<group>"; };
+		01F9F2B639A880353482A0508845B24A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02C8E190EB5622FB4E4834DC1AA9B5F7 /* NotificationButtonBackground@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationButtonBackground@2x.png"; path = "Pod/Assets/NotificationButtonBackground@2x.png"; sourceTree = "<group>"; };
+		03B10E549B4A1F0D165E46127D6C5902 /* TSMessageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSMessageView.m; path = Pod/Classes/TSMessageView.m; sourceTree = "<group>"; };
+		0AD0CC00E7DBBCE58E50CB61047E39CF /* TSMessages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TSMessages-dummy.m"; sourceTree = "<group>"; };
+		0CB4968C074ECCE8AA1FF167C985831B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		0D8A3613F4585D712FD9D926EF4EDF6E /* HexColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HexColors.modulemap; sourceTree = "<group>"; };
 		0FB7AEAC967AE97471B97091988263CB /* Pods-PlayableAdsPreviewer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PlayableAdsPreviewer_Example.modulemap"; sourceTree = "<group>"; };
-		173DB3D259B85D10AF506E6C8C29260E /* HexColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HexColor.h; path = Classes/HexColor.h; sourceTree = "<group>"; };
+		11E719AAA04F3571B9629F5FE90E833E /* NotificationBackgroundErrorIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundErrorIcon.png; path = Pod/Assets/NotificationBackgroundErrorIcon.png; sourceTree = "<group>"; };
+		12BCD57ADC2FB40B45B0BE6D94B75F49 /* TSMessageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSMessageView.h; path = Pod/Classes/TSMessageView.h; sourceTree = "<group>"; };
 		17D734D7A710E27AC9A2C0422BB87611 /* Pods-PlayableAdsPreviewer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PlayableAdsPreviewer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		296AE1675F3D708D29CC6F44157BD8F7 /* HexColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-umbrella.h"; sourceTree = "<group>"; };
-		2B3C8F6B2469CA49EE8C42F03F477231 /* TSMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSMessage.h; path = Pod/Classes/TSMessage.h; sourceTree = "<group>"; };
+		1901C491F4F0E0E352EC21CB94A5DBA6 /* NotificationButtonBackground.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationButtonBackground.png; path = Pod/Assets/NotificationButtonBackground.png; sourceTree = "<group>"; };
+		1B9A25E7F17BCDFAA9BF55C73D61D0A9 /* HexColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HexColors-dummy.m"; sourceTree = "<group>"; };
+		1C02DF8CA41C49EBE55FF05C67897685 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CF58BF5E950EA7D2A2F947D26103ADA /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		1EE59739F3049E5F9B7CE40DB350CE34 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		293C1B89E7FCA2B930757C40B2F302A0 /* NotificationBackgroundError@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundError@2x.png"; path = "Pod/Assets/NotificationBackgroundError@2x.png"; sourceTree = "<group>"; };
+		30EF2DAB5BB3E1C86BC5BCDDE843F462 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
 		34BEA92757FF503B20550E779D91B4B1 /* Pods-PlayableAdsPreviewer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlayableAdsPreviewer_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3970C67CBA391DE39AA3E10EB4067B1F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CEC6AD1CEEF9625BF9D21CE10EBDEA6 /* TSMessages.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSMessages.xcconfig; sourceTree = "<group>"; };
+		370F4B225AFA3BF20704ADE1A3A3A042 /* NotificationBackgroundWarning@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundWarning@2x.png"; path = "Pod/Assets/NotificationBackgroundWarning@2x.png"; sourceTree = "<group>"; };
+		3E66190F54BC58C8E9520F3F797C539E /* TSMessages-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSMessages-umbrella.h"; sourceTree = "<group>"; };
 		3FB0817C8A84DB411A3B08B782E2B625 /* Pods-PlayableAdsPreviewer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PlayableAdsPreviewer_Tests-resources.sh"; sourceTree = "<group>"; };
-		4DF2394584896204D4CCFE14B57F296E /* HexColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HexColors.framework; path = HexColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		469B7295E0751444029990647828DC71 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		4ADA66935BE80D57B9C111792398A190 /* TSBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSBlurView.m; path = Pod/Classes/TSBlurView.m; sourceTree = "<group>"; };
+		4CC90E53E9096E48C8AFD7638D110DEE /* TSMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TSMessages.framework; path = TSMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51274BDF8497CC6C9D3DC4FE15AB0612 /* Pods-PlayableAdsPreviewer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PlayableAdsPreviewer_Tests-dummy.m"; sourceTree = "<group>"; };
-		51ACC144B853C8562D6DA82C715BBC38 /* NotificationBackgroundWarning.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundWarning.png; path = Pod/Assets/NotificationBackgroundWarning.png; sourceTree = "<group>"; };
-		523008B43854EC96457FBCBB3F145161 /* NotificationBackgroundErrorIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundErrorIcon@2x.png"; path = "Pod/Assets/NotificationBackgroundErrorIcon@2x.png"; sourceTree = "<group>"; };
-		5833739B71D8C9E601986CEF633F1B23 /* NotificationBackgroundWarning@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundWarning@2x.png"; path = "Pod/Assets/NotificationBackgroundWarning@2x.png"; sourceTree = "<group>"; };
-		5BDC7807D50FC959FBCF0C900D3C185F /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; includeInIndex = 1; name = TSMessagesDefaultDesign.json; path = Pod/Assets/TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
-		727384B29A4DF1CE3A9B12C00ED2A4CB /* NotificationBackgroundMessage.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundMessage.png; path = Pod/Assets/NotificationBackgroundMessage.png; sourceTree = "<group>"; };
-		7525F87E3FF7EC7FB338755C082A2C32 /* NotificationBackgroundWarningIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundWarningIcon.png; path = Pod/Assets/NotificationBackgroundWarningIcon.png; sourceTree = "<group>"; };
-		7DD64CE96351ADF989ECB0C9287A2DC0 /* TSMessageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSMessageView.m; path = Pod/Classes/TSMessageView.m; sourceTree = "<group>"; };
+		52EFFDE9D740BEFB8A7210F2E3153DBA /* NotificationBackgroundSuccessIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundSuccessIcon@2x.png"; path = "Pod/Assets/NotificationBackgroundSuccessIcon@2x.png"; sourceTree = "<group>"; };
+		5DF722FDBBEEBB2898ECD354D14F7061 /* NotificationBackgroundError.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundError.png; path = Pod/Assets/NotificationBackgroundError.png; sourceTree = "<group>"; };
+		5E2F929841797F4F01EDDC2365F9F29D /* NotificationBackgroundSuccessIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundSuccessIcon.png; path = Pod/Assets/NotificationBackgroundSuccessIcon.png; sourceTree = "<group>"; };
+		65E79515235203350C8135047DD68990 /* TSMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSMessage.h; path = Pod/Classes/TSMessage.h; sourceTree = "<group>"; };
+		6893FA631C6DD36B1F6E69E83FEC36F6 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		7089A9A294F2BBF3367BC9FAD86B2D26 /* NotificationBackgroundSuccess.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundSuccess.png; path = Pod/Assets/NotificationBackgroundSuccess.png; sourceTree = "<group>"; };
+		74D21D3C4A6AFF297DE1464CADFA2D57 /* TSMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSMessage.m; path = Pod/Classes/TSMessage.m; sourceTree = "<group>"; };
+		7A21EE1C6509BAB0571EC7C4078EE938 /* Pods_PlayableAdsPreviewer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PlayableAdsPreviewer_Tests.framework; path = "Pods-PlayableAdsPreviewer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E17CB051FE3B5FC200378417AEB6E35 /* HexColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-prefix.pch"; sourceTree = "<group>"; };
+		81FF0F60C541B16BFC9DCCD0DF0577C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		84A69C68C1CBAD2F1184CAEF3606D4B3 /* NotificationBackgroundMessage.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundMessage.png; path = Pod/Assets/NotificationBackgroundMessage.png; sourceTree = "<group>"; };
 		85F7B24600C3CCAD2CB1E7240A179B5C /* Pods-PlayableAdsPreviewer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PlayableAdsPreviewer_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		862CA9D05AF0DD9D0567A7E65ADC2805 /* Pods-PlayableAdsPreviewer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PlayableAdsPreviewer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		90E3FACBFFB154927E5FEACFBB53B5D5 /* HexColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HexColors.modulemap; sourceTree = "<group>"; };
+		88CF3A3A4A69602BA2252EE35794B7BF /* TSMessages.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSMessages.xcconfig; sourceTree = "<group>"; };
+		8F342682A8BF6B47838D5807F6A3601C /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9127B71D4F6ED1F55D71D2D391F5CC8B /* NotificationBackgroundMessage@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundMessage@2x.png"; path = "Pod/Assets/NotificationBackgroundMessage@2x.png"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9454B2324A101F67A2BBAC5D0F85C2AA /* NotificationBackgroundMessage@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundMessage@2x.png"; path = "Pod/Assets/NotificationBackgroundMessage@2x.png"; sourceTree = "<group>"; };
-		981DD590952F33B617E3711F3D3220E7 /* TSBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSBlurView.m; path = Pod/Classes/TSBlurView.m; sourceTree = "<group>"; };
-		9A18D8B410B1C5987270CD8C846D91E9 /* NotificationButtonBackground@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationButtonBackground@2x.png"; path = "Pod/Assets/NotificationButtonBackground@2x.png"; sourceTree = "<group>"; };
+		941B3FCA01B2F14CD1B1C3E6579F5CBB /* NotificationBackgroundWarning.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundWarning.png; path = Pod/Assets/NotificationBackgroundWarning.png; sourceTree = "<group>"; };
+		94AF35958545E82499FE5B13F8D407B8 /* HexColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HexColors.xcconfig; sourceTree = "<group>"; };
+		97C56246CD038AFD75942B892D3AD238 /* TSMessages-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSMessages-prefix.pch"; sourceTree = "<group>"; };
 		9A6FD4D0130C61658D928B7FC3B9B80A /* Pods-PlayableAdsPreviewer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PlayableAdsPreviewer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D5B1C65BBBCC4C155BE0472F057F9FD /* NotificationBackgroundWarningIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundWarningIcon@2x.png"; path = "Pod/Assets/NotificationBackgroundWarningIcon@2x.png"; sourceTree = "<group>"; };
+		9C7123F3F7F7DA9994980FAD2C218A1A /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; includeInIndex = 1; name = TSMessagesDefaultDesign.json; path = Pod/Assets/TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
 		A34F9891BB72EE1807C994B4AF9DCBEE /* Pods-PlayableAdsPreviewer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlayableAdsPreviewer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A3682535D31B8AC3159466018A8F00ED /* HexColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B4943F4DFA23FB61AD758D8785EB9D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6F51C5A7DEEA7219DEF5F69328DCF15 /* Pods_PlayableAdsPreviewer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PlayableAdsPreviewer_Example.framework; path = "Pods-PlayableAdsPreviewer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB524E8AF8D944CBEFBE7506175FBA2 /* HexColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-umbrella.h"; sourceTree = "<group>"; };
 		AAC02728B4114A18DEFE89F8328E53CE /* Pods-PlayableAdsPreviewer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PlayableAdsPreviewer_Tests.modulemap"; sourceTree = "<group>"; };
-		AAEDF5DB1EB97BBAEA507AFE2FB109B9 /* NotificationBackgroundError.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundError.png; path = Pod/Assets/NotificationBackgroundError.png; sourceTree = "<group>"; };
 		AB4217ADA433F49DF9301A58B1DA8F9B /* Pods-PlayableAdsPreviewer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlayableAdsPreviewer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AC7EF4C9F6E5DE6701CF250510A327F3 /* NotificationButtonBackground.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationButtonBackground.png; path = Pod/Assets/NotificationButtonBackground.png; sourceTree = "<group>"; };
-		B0E9A5840769DAC4B6D2676FD9A34B34 /* Pods_PlayableAdsPreviewer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PlayableAdsPreviewer_Example.framework; path = "Pods-PlayableAdsPreviewer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B115FB6D10459D16E2DD2379558ABB30 /* TSMessages.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TSMessages.modulemap; sourceTree = "<group>"; };
+		ACB295F2A199A53AC06A93EC3D4B0F3B /* TSBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSBlurView.h; path = Pod/Classes/TSBlurView.h; sourceTree = "<group>"; };
 		B225B84BF6265DB5130E0EE6227EA907 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2BD961CF4DE7F43E0D1B4A5F3965A36 /* Pods-PlayableAdsPreviewer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PlayableAdsPreviewer_Example-umbrella.h"; sourceTree = "<group>"; };
-		B2EEF49E5197385849C6AF6271CD59C0 /* TSMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TSMessages.framework; path = TSMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B67F8F9F894ED31892422D0CF4A72821 /* HexColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HexColors.xcconfig; sourceTree = "<group>"; };
+		B50FF9E1101EC449CA0B272E5844AAB1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		B8E27BB0E37A51998DF14C33B9B3BF44 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B966FF0AA9205C5277D742D485BA8181 /* PlayableAdsPreviewer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlayableAdsPreviewer.framework; sourceTree = "<group>"; };
 		BF60EEE8DDBCCCEE5B9FCA2BF86ACC6B /* Pods-PlayableAdsPreviewer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PlayableAdsPreviewer_Example-dummy.m"; sourceTree = "<group>"; };
 		C0B67BD7A9B77DABD58A0091CD8DE21C /* Pods-PlayableAdsPreviewer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PlayableAdsPreviewer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C3E52823E979E89E693844C84CF7855F /* Pods-PlayableAdsPreviewer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PlayableAdsPreviewer_Example-resources.sh"; sourceTree = "<group>"; };
-		C70BD5239988E692C85FA4B7D78DA256 /* NotificationBackgroundSuccess@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundSuccess@2x.png"; path = "Pod/Assets/NotificationBackgroundSuccess@2x.png"; sourceTree = "<group>"; };
-		C7A4C4F09A729519811FF957650AAF8D /* NotificationBackgroundSuccessIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundSuccessIcon@2x.png"; path = "Pod/Assets/NotificationBackgroundSuccessIcon@2x.png"; sourceTree = "<group>"; };
-		C833553FE9E89F5CE87A37CC0FA56A64 /* NotificationBackgroundSuccess.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundSuccess.png; path = Pod/Assets/NotificationBackgroundSuccess.png; sourceTree = "<group>"; };
+		C6DB2538BF2EEE53F0DF33261AE9870A /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		C868624A866C4325778F008414658B09 /* HexColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HexColors.framework; path = HexColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8CE01655929CC7CE456B1AB53E859D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB245571207C9692F8E797670C201399 /* HexColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HexColor.m; path = Classes/HexColor.m; sourceTree = "<group>"; };
 		CB6089009CBF44666B0807C64F56B614 /* Pods-PlayableAdsPreviewer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlayableAdsPreviewer_Example.release.xcconfig"; sourceTree = "<group>"; };
-		CC5165343B7107C846013961188E48F0 /* TSMessages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TSMessages-dummy.m"; sourceTree = "<group>"; };
-		D4671E8B2FF97F4F71AB517D22564E6A /* TSMessages-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSMessages-umbrella.h"; sourceTree = "<group>"; };
-		D7E0B91F9736A0182AD558E7CD161589 /* NotificationBackgroundError@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundError@2x.png"; path = "Pod/Assets/NotificationBackgroundError@2x.png"; sourceTree = "<group>"; };
-		DCE0381DB3CC7A0BBD5D14F208BB99CA /* TSBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSBlurView.h; path = Pod/Classes/TSBlurView.h; sourceTree = "<group>"; };
-		E316FEF8E270D83971D1A14B0E4F627D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E39D3CBB7C15F7BF4FBDD6892F67609B /* TSMessages-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSMessages-prefix.pch"; sourceTree = "<group>"; };
-		E86C61FDF2AB35129E71DDDA858090B4 /* NotificationBackgroundSuccessIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundSuccessIcon.png; path = Pod/Assets/NotificationBackgroundSuccessIcon.png; sourceTree = "<group>"; };
-		E95FE966D3286D9BD5D63D0D758E87A1 /* HexColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HexColors-dummy.m"; sourceTree = "<group>"; };
-		E96B53A44CF7D4ED04D18CD442F5C5B9 /* HexColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-prefix.pch"; sourceTree = "<group>"; };
-		EA776253E6C14816B0D564BBDAD3D0A3 /* NotificationBackgroundErrorIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundErrorIcon.png; path = Pod/Assets/NotificationBackgroundErrorIcon.png; sourceTree = "<group>"; };
-		ED95C9854C5A1E9D1863834AA6302259 /* HexColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDFF87BBDF6948AD0E042B1EFB8596A1 /* Pods_PlayableAdsPreviewer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PlayableAdsPreviewer_Tests.framework; path = "Pods-PlayableAdsPreviewer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A7FA114BC8FAA052F6BA9EFEAEDEA8 /* TSMessages.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TSMessages.modulemap; sourceTree = "<group>"; };
+		D5313F490423354E07BFA5CF90843C78 /* NotificationBackgroundWarningIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundWarningIcon.png; path = Pod/Assets/NotificationBackgroundWarningIcon.png; sourceTree = "<group>"; };
+		D6DF0B08A2B941B9E9FC2E6F503E0B87 /* NotificationBackgroundWarningIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundWarningIcon@2x.png"; path = "Pod/Assets/NotificationBackgroundWarningIcon@2x.png"; sourceTree = "<group>"; };
+		DCD5EE8F0834E270AAED19A4A2012ED5 /* NotificationBackgroundErrorIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundErrorIcon@2x.png"; path = "Pod/Assets/NotificationBackgroundErrorIcon@2x.png"; sourceTree = "<group>"; };
 		EF73D152C1958248E196B2EAD6D4EE24 /* Pods-PlayableAdsPreviewer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PlayableAdsPreviewer_Tests-umbrella.h"; sourceTree = "<group>"; };
-		F056992C426A4AA268AA1BAD3034F253 /* TSMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSMessage.m; path = Pod/Classes/TSMessage.m; sourceTree = "<group>"; };
+		FA23B32ACA4788C5C27484AB4D90F620 /* HexColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HexColor.m; path = Classes/HexColor.m; sourceTree = "<group>"; };
+		FB13B70FEE14E1FAFC0F0C71CCFDA87D /* NotificationBackgroundSuccess@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundSuccess@2x.png"; path = "Pod/Assets/NotificationBackgroundSuccess@2x.png"; sourceTree = "<group>"; };
+		FD8D1818AE8982187B4A5E741D4F4B39 /* HexColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HexColor.h; path = Classes/HexColor.h; sourceTree = "<group>"; };
 		FDD01C791604525E71FE14B1A5548E43 /* Pods-PlayableAdsPreviewer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PlayableAdsPreviewer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		47C505A50C2B5CA40D522D78E85721E4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B449D9B176B94E4BA7AA1744D7D0BEAD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		51495B20C1FF9888126EE63D909BD6A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1557F67E6033C8091490A8D33B47D12 /* Foundation.framework in Frameworks */,
-				1BA54127D1C64F9B375F642DC1408F57 /* HexColors.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		55F6AD83E55F17BE9976ADEDBF61C40D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5ECAB8C15C909E0775540BE035000D37 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A70ACEEA4488EC6966554D478FD0AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20EB3D2AFDFD756D00C5EFE5CB0A13D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B57774E30FD88AE26F9037E1360E947B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC3AAFFCCFE94270FA4A3040449FA18 /* CoreGraphics.framework in Frameworks */,
+				14CA32AACADBC7D008311E6F720D583D /* Foundation.framework in Frameworks */,
+				5EFE3C1316AE3DF65B81286439987953 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC821B07D8C8C1C4F80A3A91EF9752D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACCA9B004C25CD515F16464E38EAF4B6 /* Foundation.framework in Frameworks */,
+				7A05D37EA8FCB5007A7049A477092546 /* HexColors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,87 +211,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04DC935C3F51D0E46520DD78439CCA1B /* Frameworks */ = {
+		0105ADCF65759A143DB2E8C1B295C897 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED95C9854C5A1E9D1863834AA6302259 /* HexColors.framework */,
-				E22B9DC5A4CC7CB374E52701F7FD9D52 /* iOS */,
+				B966FF0AA9205C5277D742D485BA8181 /* PlayableAdsPreviewer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		099816A33F324F7717ABDAE2FEEEAD60 /* PlayableAdsPreviewer */ = {
+		0AD937DB0E60681082F9B8C878D12A3A /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				1EA50843DA5EFB6A7EB60E5A9825BF33 /* Frameworks */,
+				B8E27BB0E37A51998DF14C33B9B3BF44 /* MBProgressHUD.h */,
+				1CF58BF5E950EA7D2A2F947D26103ADA /* MBProgressHUD.m */,
+				D29638FD62FE25B8DDF54C0C2DC8EAB5 /* Support Files */,
 			);
-			name = PlayableAdsPreviewer;
-			path = PlayableAdsPreviewer;
-			sourceTree = "<group>";
-		};
-		0AD20B29F0E362C74A488B35EFA8C849 /* HexColors */ = {
-			isa = PBXGroup;
-			children = (
-				173DB3D259B85D10AF506E6C8C29260E /* HexColor.h */,
-				CB245571207C9692F8E797670C201399 /* HexColor.m */,
-				183C4A74A4E61783ED674E6224099ADC /* Support Files */,
-			);
-			name = HexColors;
-			path = HexColors;
-			sourceTree = "<group>";
-		};
-		122A1FFA723E9BAD27145A16A993D7EB /* TSMessages */ = {
-			isa = PBXGroup;
-			children = (
-				DCE0381DB3CC7A0BBD5D14F208BB99CA /* TSBlurView.h */,
-				981DD590952F33B617E3711F3D3220E7 /* TSBlurView.m */,
-				2B3C8F6B2469CA49EE8C42F03F477231 /* TSMessage.h */,
-				F056992C426A4AA268AA1BAD3034F253 /* TSMessage.m */,
-				0495D89A70BEB969BF9576B3ABCE0142 /* TSMessageView.h */,
-				7DD64CE96351ADF989ECB0C9287A2DC0 /* TSMessageView.m */,
-				1A2766E8E62809A3B7FD52E123ED5C64 /* Resources */,
-				DA65F2008B9D80BC0A708F90C206D82B /* Support Files */,
-			);
-			name = TSMessages;
-			path = TSMessages;
-			sourceTree = "<group>";
-		};
-		183C4A74A4E61783ED674E6224099ADC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				90E3FACBFFB154927E5FEACFBB53B5D5 /* HexColors.modulemap */,
-				B67F8F9F894ED31892422D0CF4A72821 /* HexColors.xcconfig */,
-				E95FE966D3286D9BD5D63D0D758E87A1 /* HexColors-dummy.m */,
-				E96B53A44CF7D4ED04D18CD442F5C5B9 /* HexColors-prefix.pch */,
-				296AE1675F3D708D29CC6F44157BD8F7 /* HexColors-umbrella.h */,
-				3970C67CBA391DE39AA3E10EB4067B1F /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HexColors";
-			sourceTree = "<group>";
-		};
-		1A2766E8E62809A3B7FD52E123ED5C64 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AAEDF5DB1EB97BBAEA507AFE2FB109B9 /* NotificationBackgroundError.png */,
-				D7E0B91F9736A0182AD558E7CD161589 /* NotificationBackgroundError@2x.png */,
-				EA776253E6C14816B0D564BBDAD3D0A3 /* NotificationBackgroundErrorIcon.png */,
-				523008B43854EC96457FBCBB3F145161 /* NotificationBackgroundErrorIcon@2x.png */,
-				727384B29A4DF1CE3A9B12C00ED2A4CB /* NotificationBackgroundMessage.png */,
-				9454B2324A101F67A2BBAC5D0F85C2AA /* NotificationBackgroundMessage@2x.png */,
-				C833553FE9E89F5CE87A37CC0FA56A64 /* NotificationBackgroundSuccess.png */,
-				C70BD5239988E692C85FA4B7D78DA256 /* NotificationBackgroundSuccess@2x.png */,
-				E86C61FDF2AB35129E71DDDA858090B4 /* NotificationBackgroundSuccessIcon.png */,
-				C7A4C4F09A729519811FF957650AAF8D /* NotificationBackgroundSuccessIcon@2x.png */,
-				51ACC144B853C8562D6DA82C715BBC38 /* NotificationBackgroundWarning.png */,
-				5833739B71D8C9E601986CEF633F1B23 /* NotificationBackgroundWarning@2x.png */,
-				7525F87E3FF7EC7FB338755C082A2C32 /* NotificationBackgroundWarningIcon.png */,
-				9D5B1C65BBBCC4C155BE0472F057F9FD /* NotificationBackgroundWarningIcon@2x.png */,
-				AC7EF4C9F6E5DE6701CF250510A327F3 /* NotificationButtonBackground.png */,
-				9A18D8B410B1C5987270CD8C846D91E9 /* NotificationButtonBackground@2x.png */,
-				5BDC7807D50FC959FBCF0C900D3C185F /* TSMessagesDefaultDesign.json */,
-			);
-			name = Resources;
+			name = MBProgressHUD;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		1AEDF6F287C97958F015552CC74D3025 /* Development Pods */ = {
@@ -267,10 +238,11 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		1EA50843DA5EFB6A7EB60E5A9825BF33 /* Frameworks */ = {
+		2CEF044A99888D4E3CC1A352EC2A0A7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03FD114746C79734E2B18C20F0497DBE /* PlayableAdsPreviewer.framework */,
+				A3682535D31B8AC3159466018A8F00ED /* HexColors.framework */,
+				959C8B41CA5A83BE1208CE5ED4F657E3 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,6 +263,20 @@
 			);
 			name = "Pods-PlayableAdsPreviewer_Example";
 			path = "Target Support Files/Pods-PlayableAdsPreviewer_Example";
+			sourceTree = "<group>";
+		};
+		4513290CFDF039F2108F941E674D77F9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6B4943F4DFA23FB61AD758D8785EB9D /* Info.plist */,
+				D4A7FA114BC8FAA052F6BA9EFEAEDEA8 /* TSMessages.modulemap */,
+				88CF3A3A4A69602BA2252EE35794B7BF /* TSMessages.xcconfig */,
+				0AD0CC00E7DBBCE58E50CB61047E39CF /* TSMessages-dummy.m */,
+				97C56246CD038AFD75942B892D3AD238 /* TSMessages-prefix.pch */,
+				3E66190F54BC58C8E9520F3F797C539E /* TSMessages-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TSMessages";
 			sourceTree = "<group>";
 		};
 		5EFE45D658DAFFCA38515551D63817BB /* Pods-PlayableAdsPreviewer_Tests */ = {
@@ -324,22 +310,73 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				1AEDF6F287C97958F015552CC74D3025 /* Development Pods */,
-				04DC935C3F51D0E46520DD78439CCA1B /* Frameworks */,
-				E65B9DC940944DA7D0FDD94CD0BFB348 /* Pods */,
-				85D03D2A3655439BB8E7A76E88CAF464 /* Products */,
+				2CEF044A99888D4E3CC1A352EC2A0A7E /* Frameworks */,
+				FB1BF7455A869259FC50920667016914 /* Pods */,
+				7E4861AF4937440E87072A68F8FAB13D /* Products */,
 				A51B9A7A44EF7C43F92FDBDA88257AD3 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		85D03D2A3655439BB8E7A76E88CAF464 /* Products */ = {
+		7E04FA84A7C2E31C388BDCF6810852BC /* TSMessages */ = {
 			isa = PBXGroup;
 			children = (
-				4DF2394584896204D4CCFE14B57F296E /* HexColors.framework */,
-				B0E9A5840769DAC4B6D2676FD9A34B34 /* Pods_PlayableAdsPreviewer_Example.framework */,
-				EDFF87BBDF6948AD0E042B1EFB8596A1 /* Pods_PlayableAdsPreviewer_Tests.framework */,
-				B2EEF49E5197385849C6AF6271CD59C0 /* TSMessages.framework */,
+				ACB295F2A199A53AC06A93EC3D4B0F3B /* TSBlurView.h */,
+				4ADA66935BE80D57B9C111792398A190 /* TSBlurView.m */,
+				65E79515235203350C8135047DD68990 /* TSMessage.h */,
+				74D21D3C4A6AFF297DE1464CADFA2D57 /* TSMessage.m */,
+				12BCD57ADC2FB40B45B0BE6D94B75F49 /* TSMessageView.h */,
+				03B10E549B4A1F0D165E46127D6C5902 /* TSMessageView.m */,
+				9312FD6ADA6506009F008820BE3A4BAB /* Resources */,
+				4513290CFDF039F2108F941E674D77F9 /* Support Files */,
+			);
+			name = TSMessages;
+			path = TSMessages;
+			sourceTree = "<group>";
+		};
+		7E4861AF4937440E87072A68F8FAB13D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C868624A866C4325778F008414658B09 /* HexColors.framework */,
+				8F342682A8BF6B47838D5807F6A3601C /* MBProgressHUD.framework */,
+				A6F51C5A7DEEA7219DEF5F69328DCF15 /* Pods_PlayableAdsPreviewer_Example.framework */,
+				7A21EE1C6509BAB0571EC7C4078EE938 /* Pods_PlayableAdsPreviewer_Tests.framework */,
+				4CC90E53E9096E48C8AFD7638D110DEE /* TSMessages.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9312FD6ADA6506009F008820BE3A4BAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DF722FDBBEEBB2898ECD354D14F7061 /* NotificationBackgroundError.png */,
+				293C1B89E7FCA2B930757C40B2F302A0 /* NotificationBackgroundError@2x.png */,
+				11E719AAA04F3571B9629F5FE90E833E /* NotificationBackgroundErrorIcon.png */,
+				DCD5EE8F0834E270AAED19A4A2012ED5 /* NotificationBackgroundErrorIcon@2x.png */,
+				84A69C68C1CBAD2F1184CAEF3606D4B3 /* NotificationBackgroundMessage.png */,
+				9127B71D4F6ED1F55D71D2D391F5CC8B /* NotificationBackgroundMessage@2x.png */,
+				7089A9A294F2BBF3367BC9FAD86B2D26 /* NotificationBackgroundSuccess.png */,
+				FB13B70FEE14E1FAFC0F0C71CCFDA87D /* NotificationBackgroundSuccess@2x.png */,
+				5E2F929841797F4F01EDDC2365F9F29D /* NotificationBackgroundSuccessIcon.png */,
+				52EFFDE9D740BEFB8A7210F2E3153DBA /* NotificationBackgroundSuccessIcon@2x.png */,
+				941B3FCA01B2F14CD1B1C3E6579F5CBB /* NotificationBackgroundWarning.png */,
+				370F4B225AFA3BF20704ADE1A3A3A042 /* NotificationBackgroundWarning@2x.png */,
+				D5313F490423354E07BFA5CF90843C78 /* NotificationBackgroundWarningIcon.png */,
+				D6DF0B08A2B941B9E9FC2E6F503E0B87 /* NotificationBackgroundWarningIcon@2x.png */,
+				1901C491F4F0E0E352EC21CB94A5DBA6 /* NotificationButtonBackground.png */,
+				02C8E190EB5622FB4E4834DC1AA9B5F7 /* NotificationButtonBackground@2x.png */,
+				9C7123F3F7F7DA9994980FAD2C218A1A /* TSMessagesDefaultDesign.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		959C8B41CA5A83BE1208CE5ED4F657E3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B50FF9E1101EC449CA0B272E5844AAB1 /* CoreGraphics.framework */,
+				81FF0F60C541B16BFC9DCCD0DF0577C4 /* Foundation.framework */,
+				0CB4968C074ECCE8AA1FF167C985831B /* QuartzCore.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		A51B9A7A44EF7C43F92FDBDA88257AD3 /* Targets Support Files */ = {
@@ -351,34 +388,61 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		DA65F2008B9D80BC0A708F90C206D82B /* Support Files */ = {
+		C77C2BA5C828D0FF62E4E1FE3485951E /* PlayableAdsPreviewer */ = {
 			isa = PBXGroup;
 			children = (
-				E316FEF8E270D83971D1A14B0E4F627D /* Info.plist */,
-				B115FB6D10459D16E2DD2379558ABB30 /* TSMessages.modulemap */,
-				3CEC6AD1CEEF9625BF9D21CE10EBDEA6 /* TSMessages.xcconfig */,
-				CC5165343B7107C846013961188E48F0 /* TSMessages-dummy.m */,
-				E39D3CBB7C15F7BF4FBDD6892F67609B /* TSMessages-prefix.pch */,
-				D4671E8B2FF97F4F71AB517D22564E6A /* TSMessages-umbrella.h */,
+				0105ADCF65759A143DB2E8C1B295C897 /* Frameworks */,
+			);
+			name = PlayableAdsPreviewer;
+			path = PlayableAdsPreviewer;
+			sourceTree = "<group>";
+		};
+		D29638FD62FE25B8DDF54C0C2DC8EAB5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				01F9F2B639A880353482A0508845B24A /* Info.plist */,
+				30EF2DAB5BB3E1C86BC5BCDDE843F462 /* MBProgressHUD.modulemap */,
+				6893FA631C6DD36B1F6E69E83FEC36F6 /* MBProgressHUD.xcconfig */,
+				1EE59739F3049E5F9B7CE40DB350CE34 /* MBProgressHUD-dummy.m */,
+				C6DB2538BF2EEE53F0DF33261AE9870A /* MBProgressHUD-prefix.pch */,
+				469B7295E0751444029990647828DC71 /* MBProgressHUD-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/TSMessages";
+			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
-		E22B9DC5A4CC7CB374E52701F7FD9D52 /* iOS */ = {
+		DD3E6F2E704A1CD29143D7D931C38182 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A78499944B142B5C9B2DDC4DD45A9B97 /* Foundation.framework */,
+				0D8A3613F4585D712FD9D926EF4EDF6E /* HexColors.modulemap */,
+				94AF35958545E82499FE5B13F8D407B8 /* HexColors.xcconfig */,
+				1B9A25E7F17BCDFAA9BF55C73D61D0A9 /* HexColors-dummy.m */,
+				7E17CB051FE3B5FC200378417AEB6E35 /* HexColors-prefix.pch */,
+				AAB524E8AF8D944CBEFBE7506175FBA2 /* HexColors-umbrella.h */,
+				1C02DF8CA41C49EBE55FF05C67897685 /* Info.plist */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/HexColors";
 			sourceTree = "<group>";
 		};
-		E65B9DC940944DA7D0FDD94CD0BFB348 /* Pods */ = {
+		E9F02045D275527A7D8BC0BFAD0544C1 /* HexColors */ = {
 			isa = PBXGroup;
 			children = (
-				0AD20B29F0E362C74A488B35EFA8C849 /* HexColors */,
-				099816A33F324F7717ABDAE2FEEEAD60 /* PlayableAdsPreviewer */,
-				122A1FFA723E9BAD27145A16A993D7EB /* TSMessages */,
+				FD8D1818AE8982187B4A5E741D4F4B39 /* HexColor.h */,
+				FA23B32ACA4788C5C27484AB4D90F620 /* HexColor.m */,
+				DD3E6F2E704A1CD29143D7D931C38182 /* Support Files */,
+			);
+			name = HexColors;
+			path = HexColors;
+			sourceTree = "<group>";
+		};
+		FB1BF7455A869259FC50920667016914 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9F02045D275527A7D8BC0BFAD0544C1 /* HexColors */,
+				0AD937DB0E60681082F9B8C878D12A3A /* MBProgressHUD */,
+				C77C2BA5C828D0FF62E4E1FE3485951E /* PlayableAdsPreviewer */,
+				7E04FA84A7C2E31C388BDCF6810852BC /* TSMessages */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -386,11 +450,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		341255C0565D11D4B59ECBF1789D07C4 /* Headers */ = {
+		197B7877D5D346F405BDD059EF96DBDC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1462438AF8F96624B491357A46220CCB /* Pods-PlayableAdsPreviewer_Example-umbrella.h in Headers */,
+				28A794912ED1E06B05D96DF5ED0AED19 /* MBProgressHUD-umbrella.h in Headers */,
+				A5BF8DBDD8660DBCFE712657F3D82BDA /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,37 +476,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D945C7ACF44EB961C5FF7804E7A578F9 /* Headers */ = {
+		B47BDA307CAEEE7BB8A0E27E39FC87D8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76EE1EBD46436E6CA5C960C704DC6D68 /* TSBlurView.h in Headers */,
-				03D75AE0899CAD2364834389D13ABACB /* TSMessage.h in Headers */,
-				C6C3F245D87B6474A55A0662BEFE7397 /* TSMessages-umbrella.h in Headers */,
-				103EC0855C588110A203F93A000A8979 /* TSMessageView.h in Headers */,
+				F83B109A85428414C7B73FBAE16F06E4 /* Pods-PlayableAdsPreviewer_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4769989ED573117F5A5C8E272FDB8E8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D825318243A46A40BA1DF783A48F503 /* TSBlurView.h in Headers */,
+				7F12CD1BBD974638CA9456D911395E5A /* TSMessage.h in Headers */,
+				1CD6D70BD90FDBD222F26BBF173B2254 /* TSMessages-umbrella.h in Headers */,
+				9F27DADDBCCEBEEA307395C927C347B3 /* TSMessageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		04C67279458E7D8FD696D0A719D09075 /* TSMessages */ = {
+		01698261C2F2EAF427B85070B3A64228 /* TSMessages */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7122FF07E76EA085B96A749976EDF55 /* Build configuration list for PBXNativeTarget "TSMessages" */;
+			buildConfigurationList = C6166023C4EB111782EB2AB4D59C9CD1 /* Build configuration list for PBXNativeTarget "TSMessages" */;
 			buildPhases = (
-				91ECAC56F058B285BE029D178937ADD8 /* Sources */,
-				51495B20C1FF9888126EE63D909BD6A3 /* Frameworks */,
-				D945C7ACF44EB961C5FF7804E7A578F9 /* Headers */,
-				392670C7A8DA1A9FB6702C885512384E /* Resources */,
+				1D8F030FA1530FEE808F45E0525C231A /* Sources */,
+				BC821B07D8C8C1C4F80A3A91EF9752D1 /* Frameworks */,
+				C4769989ED573117F5A5C8E272FDB8E8 /* Headers */,
+				8CEF90F0E70C12F05A9AD499C40C9F1E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DF8BFA7DB4324995B042A5B2D02ABD17 /* PBXTargetDependency */,
+				CDB0D31109C92A8F95EB47E3B84C4E88 /* PBXTargetDependency */,
 			);
 			name = TSMessages;
 			productName = TSMessages;
-			productReference = B2EEF49E5197385849C6AF6271CD59C0 /* TSMessages.framework */;
+			productReference = 4CC90E53E9096E48C8AFD7638D110DEE /* TSMessages.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2BB5C4D903B38D1DCB03FC609EBDC96E /* Pods-PlayableAdsPreviewer_Tests */ = {
@@ -458,26 +531,24 @@
 			);
 			name = "Pods-PlayableAdsPreviewer_Tests";
 			productName = "Pods-PlayableAdsPreviewer_Tests";
-			productReference = EDFF87BBDF6948AD0E042B1EFB8596A1 /* Pods_PlayableAdsPreviewer_Tests.framework */;
+			productReference = 7A21EE1C6509BAB0571EC7C4078EE938 /* Pods_PlayableAdsPreviewer_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		370253E3B4C48C74DAE5D3F71DED67E3 /* Pods-PlayableAdsPreviewer_Example */ = {
+		41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6EA4B29749481BE7461ED7E9EDC71D70 /* Build configuration list for PBXNativeTarget "Pods-PlayableAdsPreviewer_Example" */;
+			buildConfigurationList = CC1874913BA1F82C4953C3C7F551AB22 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
 			buildPhases = (
-				CED044DE14A48DFEB862DB0DD0425DFC /* Sources */,
-				47C505A50C2B5CA40D522D78E85721E4 /* Frameworks */,
-				341255C0565D11D4B59ECBF1789D07C4 /* Headers */,
+				FE8E0446C3B3B52779E8DE373E495A61 /* Sources */,
+				B57774E30FD88AE26F9037E1360E947B /* Frameworks */,
+				197B7877D5D346F405BDD059EF96DBDC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				19C529E0C619007B9BF41C67DA0D70C6 /* PBXTargetDependency */,
-				F63789442D0E64E3F48DA095226C6B8A /* PBXTargetDependency */,
 			);
-			name = "Pods-PlayableAdsPreviewer_Example";
-			productName = "Pods-PlayableAdsPreviewer_Example";
-			productReference = B0E9A5840769DAC4B6D2676FD9A34B34 /* Pods_PlayableAdsPreviewer_Example.framework */;
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = 8F342682A8BF6B47838D5807F6A3601C /* MBProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AB57EF7D8B23701455085EC663E5FA40 /* HexColors */ = {
@@ -494,7 +565,27 @@
 			);
 			name = HexColors;
 			productName = HexColors;
-			productReference = 4DF2394584896204D4CCFE14B57F296E /* HexColors.framework */;
+			productReference = C868624A866C4325778F008414658B09 /* HexColors.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E0F8650C4AFC756CA33537FAD90EB327 /* Pods-PlayableAdsPreviewer_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A4AEAED4A3403E62D9EE5C12DC3A6B0 /* Build configuration list for PBXNativeTarget "Pods-PlayableAdsPreviewer_Example" */;
+			buildPhases = (
+				31748401D0EF429CCA63A5A8AAD77C38 /* Sources */,
+				95A70ACEEA4488EC6966554D478FD0AF /* Frameworks */,
+				B47BDA307CAEEE7BB8A0E27E39FC87D8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A48228597B5201B38FDA42217C30F0C2 /* PBXTargetDependency */,
+				8BE33E8607DE2763AFEF7583F5168BAA /* PBXTargetDependency */,
+				47E9CFC4A7B818D833A711F7107A45B5 /* PBXTargetDependency */,
+			);
+			name = "Pods-PlayableAdsPreviewer_Example";
+			productName = "Pods-PlayableAdsPreviewer_Example";
+			productReference = A6F51C5A7DEEA7219DEF5F69328DCF15 /* Pods_PlayableAdsPreviewer_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -514,40 +605,41 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 85D03D2A3655439BB8E7A76E88CAF464 /* Products */;
+			productRefGroup = 7E4861AF4937440E87072A68F8FAB13D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AB57EF7D8B23701455085EC663E5FA40 /* HexColors */,
-				370253E3B4C48C74DAE5D3F71DED67E3 /* Pods-PlayableAdsPreviewer_Example */,
+				41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */,
+				E0F8650C4AFC756CA33537FAD90EB327 /* Pods-PlayableAdsPreviewer_Example */,
 				2BB5C4D903B38D1DCB03FC609EBDC96E /* Pods-PlayableAdsPreviewer_Tests */,
-				04C67279458E7D8FD696D0A719D09075 /* TSMessages */,
+				01698261C2F2EAF427B85070B3A64228 /* TSMessages */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		392670C7A8DA1A9FB6702C885512384E /* Resources */ = {
+		8CEF90F0E70C12F05A9AD499C40C9F1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7914FBF44987C885DF2233708FB98361 /* NotificationBackgroundError.png in Resources */,
-				EF5BC2F015E3F45269DD00DCC4F45D99 /* NotificationBackgroundError@2x.png in Resources */,
-				E7D1BEC624DA18B0E74602C2CC3FECB6 /* NotificationBackgroundErrorIcon.png in Resources */,
-				ADDD917CA9101E370B3ABA48F90802FA /* NotificationBackgroundErrorIcon@2x.png in Resources */,
-				7C025FA4A7A05988DBE9041CA32EC31E /* NotificationBackgroundMessage.png in Resources */,
-				1258E37D8EF286A64E2B77565B4088EA /* NotificationBackgroundMessage@2x.png in Resources */,
-				137C824EA1D6A345971181DF56A5F8B9 /* NotificationBackgroundSuccess.png in Resources */,
-				9DAF712B80B2407175841F1A05C8AF0A /* NotificationBackgroundSuccess@2x.png in Resources */,
-				3E05C971D141A016A419D024BBD639F6 /* NotificationBackgroundSuccessIcon.png in Resources */,
-				95DD5B26604043B0B4C9B5A5DAC2E825 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
-				5369612B6A78BB128C4CDE7802719269 /* NotificationBackgroundWarning.png in Resources */,
-				ABD8B7D7E0B838BBE362E967E163CB8E /* NotificationBackgroundWarning@2x.png in Resources */,
-				DAF9E45DAB06CF87880F9F07EF4ADB55 /* NotificationBackgroundWarningIcon.png in Resources */,
-				3574915CB8253B84A83DBB59A5AF9A5D /* NotificationBackgroundWarningIcon@2x.png in Resources */,
-				B5B7E6A7DF9D824645176253297B3DC6 /* NotificationButtonBackground.png in Resources */,
-				F381F37EA8284FB179C5C0F567CEF999 /* NotificationButtonBackground@2x.png in Resources */,
-				94226A2B722F89E52A34AC2B0E2E16D3 /* TSMessagesDefaultDesign.json in Resources */,
+				861058D86E1623C14F7647334092DB02 /* NotificationBackgroundError.png in Resources */,
+				BDF1A736FD8A4715CDCA0167F29FB783 /* NotificationBackgroundError@2x.png in Resources */,
+				A7F5768184B87F8A9D5A389B245D061F /* NotificationBackgroundErrorIcon.png in Resources */,
+				5BF35D83D2464487F8F4269D5B1090AD /* NotificationBackgroundErrorIcon@2x.png in Resources */,
+				2F673A1C29B18E505F6CD6701B29C0DA /* NotificationBackgroundMessage.png in Resources */,
+				21D29D4E81933585B3C53CDF0CE2453E /* NotificationBackgroundMessage@2x.png in Resources */,
+				9B37F83D8322BADA333924FECDF8A617 /* NotificationBackgroundSuccess.png in Resources */,
+				111FF7ECAF5E45FC787A58BE066FC0E7 /* NotificationBackgroundSuccess@2x.png in Resources */,
+				080671DB155859DFFA34068A47B3C630 /* NotificationBackgroundSuccessIcon.png in Resources */,
+				985DCBD302CAE59ACD6E8B8BB840A687 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
+				74ED63562E32CE8BD623CF61866A49F4 /* NotificationBackgroundWarning.png in Resources */,
+				B09752CEF0BBA9C6036DCA13A1CAA082 /* NotificationBackgroundWarning@2x.png in Resources */,
+				7E5CAA251DE0BC646E85E49117B17911 /* NotificationBackgroundWarningIcon.png in Resources */,
+				ECA371151941A1C6C294564729E42836 /* NotificationBackgroundWarningIcon@2x.png in Resources */,
+				F6F5D28DA80F7B16FA1BFB486B924F92 /* NotificationButtonBackground.png in Resources */,
+				C992FDB2C317F21CCE823E47C3AD4751 /* NotificationButtonBackground@2x.png in Resources */,
+				F99BB9E564618C430AD8C826E116BC70 /* TSMessagesDefaultDesign.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +655,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D8F030FA1530FEE808F45E0525C231A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02532E3E1CB6776E3352E9D93D69F18 /* TSBlurView.m in Sources */,
+				8EDDD75D3A28A2A72346283F52771621 /* TSMessage.m in Sources */,
+				98E6CC5FEFC0A47C22CC47C70A55F725 /* TSMessages-dummy.m in Sources */,
+				A89707C07C838147039249FF304E5DE7 /* TSMessageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31748401D0EF429CCA63A5A8AAD77C38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9234E0AC6C5866036E90F5DF839A697 /* Pods-PlayableAdsPreviewer_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8700176524D0297B2290692CFE5DE10D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -571,50 +682,76 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91ECAC56F058B285BE029D178937ADD8 /* Sources */ = {
+		FE8E0446C3B3B52779E8DE373E495A61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C083A4F8243DEFA0BCF0002C2CC9D6C9 /* TSBlurView.m in Sources */,
-				35C26FB87AABBCBD1BFDC86BA33F4B3B /* TSMessage.m in Sources */,
-				13D49AE896341480C9F397A6EF38DF53 /* TSMessages-dummy.m in Sources */,
-				9BC55E8C10908E2C1DF87B7A024FF9CD /* TSMessageView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CED044DE14A48DFEB862DB0DD0425DFC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7DAC1B32F8AFEA347E5EA69D8F072CAB /* Pods-PlayableAdsPreviewer_Example-dummy.m in Sources */,
+				0968524ED4DE8DF7834055C5B6089D72 /* MBProgressHUD-dummy.m in Sources */,
+				897C38C8E3C31950E2E93A4D6937CCC4 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		19C529E0C619007B9BF41C67DA0D70C6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HexColors;
-			target = AB57EF7D8B23701455085EC663E5FA40 /* HexColors */;
-			targetProxy = 95520C7177E27996530F229965F5247D /* PBXContainerItemProxy */;
-		};
-		DF8BFA7DB4324995B042A5B2D02ABD17 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HexColors;
-			target = AB57EF7D8B23701455085EC663E5FA40 /* HexColors */;
-			targetProxy = D52C75A167C34A571AFAC425199F4224 /* PBXContainerItemProxy */;
-		};
-		F63789442D0E64E3F48DA095226C6B8A /* PBXTargetDependency */ = {
+		47E9CFC4A7B818D833A711F7107A45B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TSMessages;
-			target = 04C67279458E7D8FD696D0A719D09075 /* TSMessages */;
-			targetProxy = 464FCBBCF4A166262B39ADA78BD2ED0E /* PBXContainerItemProxy */;
+			target = 01698261C2F2EAF427B85070B3A64228 /* TSMessages */;
+			targetProxy = 94BCE85C9DC51EC15DF71A96AA1A68AD /* PBXContainerItemProxy */;
+		};
+		8BE33E8607DE2763AFEF7583F5168BAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */;
+			targetProxy = E0EA3CB4BAAE8FF8194A6CD0C8D5474C /* PBXContainerItemProxy */;
+		};
+		A48228597B5201B38FDA42217C30F0C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HexColors;
+			target = AB57EF7D8B23701455085EC663E5FA40 /* HexColors */;
+			targetProxy = A12C4E6185D6D051C126C8A11483F873 /* PBXContainerItemProxy */;
+		};
+		CDB0D31109C92A8F95EB47E3B84C4E88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HexColors;
+			target = AB57EF7D8B23701455085EC663E5FA40 /* HexColors */;
+			targetProxy = C955DB9E810BB6C8F47319F08AC519F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		048605C820B957EF9E0C1D7F32F6C5E7 /* Release */ = {
+		06BFDAFAD40566C1E7358557E1069C82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6893FA631C6DD36B1F6E69E83FEC36F6 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		20CEB5BE95A20E6527AAAF20AE2EDC41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB6089009CBF44666B0807C64F56B614 /* Pods-PlayableAdsPreviewer_Example.release.xcconfig */;
 			buildSettings = {
@@ -647,41 +784,9 @@
 			};
 			name = Release;
 		};
-		102AC7C82F7ADFC8BEA472A85B05A1D5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A34F9891BB72EE1807C994B4AF9DCBEE /* Pods-PlayableAdsPreviewer_Example.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PlayableAdsPreviewer_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PlayableAdsPreviewer_Example/Pods-PlayableAdsPreviewer_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PlayableAdsPreviewer_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		22D58F64156E230BC59F1E1EBFFA004F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B67F8F9F894ED31892422D0CF4A72821 /* HexColors.xcconfig */;
+			baseConfigurationReference = 94AF35958545E82499FE5B13F8D407B8 /* HexColors.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -709,36 +814,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		4713526601D80AE3EC55249D528BFB72 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CEC6AD1CEEF9625BF9D21CE10EBDEA6 /* TSMessages.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TSMessages/TSMessages-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TSMessages/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TSMessages/TSMessages.modulemap";
-				PRODUCT_NAME = TSMessages;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		553A97808DA39FF9D2A5E7B3DFC2C5E9 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -773,9 +848,70 @@
 			};
 			name = Release;
 		};
-		7AEBDF26C8F63DD413BEF3CBF862C362 /* Release */ = {
+		973B1618506F1B069AAF7632BF5FC9EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CEC6AD1CEEF9625BF9D21CE10EBDEA6 /* TSMessages.xcconfig */;
+			baseConfigurationReference = 6893FA631C6DD36B1F6E69E83FEC36F6 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9F4E0A3850A412F0BFFE1C9F00A17ECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94AF35958545E82499FE5B13F8D407B8 /* HexColors.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HexColors/HexColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HexColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HexColors/HexColors.modulemap";
+				PRODUCT_NAME = HexColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A8C06DD2F5FE57CF8E090D984B16D664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88CF3A3A4A69602BA2252EE35794B7BF /* TSMessages.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -803,36 +939,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		9F4E0A3850A412F0BFFE1C9F00A17ECF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B67F8F9F894ED31892422D0CF4A72821 /* HexColors.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HexColors/HexColors-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HexColors/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HexColors/HexColors.modulemap";
-				PRODUCT_NAME = HexColors;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -981,6 +1087,68 @@
 			};
 			name = Debug;
 		};
+		EA15E5DDCF39B569A49742623B76480A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A34F9891BB72EE1807C994B4AF9DCBEE /* Pods-PlayableAdsPreviewer_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PlayableAdsPreviewer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PlayableAdsPreviewer_Example/Pods-PlayableAdsPreviewer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PlayableAdsPreviewer_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F86FD103057B1D04229E34AFEA1F54DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88CF3A3A4A69602BA2252EE35794B7BF /* TSMessages.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TSMessages/TSMessages-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TSMessages/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TSMessages/TSMessages.modulemap";
+				PRODUCT_NAME = TSMessages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -989,6 +1157,15 @@
 			buildConfigurations = (
 				E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */,
 				B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A4AEAED4A3403E62D9EE5C12DC3A6B0 /* Build configuration list for PBXNativeTarget "Pods-PlayableAdsPreviewer_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA15E5DDCF39B569A49742623B76480A /* Debug */,
+				20CEB5BE95A20E6527AAAF20AE2EDC41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1002,29 +1179,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6EA4B29749481BE7461ED7E9EDC71D70 /* Build configuration list for PBXNativeTarget "Pods-PlayableAdsPreviewer_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				102AC7C82F7ADFC8BEA472A85B05A1D5 /* Debug */,
-				048605C820B957EF9E0C1D7F32F6C5E7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A7122FF07E76EA085B96A749976EDF55 /* Build configuration list for PBXNativeTarget "TSMessages" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4713526601D80AE3EC55249D528BFB72 /* Debug */,
-				7AEBDF26C8F63DD413BEF3CBF862C362 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		AA3EC2D8BF8A3E56FB58C341A179972B /* Build configuration list for PBXNativeTarget "Pods-PlayableAdsPreviewer_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C759E9AB637178B7F31256DBA4B9E18E /* Debug */,
 				553A97808DA39FF9D2A5E7B3DFC2C5E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6166023C4EB111782EB2AB4D59C9CD1 /* Build configuration list for PBXNativeTarget "TSMessages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F86FD103057B1D04229E34AFEA1F54DB /* Debug */,
+				A8C06DD2F5FE57CF8E090D984B16D664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC1874913BA1F82C4953C3C7F551AB22 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06BFDAFAD40566C1E7358557E1069C82 /* Debug */,
+				973B1618506F1B069AAF7632BF5FC9EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

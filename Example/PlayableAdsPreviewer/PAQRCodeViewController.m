@@ -8,6 +8,7 @@
 
 #import "PAQRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 #define SCREEN_WIDTH  [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -30,6 +31,7 @@
 @property (nonatomic, strong) UILabel *bottomLabel;
 @property (nonatomic, strong) UILabel *warningLabel;
 @property (nonatomic, strong) UILabel *topLabel;
+@property (nonatomic, strong) MBProgressHUD *hud;
 @property (nonatomic) BOOL needsScanAnnimation;
 @property (nonatomic) BOOL isReading;
 
@@ -100,6 +102,39 @@
             [_lineImageView setFrame:_lineRect0];
         }];
     }
+    
+    [self checkCameraPermission];
+}
+
+- (void)checkCameraPermission{
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if (authStatus == AVAuthorizationStatusAuthorized) {
+        BOOL atLeastOne = NO;
+        NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+        for (AVCaptureDevice *device in devices) {
+            if (device) {
+                atLeastOne = YES;
+            }
+        }
+        if (!atLeastOne) {
+            authStatus = AVAuthorizationStatusRestricted;
+        }
+    }else{
+        self.hud.mode = MBProgressHUDModeText;
+        self.hud.label.text = @"please check camera permission";
+        self.hud.hidden = NO;
+        [self.hud hideAnimated:YES afterDelay:5];
+        self.hud = nil;
+    }
+}
+
+- (MBProgressHUD *)hud{
+    if (!_hud) {
+        UIView *view = self.view;
+        _hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+        _hud.mode = MBProgressHUDModeIndeterminate;
+    }
+    return _hud;
 }
 
 - (void)viewDidAppear:(BOOL)animated{

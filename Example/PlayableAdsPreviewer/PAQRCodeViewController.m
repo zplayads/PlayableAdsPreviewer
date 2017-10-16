@@ -64,7 +64,7 @@
                              queue:nil
                         usingBlock:^(NSNotification *note) {
                             [weakSelf.imagePicker dismissViewControllerAnimated:NO completion:NULL];
-                            [weakSelf cancel];
+                            [weakSelf dismissViewControllerAnimated:NO completion:nil];
                         }];
     [_observers addObject:o];
 }
@@ -95,6 +95,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
     if (_needsScanAnnimation) {
         [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionRepeat animations:^{
             [_lineImageView setFrame:_lineRect1];
@@ -294,7 +295,7 @@
     _albumButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _albumButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     
-    [_albumButton addTarget:self action:@selector(pickImage) forControlEvents:UIControlEventAllEvents];
+    [_albumButton addTarget:self action:@selector(pickImage) forControlEvents:UIControlEventTouchUpInside];
     [_albumButton setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:_albumButton];
     
@@ -433,8 +434,8 @@
 
 - (void)pickImage{
     [self presentViewController:_imagePicker animated:YES completion:NULL];
-}
 
+}
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
     [picker dismissViewControllerAnimated:NO completion:NULL];
@@ -509,10 +510,6 @@
         [_videoPreviewLayer removeFromSuperlayer];
         _isReading = !_isReading;
     }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate method implementation

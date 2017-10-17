@@ -32,6 +32,7 @@
     [self addObserver];
     if (!_isShow) {
         [self startScan];
+//        [self createQRCodeImage];
         _isShow = YES;
     }
 }

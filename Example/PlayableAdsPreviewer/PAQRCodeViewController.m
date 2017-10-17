@@ -442,7 +442,7 @@
     CIContext *context = [CIContext contextWithOptions:nil];
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode
                                               context:context
-                                              options:@{CIDetectorAccuracy:CIDetectorAccuracyHigh}];
+                                              options:@{CIDetectorAccuracy:CIDetectorAccuracyLow}];
     CIImage *cgImage = [CIImage imageWithCGImage:image.CGImage];
     NSArray *features = [detector featuresInImage:cgImage];
     CIQRCodeFeature *feature = [features firstObject];

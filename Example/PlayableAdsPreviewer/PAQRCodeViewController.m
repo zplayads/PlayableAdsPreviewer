@@ -286,10 +286,10 @@
     _albumButton = [[UIButton alloc]init];
     _albumButton.titleLabel.font = [UIFont fontWithName:@"Arial" size:15];
     //attribute
-    NSString *str = @"您可在Zplay Ads广告平台获得二维码或者前往相册选择二维码";
+    NSString *str = @"您可在Zplay Ads广告平台获得二维码\n或者\n选择二维码";
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc]initWithString:str];
     [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, str.length)];
-    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(25, 2)];
+    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:127.0/255.0f green:233.0/255.0f blue:97.0/255.0f alpha:1] range:NSMakeRange(25, 5)];
     [_albumButton setAttributedTitle:attrStr forState:UIControlStateNormal];
     
     _albumButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -304,7 +304,7 @@
                                                                       options:0
                                                                       metrics:0
                                                                         views:@{@"_albumButton":_albumButton}]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[_albumButton(==%f)]", frameWidth]
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[_albumButton(==%f)]", SCREEN_WIDTH]
                                                                       options:0
                                                                       metrics:0
                                                                         views:@{@"_albumButton":_albumButton}]];
@@ -407,7 +407,7 @@
     
     [_warningLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[_warningLabel(==%f)]", frameWidth]
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[_warningLabel(==%f)]", SCREEN_WIDTH]
                                                                       options:0
                                                                       metrics:0
                                                                         views:@{@"_warningLabel":_warningLabel}]];

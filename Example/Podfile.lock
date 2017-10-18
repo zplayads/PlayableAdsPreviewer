@@ -1,7 +1,7 @@
 PODS:
   - HexColors (2.2.1)
   - MBProgressHUD (1.0.0)
-  - PlayableAdsPreviewer (0.6.1)
+  - PlayableAdsPreviewer (0.7.0)
   - PlayableAdsPreviewerDemo (0.1.0):
     - TSMessages
   - TSMessages (0.9.12):
@@ -9,7 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
-  - PlayableAdsPreviewer (= 0.6.1)
+  - PlayableAdsPreviewer (= 0.7.0)
   - PlayableAdsPreviewerDemo (from `../`)
   - TSMessages
 
@@ -20,10 +20,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  PlayableAdsPreviewer: 0b922c50e84ffa24bf28d179f5512b61ffa01ed7
+  PlayableAdsPreviewer: 657e9d428613bd753f4228ee37449d3fe002bb60
   PlayableAdsPreviewerDemo: 29e467a756e4f69eb1682fdbbdb5d504fa0c1f09
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
 
-PODFILE CHECKSUM: d4aec896d09c11938c99675be0dfa1596e3cf399
+PODFILE CHECKSUM: 947577ce37ee4c7cdf29854498055c1cfd89a7cf
 
 COCOAPODS: 1.3.1

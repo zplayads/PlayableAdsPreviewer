@@ -334,8 +334,9 @@
 				ORGANIZATIONNAME = "wzy2010416033@163.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = VG25A6M88T;
+						DevelopmentTeam = YEB8KNJQ29;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -646,7 +647,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = VG25A6M88T;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = YEB8KNJQ29;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlayableAdsPreviewer/PlayableAdsPreviewer-Prefix.pch";
 				INFOPLIST_FILE = "PlayableAdsPreviewer/PlayableAdsPreviewer-Info.plist";
@@ -655,6 +658,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9ea8bbf2-02c7-48d6-8925-d94319f877d8";
+				PROVISIONING_PROFILE_SPECIFIER = Dev_zplayads;
 				SWIFT_OBJC_BRIDGING_HEADER = "PlayableAdsPreviewer/PlayableAdsPreviewer_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -668,7 +673,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = VG25A6M88T;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = YEB8KNJQ29;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlayableAdsPreviewer/PlayableAdsPreviewer-Prefix.pch";
@@ -678,6 +685,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9ea8bbf2-02c7-48d6-8925-d94319f877d8";
+				PROVISIONING_PROFILE_SPECIFIER = Dev_zplayads;
 				SWIFT_OBJC_BRIDGING_HEADER = "PlayableAdsPreviewer/PlayableAdsPreviewer_Example-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;

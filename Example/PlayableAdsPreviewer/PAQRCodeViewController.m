@@ -328,7 +328,7 @@
                                                              toItem:_viewPreview
                                                           attribute:NSLayoutAttributeCenterY
                                                          multiplier:1.0
-                                                           constant:frameWidth/2 + 30]];
+                                                           constant:frameWidth/2 + 35]];
 }
 
 - (void)addBottomLabelConstraint{

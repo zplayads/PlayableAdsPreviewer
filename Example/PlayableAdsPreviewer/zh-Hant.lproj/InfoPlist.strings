@@ -1,3 +1,5 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleDisplayName = "ZPLAY Ads 預覽工具";
+NSCameraUsageDescription = "以便掃描二維碼預覽廣告";
+NSPhotoLibraryUsageDescription = "以便掃描二維碼預覽廣告";

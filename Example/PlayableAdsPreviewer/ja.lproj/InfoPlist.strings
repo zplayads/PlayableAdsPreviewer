@@ -1,3 +1,5 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleDisplayName = "ZPLAY Ads プレビューツール";
+NSCameraUsageDescription = "2次元コードをスキャンして広告をプレビューするには";
+NSPhotoLibraryUsageDescription = "2次元コードをスキャンして広告をプレビューするには";

@@ -1,3 +1,5 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleDisplayName = "ZPLAY Ads 미리보기";
+NSCameraUsageDescription = "코드 스캔를 통하여 광고 미리 확인 하기";
+NSPhotoLibraryUsageDescription = "코드 스캔를 통하여 광고 미리 확인 하기";

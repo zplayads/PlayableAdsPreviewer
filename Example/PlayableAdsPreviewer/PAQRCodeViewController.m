@@ -122,7 +122,7 @@
         }
     }else{
         self.hud.mode = MBProgressHUDModeText;
-        self.hud.label.text = @"please check camera permission";
+        self.hud.label.text = NSLocalizedString(@"缺少相机权限", nil);
         self.hud.hidden = NO;
         [self.hud hideAnimated:YES afterDelay:5];
         self.hud = nil;
@@ -286,10 +286,17 @@
     _albumButton = [[UIButton alloc]init];
     _albumButton.titleLabel.font = [UIFont fontWithName:@"Arial" size:15];
     //attribute
-    NSString *str = @"您可在Zplay Ads广告平台获得二维码\n或者\n选择二维码";
+    NSString *str1 = NSLocalizedString(@"你可以在ZPLAY Ads广告平台获得二维码", nil);
+    NSString *str2 = NSLocalizedString(@"或者", nil);
+    NSString *str3 = NSLocalizedString(@"选择二维码", nil);
+    NSString *str = [NSString stringWithFormat:@"%@\n%@\n",str1,str2];
+    
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc]initWithString:str];
     [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, str.length)];
-    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:127.0/255.0f green:233.0/255.0f blue:97.0/255.0f alpha:1] range:NSMakeRange(25, 5)];
+//    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:127.0/255.0f green:233.0/255.0f blue:97.0/255.0f alpha:1] range:NSMakeRange(25, 5)];
+    NSMutableAttributedString *attrStr2 = [[NSMutableAttributedString alloc]initWithString:str3];
+    [attrStr2 addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:127.0/255.0f green:233.0/255.0f blue:97.0/255.0f alpha:1] range:NSMakeRange(0, str3.length)];
+    [attrStr appendAttributedString:attrStr2];
     [_albumButton setAttributedTitle:attrStr forState:UIControlStateNormal];
     
     _albumButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -326,7 +333,7 @@
 
 - (void)addBottomLabelConstraint{
     _bottomLabel = [[UILabel alloc]init];
-    _bottomLabel.text = @"© 2010 ～ 2017 Power By Zplay Ads";
+    _bottomLabel.text = @"© 2010 ～ 2017 Power By ZPLAY Ads";
     _bottomLabel.font = [UIFont fontWithName:@"Arial" size:12];
     _bottomLabel.textColor = [UIColor whiteColor];
     _bottomLabel.textAlignment = NSTextAlignmentCenter;
@@ -361,7 +368,7 @@
 
 - (void)addTopLabelConstraint{
     _topLabel = [[UILabel alloc]init];
-    _topLabel.text = @"Zplay Ads 可玩广告";
+    _topLabel.text = NSLocalizedString(@"ZPLAY Ads预览工具", nil);
     _topLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
     _topLabel.textColor = [UIColor whiteColor];
     _topLabel.textAlignment = NSTextAlignmentCenter;
@@ -397,7 +404,7 @@
     CGFloat frameWidth = SCREEN_WIDTH * 2 / 3;
     
     _warningLabel = [[UILabel alloc]init];
-    _warningLabel.text = @"将二维码／条码放入框内，即可自动扫描";
+    _warningLabel.text = NSLocalizedString(@"将二维码放入框内，即可自动扫描", nil);
     _warningLabel.numberOfLines = 0;
     _warningLabel.font = [UIFont fontWithName:@"Arial" size:15];
     _warningLabel.textColor = [UIColor whiteColor];

@@ -46,7 +46,7 @@
             if (self.appID.length != str.length ) {
                 [TSMessage showNotificationInViewController:weakSelf
                                                       title:@"Error"
-                                                   subtitle:@"QRCode Error"
+                                                   subtitle:NSLocalizedString(@"解析二维码失败", nil)
                                                       image:nil
                                                        type:TSMessageNotificationTypeError
                                                    duration:TSMessageNotificationDurationAutomatic
@@ -65,12 +65,12 @@
                 return;
             }
             
-            self.hud.label.text = @"Loading";
+            self.hud.label.text = NSLocalizedString(@"正在加载中...", nil);
             self.hud.hidden = NO;
             
             [TSMessage showNotificationInViewController:weakSelf
                                                   title:@"Successed"
-                                               subtitle:nil
+                                               subtitle:NSLocalizedString(@"二维码解析成功", nil)
                                                   image:nil
                                                    type:TSMessageNotificationTypeSuccess
                                            duration:TSMessageNotificationDurationAutomatic
@@ -83,7 +83,7 @@
         } else {
             [TSMessage showNotificationInViewController:weakSelf
                                                   title:@"Error"
-                                               subtitle:@"QRCode Error"
+                                               subtitle:NSLocalizedString(@"解析二维码失败", nil)
                                                   image:nil
                                                    type:TSMessageNotificationTypeError
                                            duration:TSMessageNotificationDurationAutomatic
@@ -122,7 +122,7 @@
                                               failure:^(NSError *_Nonnull error) {
                                                   [TSMessage showNotificationInViewController:weakSelf
                                                                                         title:@"Error"
-                                                                                     subtitle:@"Load Error"
+                                                                                     subtitle:NSLocalizedString(@"图片加载失败", nil)
                                                                                         image:nil
                                                                                          type:TSMessageNotificationTypeError
                                                                                      duration:TSMessageNotificationDurationAutomatic

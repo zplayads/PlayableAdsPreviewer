@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  PlayableAdsPreviewer
+
+  Created by 王泽永 on 2017/10/24.
+  Copyright © 2017年 wzy2010416033@163.com. All rights reserved.
+*/
+
+"ZPLAY Ads预览工具" = "ZPLAY Ads Preview Tool";
+"将二维码放入框内，即可自动扫描" = "Scan the QR code here";
+"你可以在ZPLAY Ads广告平台获得二维码" = "Codes are available on the ZPLAY Ads platform or may have been save to your photo storage";
+"或者" = "Or";
+"选择二维码" = "Access photo storage";
+"二维码解析成功" = "Read successful";
+"解析二维码失败" = "Failed to read";
+"缺少相机权限" = "Need permission to use camera";
+"缺少存储卡读写权限" = "Not authorized to access SD card storage";
+"正在加载中..." = "Loading...";
+"图片加载失败" = "Loading failed ";

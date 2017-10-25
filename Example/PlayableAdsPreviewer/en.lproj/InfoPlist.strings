@@ -1,5 +1,5 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleDisplayName = "ZPLAY Ads Preview Tool";
-NSCameraUsageDescription = "For reading codes to preview the ads ";
-NSPhotoLibraryUsageDescription = "For reading codes to preview the ads ";
+NSCameraUsageDescription = "For scanning QR codes to preview the ads";
+NSPhotoLibraryUsageDescription = "For scanning QR codes to preview the ads";

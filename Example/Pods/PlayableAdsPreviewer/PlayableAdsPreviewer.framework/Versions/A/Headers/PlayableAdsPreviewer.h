@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)presentFromRootViewController:(UIViewController *)rootViewController
                               withURL:(NSString *)url
+                          isLandscape:(BOOL)isLandscape
+                             itunesID:(NSNumber *)itunesID
                               success:(void (^)(void))success
                               dismiss:(void (^)(void))dismiss
                               failure:(void (^)(NSError *error))failure;

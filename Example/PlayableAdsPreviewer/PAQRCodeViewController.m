@@ -293,7 +293,6 @@
     
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc]initWithString:str];
     [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, str.length)];
-//    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:127.0/255.0f green:233.0/255.0f blue:97.0/255.0f alpha:1] range:NSMakeRange(25, 5)];
     NSMutableAttributedString *attrStr2 = [[NSMutableAttributedString alloc]initWithString:str3];
     [attrStr2 addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:127.0/255.0f green:233.0/255.0f blue:97.0/255.0f alpha:1] range:NSMakeRange(0, str3.length)];
     [attrStr appendAttributedString:attrStr2];

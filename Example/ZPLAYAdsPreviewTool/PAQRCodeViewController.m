@@ -760,7 +760,7 @@ static   NSString  * firstCheckCameraPermission = @"first_checkCameraPermission"
         AVAuthorizationStatus authStatus =
         [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
 
-        if (authStatus != AVAuthorizationStatusAuthorized) {
+        if (authStatus != AVAuthorizationStatusAuthorized || authStatus != AVAuthorizationStatusNotDetermined) {
             self.hud.mode = MBProgressHUDModeText;
             self.hud.label.text = NSLocalizedString(@"缺少相机权限", nil);
             self.hud.hidden = NO;

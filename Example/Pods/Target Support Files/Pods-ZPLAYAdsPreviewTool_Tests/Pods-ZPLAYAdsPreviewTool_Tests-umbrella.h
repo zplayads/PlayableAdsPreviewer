@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_PlayableAdsPreviewer_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_PlayableAdsPreviewer_TestsVersionString[];
+FOUNDATION_EXPORT double Pods_ZPLAYAdsPreviewTool_TestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_ZPLAYAdsPreviewTool_TestsVersionString[];
 

@@ -1,12 +1,12 @@
 use_frameworks!
 
-target 'PlayableAdsPreviewer_Example' do
+target 'ZPLAYAdsPreviewTool_Example' do
   pod 'PlayableAdsPreviewerDemo', :path => '../'
   pod 'TSMessages'
   pod 'PlayableAdsPreviewer' ,'0.10.4'
   pod 'MBProgressHUD', '~> 1.0.0'
 
-  target 'PlayableAdsPreviewer_Tests' do
+  target 'ZPLAYAdsPreviewTool_Tests' do
     inherit! :search_paths
 
     

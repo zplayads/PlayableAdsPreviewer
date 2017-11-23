@@ -353,7 +353,7 @@
 				ORGANIZATIONNAME = "wzy2010416033@163.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = YEB8KNJQ29;
+						DevelopmentTeam = L5UE3EGW93;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
@@ -480,7 +480,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A6F803226CA74B0658670F68 /* [CP] Check Pods Manifest.lock */ = {
@@ -498,7 +498,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B791C397951495AF0FAF35F9 /* [CP] Embed Pods Frameworks */ = {
@@ -699,17 +699,17 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = YEB8KNJQ29;
+				DEVELOPMENT_TEAM = L5UE3EGW93;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Prefix.pch";
 				INFOPLIST_FILE = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9ea8bbf2-02c7-48d6-8925-d94319f877d8";
-				PROVISIONING_PROFILE_SPECIFIER = Dev_zplayads;
+				PROVISIONING_PROFILE = "5a0f3961-fa99-40fe-abfc-94b2d83bbf1f";
+				PROVISIONING_PROFILE_SPECIFIER = PlayAds_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -725,7 +725,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = YEB8KNJQ29;
+				DEVELOPMENT_TEAM = L5UE3EGW93;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Prefix.pch";
@@ -733,10 +733,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9ea8bbf2-02c7-48d6-8925-d94319f877d8";
-				PROVISIONING_PROFILE_SPECIFIER = Dev_zplayads;
+				PROVISIONING_PROFILE = "5a0f3961-fa99-40fe-abfc-94b2d83bbf1f";
+				PROVISIONING_PROFILE_SPECIFIER = PlayAds_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool_Example-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;

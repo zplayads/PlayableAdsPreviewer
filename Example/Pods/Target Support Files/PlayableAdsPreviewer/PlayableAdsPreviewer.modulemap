@@ -1,6 +1,0 @@
-framework module PlayableAdsPreviewer {
-  umbrella header "PlayableAdsPreviewer-umbrella.h"
-
-  export *
-  module * { export * }
-}

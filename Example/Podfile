@@ -3,7 +3,7 @@ use_frameworks!
 target 'ZPLAYAdsPreviewTool_Example' do
   pod 'PlayableAdsPreviewerDemo', :path => '../'
   pod 'TSMessages'
-  pod 'PlayableAdsPreviewer' ,'0.10.4'
+  pod 'PlayableAdsPreviewer' ,'0.10.7'
   pod 'MBProgressHUD', '~> 1.0.0'
 
   target 'ZPLAYAdsPreviewTool_Tests' do

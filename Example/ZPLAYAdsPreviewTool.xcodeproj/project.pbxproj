@@ -104,7 +104,7 @@
 		5BFB4BEF1F7E1D7A00826D90 /* NotificationButtonBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationButtonBackground.png; sourceTree = "<group>"; };
 		5BFB4BF01F7E1D7A00826D90 /* NotificationButtonBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotificationButtonBackground@2x.png"; sourceTree = "<group>"; };
 		5BFB4BF11F7E1D7A00826D90 /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* ZPLAYAdsPreviewTool_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZPLAYAdsPreviewTool_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* ZPLAYAdsPreviewTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZPLAYAdsPreviewTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -131,9 +131,10 @@
 		C3D97EC1A4A154F2B975840E /* Pods-ZPLAYAdsPreviewTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_Tests/Pods-ZPLAYAdsPreviewTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C766D0E21FCA67B40066B77B /* RightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		C766D0E31FCA67B40066B77B /* RightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
-		C766D0EA1FCBED2B0066B77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C797FF631FC7EF5D00540338 /* LeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		C797FF641FC7EF5D00540338 /* LeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		C7C755551FCBF5FF00E047E0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		C7C755561FCBF61A00E047E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA024B04D389B67E341A87DB /* Pods_ZPLAYAdsPreviewTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZPLAYAdsPreviewTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -222,7 +223,7 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* ZPLAYAdsPreviewTool_Example.app */,
+				6003F58A195388D20070C39A /* ZPLAYAdsPreviewTool.app */,
 				6003F5AE195388D20070C39A /* ZPLAYAdsPreviewTool_Tests.xctest */,
 			);
 			name = Products;
@@ -311,9 +312,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F589195388D20070C39A /* ZPLAYAdsPreviewTool_Example */ = {
+		6003F589195388D20070C39A /* ZPLAYAdsPreviewTool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ZPLAYAdsPreviewTool_Example" */;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ZPLAYAdsPreviewTool" */;
 			buildPhases = (
 				A6F803226CA74B0658670F68 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
@@ -326,9 +327,9 @@
 			);
 			dependencies = (
 			);
-			name = ZPLAYAdsPreviewTool_Example;
+			name = ZPLAYAdsPreviewTool;
 			productName = ZPLAYAdsPreviewTool;
-			productReference = 6003F58A195388D20070C39A /* ZPLAYAdsPreviewTool_Example.app */;
+			productReference = 6003F58A195388D20070C39A /* ZPLAYAdsPreviewTool.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* ZPLAYAdsPreviewTool_Tests */ = {
@@ -363,9 +364,9 @@
 				ORGANIZATIONNAME = "wzy2010416033@163.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 5QP2NLJB42;
+						DevelopmentTeam = L5UE3EGW93;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -389,7 +390,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F589195388D20070C39A /* ZPLAYAdsPreviewTool_Example */,
+				6003F589195388D20070C39A /* ZPLAYAdsPreviewTool */,
 				6003F5AD195388D20070C39A /* ZPLAYAdsPreviewTool_Tests */,
 			);
 		};
@@ -571,7 +572,7 @@
 /* Begin PBXTargetDependency section */
 		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6003F589195388D20070C39A /* ZPLAYAdsPreviewTool_Example */;
+			target = 6003F589195388D20070C39A /* ZPLAYAdsPreviewTool */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -628,7 +629,8 @@
 		C766D0E71FCBED1F0066B77B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C766D0EA1FCBED2B0066B77B /* Base */,
+				C7C755551FCBF5FF00E047E0 /* zh-Hans */,
+				C7C755561FCBF61A00E047E0 /* Base */,
 			);
 			name = Main.storyboard;
 			path = Base.lproj;
@@ -719,18 +721,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QP2NLJB42;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = L5UE3EGW93;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Prefix.pch";
 				INFOPLIST_FILE = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads1.private;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5a0f3961-fa99-40fe-abfc-94b2d83bbf1f";
+				PROVISIONING_PROFILE_SPECIFIER = PlayAds_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -745,8 +747,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QP2NLJB42;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = L5UE3EGW93;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Prefix.pch";
@@ -754,10 +756,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads1.private;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5a0f3961-fa99-40fe-abfc-94b2d83bbf1f";
+				PROVISIONING_PROFILE_SPECIFIER = PlayAds_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool_Example-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
@@ -820,7 +822,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ZPLAYAdsPreviewTool_Example" */ = {
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ZPLAYAdsPreviewTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5C0195388D20070C39A /* Debug */,

@@ -20,7 +20,7 @@
                         <viewControllerLayoutGuide type="bottom" id="OpI-Kt-VCZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="APE-HJ-XlE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="880"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAt-8L-iUk" userLabel="NB">
@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="44" id="0Ve-gg-OLQ"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="How to Get Playable Ad QR Code" id="gFI-dd-Qsw">
+                                    <navigationItem title="二维码获取方法" id="gFI-dd-Qsw">
                                         <barButtonItem key="rightBarButtonItem" image="scanning" id="Dg4-XZ-Fmi">
                                             <connections>
                                                 <segue destination="whP-gf-Uak" kind="show" id="dj1-Rd-cDa"/>
@@ -39,53 +39,31 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efv-P0-yS8" userLabel="SV">
-                                <rect key="frame" x="0.0" y="64" width="375" height="887"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="767"/>
                                 <subviews>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpn-5K-QKb" userLabel="RL">
-                                        <rect key="frame" x="8" y="8" width="359" height="273"/>
+                                        <rect key="frame" x="8" y="8" width="359" height="125"/>
                                         <gestureRecognizers/>
                                         <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">1. online access. 
-Step1: You need to log into the </string>
+                                            <fragment content="一、在线获取。您需要">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="15" name="Helvetica"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="6" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                    <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="ZPLAY Ads">
+                                            <fragment content="登录">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="15" name="Helvetica"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="6" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment>
-                                                <string key="content"> website and choose "Advertiser Login".
-Step2: Application list of your account will display in Application Management, choose one application and click it. 
-Step3: Once access an application, you can click "Preview Ad", the QR Code will display. 
-Step4: Open camera on the upper right corner and scan the QR Code.
-Step5: The playable ads will popout. Check and play it.</string>
+                                            <fragment content="ZPLAY Ads网站，选择“广告主登录”，进入系统后，选择菜单中“应用管理”可查看账号下所有应用，若想看某个应用广告二维码，点击应用名称在广告列表中点击“广告预览”即可获得，点击右上角“相机”扫描二维码。">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="15" name="Helvetica"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="6" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                    <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -95,25 +73,20 @@ Step5: The playable ads will popout. Check and play it.</string>
                                         </connections>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co1-nG-UGo">
-                                        <rect key="frame" x="8" y="583" width="359" height="15.5"/>
+                                        <rect key="frame" x="8" y="344" width="367" height="21"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="iOS Demo:">
+                                            <fragment content="iOS示例：">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="13" name="ArialNarrow"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                    <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="en QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="Pei-lQ-d68">
-                                        <rect key="frame" x="97" y="605.5" width="180" height="180"/>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ch QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="Pei-lQ-d68">
+                                        <rect key="frame" x="97" y="372" width="180" height="180"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="i4Y-lz-b4G"/>
@@ -124,22 +97,15 @@ Step5: The playable ads will popout. Check and play it.</string>
                                         </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4c-Xg-UBd">
-                                        <rect key="frame" x="8" y="301" width="359" height="262"/>
+                                        <rect key="frame" x="8" y="153" width="367" height="171"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">2. Samples on ZPLAY Ads.
-We provide 3 sample QR codes on the ZPLAY Ads website, which located on the right corner of the website. Open ZplayAds app to scan the QR Code with the camera and you will see a playable ads.
-3. Offline Access. 
-We provide the following offline QR Code, you simply save the QR code to the album, click camera on the upper right corner, select the page "album" to scan the QR Code.</string>
+                                                <string key="content">二、官网示例。我们在ZPLAY Ads网站提供3个示例二维码，进入ZPLAY Ads网站即可看到，点击右上角“相机”扫描二维码。
+三、离线二维码。我们提供如下二维码，您只需将二维码保存到相册，点击右上角“相机”，选择页面中“相册”即可扫描</string>
                                                 <attributes>
-                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="3" paragraphSpacing="20" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                    <color key="NSBackgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" paragraphSpacingBefore="20" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -150,16 +116,16 @@ We provide the following offline QR Code, you simply save the QR code to the alb
                                     <constraint firstItem="lpn-5K-QKb" firstAttribute="trailing" secondItem="Efv-P0-yS8" secondAttribute="trailingMargin" id="0oA-vQ-na2"/>
                                     <constraint firstItem="Pei-lQ-d68" firstAttribute="centerX" secondItem="Efv-P0-yS8" secondAttribute="centerX" id="3Hc-vE-B68"/>
                                     <constraint firstAttribute="bottom" secondItem="Pei-lQ-d68" secondAttribute="bottom" constant="10" id="ADV-lC-EHP"/>
+                                    <constraint firstItem="Co1-nG-UGo" firstAttribute="leading" secondItem="t4c-Xg-UBd" secondAttribute="leading" id="B8K-8l-NAL"/>
                                     <constraint firstItem="t4c-Xg-UBd" firstAttribute="leading" secondItem="Efv-P0-yS8" secondAttribute="leading" constant="8" id="DtP-2p-LS7"/>
                                     <constraint firstItem="Pei-lQ-d68" firstAttribute="centerX" secondItem="Efv-P0-yS8" secondAttribute="centerX" id="ISZ-LR-hpp"/>
                                     <constraint firstItem="t4c-Xg-UBd" firstAttribute="top" secondItem="lpn-5K-QKb" secondAttribute="bottom" constant="20" id="KkQ-id-Ux5"/>
                                     <constraint firstItem="Pei-lQ-d68" firstAttribute="centerX" secondItem="Efv-P0-yS8" secondAttribute="centerX" id="PeU-gE-TNS"/>
-                                    <constraint firstItem="Co1-nG-UGo" firstAttribute="trailing" secondItem="t4c-Xg-UBd" secondAttribute="trailing" id="Rx3-sf-Mo0"/>
+                                    <constraint firstItem="Co1-nG-UGo" firstAttribute="trailing" secondItem="t4c-Xg-UBd" secondAttribute="trailing" id="Vng-jQ-5hY"/>
+                                    <constraint firstItem="Co1-nG-UGo" firstAttribute="top" secondItem="t4c-Xg-UBd" secondAttribute="bottom" constant="20" id="afR-lx-Tzr"/>
                                     <constraint firstItem="Pei-lQ-d68" firstAttribute="top" secondItem="Co1-nG-UGo" secondAttribute="bottom" constant="7" id="ezv-Cv-LAI"/>
                                     <constraint firstItem="lpn-5K-QKb" firstAttribute="leading" secondItem="Efv-P0-yS8" secondAttribute="leadingMargin" id="hJv-b7-38M"/>
-                                    <constraint firstItem="Co1-nG-UGo" firstAttribute="top" secondItem="t4c-Xg-UBd" secondAttribute="bottom" constant="20" id="p4g-VH-Rol"/>
-                                    <constraint firstItem="Co1-nG-UGo" firstAttribute="leading" secondItem="t4c-Xg-UBd" secondAttribute="leading" id="rzU-jG-W9t"/>
-                                    <constraint firstAttribute="trailing" secondItem="t4c-Xg-UBd" secondAttribute="trailing" constant="8" id="uYU-IU-k3J"/>
+                                    <constraint firstAttribute="trailing" secondItem="t4c-Xg-UBd" secondAttribute="trailing" id="uYU-IU-k3J"/>
                                     <constraint firstItem="lpn-5K-QKb" firstAttribute="top" secondItem="Efv-P0-yS8" secondAttribute="topMargin" id="wuh-MS-olC"/>
                                 </constraints>
                             </scrollView>
@@ -176,30 +142,30 @@ We provide the following offline QR Code, you simply save the QR code to the alb
                             <constraint firstItem="Efv-P0-yS8" firstAttribute="leading" secondItem="mAt-8L-iUk" secondAttribute="leading" id="wAb-Sh-jgZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Get QR Code" image="QRCode" id="vBE-Xk-aHd"/>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <tabBarItem key="tabBarItem" title="获取二维码" image="QRCode" id="vBE-Xk-aHd"/>
+                    <size key="freeformSize" width="375" height="880"/>
                     <connections>
-                        <outlet property="iosQRCodeImage" destination="Pei-lQ-d68" id="3DP-9b-tgN"/>
-                        <outlet property="loginLabel" destination="lpn-5K-QKb" id="nSw-4z-0S4"/>
-                        <outlet property="navigationItem" destination="gFI-dd-Qsw" id="Rfm-zL-t8F"/>
-                        <outlet property="paragraph23" destination="t4c-Xg-UBd" id="Z2N-ed-NgA"/>
+                        <outlet property="iosQRCodeImage" destination="Pei-lQ-d68" id="n7D-nr-xUd"/>
+                        <outlet property="loginLabel" destination="lpn-5K-QKb" id="s8a-Qs-ZQx"/>
+                        <outlet property="navigationItem" destination="gFI-dd-Qsw" id="OXY-8n-cjd"/>
+                        <outlet property="paragraph23" destination="t4c-Xg-UBd" id="BRG-Lc-X2d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSK-a2-Su9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="P6h-Cx-d8m">
                     <connections>
-                        <action selector="iosQRCTapped:" destination="3tT-WY-qeb" id="2ZC-rE-8gv"/>
+                        <action selector="iosQRCTapped:" destination="3tT-WY-qeb" id="d5J-tR-5VF"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="y53-TJ-UfD">
                     <connections>
-                        <action selector="gotoLogin:" destination="3tT-WY-qeb" id="ecU-FE-SUc"/>
+                        <action selector="gotoLogin:" destination="3tT-WY-qeb" id="I84-1f-kyP"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-174" y="874"/>
+            <point key="canvasLocation" x="-174" y="781"/>
         </scene>
-        <!--Introduction-->
+        <!--工具简介-->
         <scene sceneID="egj-HJ-ZcN">
             <objects>
                 <viewController id="vge-uy-5h4" customClass="LeftViewController" sceneMemberID="viewController">
@@ -214,7 +180,9 @@ We provide the following offline QR Code, you simply save the QR code to the alb
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mr-AC-GU1">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="ZPLAY Ads Preview Tool Introduction" largeTitleDisplayMode="never" id="Wro-go-nM2">
+                                    <navigationItem id="Wro-go-nM2">
+                                        <string key="title">ZPLAY Ads预览工具简介
+</string>
                                         <barButtonItem key="rightBarButtonItem" image="scanning" id="mJo-Qv-tzB">
                                             <connections>
                                                 <segue destination="whP-gf-Uak" kind="show" id="kWr-GK-uDQ"/>
@@ -227,64 +195,55 @@ We provide the following offline QR Code, you simply save the QR code to the alb
                                 <rect key="frame" x="0.0" y="64" width="375" height="587"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ier-e2-46V">
-                                        <rect key="frame" x="8" y="8" width="359" height="359.5"/>
+                                        <rect key="frame" x="8" y="8" width="359" height="537"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">ZPLAY Ads is a playable ads preview tool for advertisers of ZPLAY Ads Platform. It’s a free app. Both the advertisers and the publishers can preview the playable ads by scanning QR codes on our ads platform with it. 
-It provides the real mobile ads effects, avoiding the preview deviation between the website and mobile device. Comparing with the traditional ads display, advertisers of ZPLAY Ads can get the intuitionistic effective visual. 
-To ensure the ads effect, we provide the preview tool, which currently is the UNIQUE preview way for our advertisers. Users out of the platform, can also preview the playable ads via this way.</string>
+                                                <string key="content">ZPLAY Ads 广告预览软件是ZPLAY Ads广告平台提供给企业客户预览可玩广告所必须的工具。此软件没有任何收费点，完全为企业客户预览可玩广告使用。
+移动端广告主和开发者需要使用此软件对ZplayAds平台上的广告二维码进行扫描后体验ZplayAds的可玩广告。
+同时，ZplayAds的广告客户需要使用此软件在其投放账户中预览每一条广告，并选择最终的广告投放素材。
+使用此软件可以很方便，很容易真实得感受广告在手机上的展示效果以避免网页预览与手机预览的效果偏差，还可以及时对异常效果进行反馈。
+</string>
                                                 <attributes>
-                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="15" name="Helvetica"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="6" paragraphSpacing="20" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                    <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" paragraphSpacing="20" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">而且，为了保证广告体验的真实和效果好，我们目前只提供给客户此唯一的广告预览方式，没有其他预览方式。对于非平台客户，也需要其使用此软件体验可玩广告。
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" paragraphSpacing="20" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lV-cF-7sb">
-                                        <rect key="frame" x="8" y="377.5" width="359" height="17.5"/>
+                                        <rect key="frame" x="8" y="523" width="359" height="26"/>
                                         <gestureRecognizers/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Tap to learn more about ">
+                                            <fragment content="想了解更多关于ZPLAY Ads，">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="15" name="Helvetica"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                    <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="ZPLAY Ads">
+                                            <fragment content="点击了解详情">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="15" name="Helvetica"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content=".">
+                                            <fragment content="。">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="15" name="Helvetica"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                    <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -298,7 +257,7 @@ To ensure the ads effect, we provide the preview tool, which currently is the UN
                                     <constraint firstAttribute="bottom" secondItem="8lV-cF-7sb" secondAttribute="bottom" constant="20" id="3Sj-dM-eQA"/>
                                     <constraint firstItem="8lV-cF-7sb" firstAttribute="leading" secondItem="ier-e2-46V" secondAttribute="leading" id="3lE-Mm-Nrn"/>
                                     <constraint firstItem="ier-e2-46V" firstAttribute="trailing" secondItem="Nhw-KX-xlb" secondAttribute="trailingMargin" id="436-a8-8nb"/>
-                                    <constraint firstItem="8lV-cF-7sb" firstAttribute="top" secondItem="ier-e2-46V" secondAttribute="bottom" constant="10" id="J7t-pG-fR9"/>
+                                    <constraint firstItem="8lV-cF-7sb" firstAttribute="top" secondItem="ier-e2-46V" secondAttribute="bottom" constant="-22" id="J7t-pG-fR9"/>
                                     <constraint firstItem="ier-e2-46V" firstAttribute="top" secondItem="Nhw-KX-xlb" secondAttribute="top" constant="8" id="TmR-Kd-dsG"/>
                                     <constraint firstItem="ier-e2-46V" firstAttribute="leading" secondItem="Nhw-KX-xlb" secondAttribute="leading" constant="8" id="Yjl-Sf-feV"/>
                                     <constraint firstItem="8lV-cF-7sb" firstAttribute="trailing" secondItem="ier-e2-46V" secondAttribute="trailing" id="oZ9-li-COq"/>
@@ -317,18 +276,18 @@ To ensure the ads effect, we provide the preview tool, which currently is the UN
                             <constraint firstItem="Nhw-KX-xlb" firstAttribute="top" secondItem="3Mr-AC-GU1" secondAttribute="bottom" id="uxx-X2-a1S"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Introduction" image="Category" id="UAt-G1-Rft"/>
+                    <tabBarItem key="tabBarItem" title="工具简介" image="Category" id="UAt-G1-Rft"/>
                     <size key="freeformSize" width="375" height="700"/>
                     <connections>
-                        <outlet property="clickLabel" destination="8lV-cF-7sb" id="Ukh-wq-kzg"/>
-                        <outlet property="messageLabel" destination="ier-e2-46V" id="V6x-Ty-jK3"/>
-                        <outlet property="navigationItem" destination="Wro-go-nM2" id="bjR-z6-nZP"/>
+                        <outlet property="clickLabel" destination="8lV-cF-7sb" id="x1i-ub-ZpR"/>
+                        <outlet property="messageLabel" destination="ier-e2-46V" id="fT9-Vc-ICG"/>
+                        <outlet property="navigationItem" destination="Wro-go-nM2" id="kTX-9w-HGI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhk-dr-DFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="76a-k0-c31">
                     <connections>
-                        <action selector="gotoDetail:" destination="vge-uy-5h4" id="BWD-hf-2mH"/>
+                        <action selector="gotoDetail:" destination="vge-uy-5h4" id="B65-Nn-5aZ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -390,10 +349,10 @@ To ensure the ads effect, we provide the preview tool, which currently is the UN
     <resources>
         <image name="Category" width="20" height="20"/>
         <image name="QRCode" width="20" height="20"/>
-        <image name="en QRCode" width="140" height="140"/>
+        <image name="ch QRCode" width="140" height="140"/>
         <image name="scanning" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kWr-GK-uDQ"/>
+        <segue reference="dj1-Rd-cDa"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -570,22 +570,24 @@ UIImagePickerControllerDelegate> {
 }
 
 - (void)addBackButton {
-    _backButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [_backButton setTitle:@"Back" forState:UIControlStateNormal];
+    _backButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 60)];
+    UIImage *normal = [UIImage imageNamed:@"back"];
+    [_backButton setImage:normal forState:UIControlStateNormal];
+    UIImage *focused = [UIImage imageNamed:@"back_focused"];;
+    [_backButton setImage:focused forState:UIControlStateFocused];
     _backButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_backButton];
     
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"H:|-[_backButton]"
+                               constraintsWithVisualFormat:@"H:|-(-10)-[_backButton(60)]"
                                options:0
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(_backButton)]];
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"V:|-[_backButton]"
+                               constraintsWithVisualFormat:@"V:|-0-[_backButton(60)]"
                                options:0
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(_backButton)]];
-//    [_backButton addTarget:self action:@selector("backConstroller") forControlEvents:UIControlEventTouchUpInside];
     [_backButton addTarget:self action:@selector(backController) forControlEvents:UIControlEventTouchUpInside];
 }
 

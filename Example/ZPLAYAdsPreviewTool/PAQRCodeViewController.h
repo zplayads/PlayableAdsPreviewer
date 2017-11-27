@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class PAQRCodeViewController;
+
+@protocol QRCodeDelegate <NSObject>
+
+- (void) closeQRViewController;
+
+@end
+
 @interface PAQRCodeViewController : UIViewController
 
 - (id)initWithCompletion:(void(^)(BOOL succeeded, NSString * result))completion;
@@ -17,5 +25,7 @@
 - (void)cancel;
 
 - (UIImage *)generateQRCode:(NSString *)code width:(CGFloat)width height:(CGFloat)height;
+
+@property (nonatomic, weak) id <QRCodeDelegate> delegate;
 
 @end

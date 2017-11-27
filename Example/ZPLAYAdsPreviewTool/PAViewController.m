@@ -12,7 +12,7 @@
 #import "PAQRCodeViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
-@interface PAViewController ()
+@interface PAViewController () <QRCodeDelegate>
 
 @property (nonatomic) NSString *appID;
 @property (nonatomic) PlayableAdsPreviewer *previewer;
@@ -101,7 +101,7 @@
             });
         }
     }];
-    
+    _qrVC.delegate = self;
     [self presentViewController:self.qrVC animated:NO completion:nil];
 }
 
@@ -139,6 +139,10 @@
                                                   });
                                               }];
     });
+}
+
+- (void)closeQRViewController {
+    [self.presentingViewController dismissViewControllerAnimated:NO completion: nil];
 }
 
 - (void)createQRCodeImage{

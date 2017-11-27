@@ -43,7 +43,9 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		C766D0E41FCA67B40066B77B /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C766D0E31FCA67B40066B77B /* RightViewController.m */; };
+		C766D0E51FCBED1F0066B77B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C766D0E71FCBED1F0066B77B /* Main.storyboard */; };
+		C797FF651FC7EF5D00540338 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C797FF641FC7EF5D00540338 /* LeftViewController.m */; };
 		E7620B27B92693F8615E5ADE /* Pods_ZPLAYAdsPreviewTool_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA024B04D389B67E341A87DB /* Pods_ZPLAYAdsPreviewTool_Tests.framework */; };
 		E9E4BEB17DA6B0D3E47BC1AA /* Pods_ZPLAYAdsPreviewTool_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C6A30676BD2FC4B33CC0FB /* Pods_ZPLAYAdsPreviewTool_Example.framework */; };
 /* End PBXBuildFile section */
@@ -124,10 +126,14 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75B2F8830D9A4B5E06F6E683 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		85AB64EA3D26C0DD4ADBA152 /* ZPLAYAdsPreviewToolDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZPLAYAdsPreviewToolDemo.podspec; path = ../ZPLAYAdsPreviewToolDemo.podspec; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E568F9D9B6E459A8D5B9BE5 /* Pods-ZPLAYAdsPreviewTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_Example/Pods-ZPLAYAdsPreviewTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		94C6A30676BD2FC4B33CC0FB /* Pods_ZPLAYAdsPreviewTool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZPLAYAdsPreviewTool_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D97EC1A4A154F2B975840E /* Pods-ZPLAYAdsPreviewTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_Tests/Pods-ZPLAYAdsPreviewTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C766D0E21FCA67B40066B77B /* RightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		C766D0E31FCA67B40066B77B /* RightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		C766D0EA1FCBED2B0066B77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C797FF631FC7EF5D00540338 /* LeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		C797FF641FC7EF5D00540338 /* LeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		DA024B04D389B67E341A87DB /* Pods_ZPLAYAdsPreviewTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZPLAYAdsPreviewTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,9 +248,13 @@
 				5BFB4BE01F7E1D7A00826D90 /* TSMessageAssets */,
 				5BAA36921F8DC3A200D4F404 /* PAQRCodeViewController.h */,
 				5BAA36931F8DC3A200D4F404 /* PAQRCodeViewController.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				C797FF631FC7EF5D00540338 /* LeftViewController.h */,
+				C797FF641FC7EF5D00540338 /* LeftViewController.m */,
+				C766D0E21FCA67B40066B77B /* RightViewController.h */,
+				C766D0E31FCA67B40066B77B /* RightViewController.m */,
 				6003F5A5195388D20070C39A /* PAViewController.h */,
 				6003F5A6195388D20070C39A /* PAViewController.m */,
+				C766D0E71FCBED1F0066B77B /* Main.storyboard */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -353,9 +363,9 @@
 				ORGANIZATIONNAME = "wzy2010416033@163.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = L5UE3EGW93;
+						DevelopmentTeam = 5QP2NLJB42;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -390,7 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				C766D0E51FCBED1F0066B77B /* Main.storyboard in Resources */,
 				5BAA369A1F8DC92E00D4F404 /* img_animation_scan_line.png in Resources */,
 				5BFB4C021F7E1D7A00826D90 /* TSMessagesDefaultDesign.json in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
@@ -538,9 +548,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C766D0E41FCA67B40066B77B /* RightViewController.m in Sources */,
 				5B9C6B491F7DFE680024D699 /* PAUIView+CornerRadius.m in Sources */,
 				6003F59E195388D20070C39A /* PAAppDelegate.m in Sources */,
 				5BAA36951F8DC3A200D4F404 /* PAQRCodeViewController.m in Sources */,
+				C797FF651FC7EF5D00540338 /* LeftViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* PAViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -611,6 +623,15 @@
 				5B04C0371F9ED5E900C9AD42 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C766D0E71FCBED1F0066B77B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C766D0EA1FCBED2B0066B77B /* Base */,
+			);
+			name = Main.storyboard;
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -698,18 +719,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = L5UE3EGW93;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QP2NLJB42;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Prefix.pch";
 				INFOPLIST_FILE = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads1.private;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5a0f3961-fa99-40fe-abfc-94b2d83bbf1f";
-				PROVISIONING_PROFILE_SPECIFIER = PlayAds_dev;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -724,8 +745,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = L5UE3EGW93;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QP2NLJB42;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Prefix.pch";
@@ -733,10 +754,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads1.private;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5a0f3961-fa99-40fe-abfc-94b2d83bbf1f";
-				PROVISIONING_PROFILE_SPECIFIER = PlayAds_dev;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool_Example-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;

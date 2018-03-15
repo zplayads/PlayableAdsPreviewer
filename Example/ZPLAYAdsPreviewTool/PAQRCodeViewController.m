@@ -38,8 +38,7 @@ UIImagePickerControllerDelegate> {
 @property(nonatomic) BOOL needsScanAnnimation;
 @property(nonatomic) BOOL isReading;
 @property (nonatomic,assign)   BOOL isFirstAuth;
-
-
+@property(nonatomic, strong) UILabel *coverLabel;
 @end
 
 @implementation PAQRCodeViewController
@@ -161,6 +160,13 @@ UIImagePickerControllerDelegate> {
         
     }
     
+}
+
+- (BOOL)iPhoneX {
+    if ([[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
+        return (int)[[UIScreen mainScreen] nativeBounds].size.height == 2436;
+    }
+    return NO;
 }
 
 - (MBProgressHUD *)hud {
@@ -435,12 +441,10 @@ UIImagePickerControllerDelegate> {
     [self.view addSubview:_bottomLabel];
     
     [_bottomLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    double bh = [self iPhoneX] ? 40 : 30;
     [self.view
      addConstraints:[NSLayoutConstraint
-                     constraintsWithVisualFormat:
-                     [NSString
-                      stringWithFormat:@"V:[_bottomLabel(==%f)]",
-                      30.0]
+                     constraintsWithVisualFormat: [NSString stringWithFormat:@"V:[_bottomLabel(==%f)]", bh]
                      options:0
                      metrics:0
                      views:@{
@@ -485,11 +489,10 @@ UIImagePickerControllerDelegate> {
     [self.view addSubview:_topLabel];
     
     [_topLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    double topHeight = [self iPhoneX] ? 100 : 60;
     [self.view
      addConstraints:[NSLayoutConstraint
-                     constraintsWithVisualFormat:
-                     [NSString
-                      stringWithFormat:@"V:[_topLabel(==%f)]", 60.0]
+                     constraintsWithVisualFormat: [NSString stringWithFormat:@"V:[_topLabel(==%f)]", topHeight]
                      options:0
                      metrics:0
                      views:@{
@@ -497,9 +500,7 @@ UIImagePickerControllerDelegate> {
                              }]];
     [self.view
      addConstraints:[NSLayoutConstraint
-                     constraintsWithVisualFormat:
-                     [NSString stringWithFormat:@"H:[_topLabel(==%f)]",
-                      SCREEN_WIDTH]
+                     constraintsWithVisualFormat: [NSString stringWithFormat:@"H:[_topLabel(==%f)]", SCREEN_WIDTH]
                      options:0
                      metrics:0
                      views:@{
@@ -513,6 +514,7 @@ UIImagePickerControllerDelegate> {
                               attribute:NSLayoutAttributeCenterX
                               multiplier:1.0
                               constant:0.0]];
+//    double marginTop = self.iPhoneX ? 20 : 0;
     [self.view
      addConstraint:[NSLayoutConstraint constraintWithItem:_topLabel
                                                 attribute:NSLayoutAttributeTop
@@ -520,8 +522,45 @@ UIImagePickerControllerDelegate> {
                                                    toItem:self.view
                                                 attribute:NSLayoutAttributeTop
                                                multiplier:1.0
-                                                 constant:0.0]];
+                                                 constant:0]];
+//    if(self.iPhoneX){
+//        [self addCoverView];
+//    }
 }
+
+//- (void)addCoverView {
+//    _coverLabel = [[UILabel alloc] init];
+//    _coverLabel.textColor = [UIColor whiteColor];
+//    _coverLabel.textAlignment = NSTextAlignmentCenter;
+//    _coverLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
+//    [self.view addSubview:_coverLabel];
+//
+//    [_topLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    [self.view
+//     addConstraints:[NSLayoutConstraint
+//                     constraintsWithVisualFormat: [NSString stringWithFormat:@"V:[_coverLabel(==%f)]", 20.0]
+//                     options:0
+//                     metrics:0
+//                     views:@{
+//                             @"_coverLabel" : _coverLabel
+//                             }]];
+//    [self.view
+//     addConstraints:[NSLayoutConstraint
+//                     constraintsWithVisualFormat: [NSString stringWithFormat:@"H:[_coverLabel(==%f)]", SCREEN_WIDTH]
+//                     options:0
+//                     metrics:0
+//                     views:@{
+//                             @"_coverLabel" : _coverLabel
+//                             }]];
+//    [self.view addConstraint:[NSLayoutConstraint
+//                              constraintWithItem:_coverLabel
+//                              attribute:NSLayoutAttributeCenterX
+//                              relatedBy:NSLayoutRelationEqual
+//                              toItem:self.view
+//                              attribute:NSLayoutAttributeCenterX
+//                              multiplier:1.0
+//                              constant:0.0]];
+//}
 
 - (void)addWarningLabelConstraint {
     CGFloat frameWidth = SCREEN_WIDTH * 2 / 3;
@@ -583,8 +622,9 @@ UIImagePickerControllerDelegate> {
                                options:0
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(_backButton)]];
+    double bmt = self.iPhoneX ? 20 : 5;
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"V:|-0-[_backButton(60)]"
+                               constraintsWithVisualFormat: [NSString stringWithFormat:@"V:|-%lf-[_backButton(60)]", bmt]
                                options:0
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(_backButton)]];

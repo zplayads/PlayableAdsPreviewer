@@ -7,11 +7,13 @@
 //
 
 #import "PAAppDelegate.h"
+#import <Bugly/Bugly.h>
 
 @implementation PAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Bugly startWithAppId:@"此处替换为你的AppId"];
     return YES;
 }
 

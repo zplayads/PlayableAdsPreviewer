@@ -370,7 +370,7 @@
 				ORGANIZATIONNAME = "wzy2010416033@163.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = YEB8KNJQ29;
+						DevelopmentTeam = VG25A6M88T;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
@@ -540,6 +540,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool/Pods-ZPLAYAdsPreviewTool-resources.sh",
+				"${PODS_ROOT}/PlayableAdsPreviewer/Resources/ZplayMuteListener.bundle",
 				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError.png",
 				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError@2x.png",
 				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon.png",
@@ -560,6 +561,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZplayMuteListener.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundError.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundError@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundErrorIcon.png",
@@ -761,9 +763,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = YEB8KNJQ29;
+				DEVELOPMENT_TEAM = VG25A6M88T;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Prefix.pch";
@@ -773,8 +776,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0534ce5e-53d2-4d5a-b754-84d357fa37d3";
-				PROVISIONING_PROFILE_SPECIFIER = Dev_zplayads;
+				PROVISIONING_PROFILE = "a0f49df3-171d-4535-b30a-dd800ef8f012";
+				PROVISIONING_PROFILE_SPECIFIER = wanghaiyingDev;
 				SWIFT_OBJC_BRIDGING_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -788,9 +791,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = YEB8KNJQ29;
+				DEVELOPMENT_TEAM = VG25A6M88T;
 				ENABLE_BITCODE = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -801,8 +805,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0534ce5e-53d2-4d5a-b754-84d357fa37d3";
-				PROVISIONING_PROFILE_SPECIFIER = Dev_zplayads;
+				PROVISIONING_PROFILE = "a0f49df3-171d-4535-b30a-dd800ef8f012";
+				PROVISIONING_PROFILE_SPECIFIER = wanghaiyingDev;
 				SWIFT_OBJC_BRIDGING_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool_Example-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;

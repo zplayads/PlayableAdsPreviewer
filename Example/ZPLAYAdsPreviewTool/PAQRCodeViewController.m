@@ -433,7 +433,11 @@ UIImagePickerControllerDelegate> {
 
 - (void)addBottomLabelConstraint {
     _bottomLabel = [[UILabel alloc] init];
-    _bottomLabel.text = @"© 2010 ～ 2017 Power By ZPLAY Ads";
+    NSDate *date =[NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy"];
+    NSInteger currentYear=[[formatter stringFromDate:date] integerValue];
+    _bottomLabel.text = [NSString stringWithFormat:@"© 2010 ～ %ld Power By ZPLAY Ads",(long)currentYear];
     _bottomLabel.font = [UIFont fontWithName:@"Arial" size:12];
     _bottomLabel.textColor = [UIColor whiteColor];
     _bottomLabel.textAlignment = NSTextAlignmentCenter;

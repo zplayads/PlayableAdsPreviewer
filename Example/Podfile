@@ -4,8 +4,9 @@
 target 'ZPLAYAdsPreviewTool' do
   pod 'PlayableAdsPreviewerDemo', :path => '../'
   pod 'TSMessages'
-  pod 'PlayableAdsPreviewer' ,'0.11.3'
+  pod 'PlayableAdsPreviewer' ,'2.0.5'
   pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'Bugly'
 
   target 'ZPLAYAdsPreviewTool_Tests' do
     inherit! :search_paths

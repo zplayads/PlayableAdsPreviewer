@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [Bugly startWithAppId:@"此处替换为你的AppId"];
+    [Bugly startWithAppId:@"5955ae02d6"];
     return YES;
 }
 

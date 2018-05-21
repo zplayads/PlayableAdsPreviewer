@@ -4,7 +4,7 @@
 target 'ZPLAYAdsPreviewTool' do
   pod 'PlayableAdsPreviewerDemo', :path => '../'
   pod 'TSMessages'
-  pod 'PlayableAdsPreviewer' ,'2.0.5'
+  pod 'PlayableAdsPreviewer' ,'2.0.6'
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'Bugly'
 

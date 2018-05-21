@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tue-of-qqM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tue-of-qqM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -112,7 +112,7 @@ Step5: The playable ads will popout. Check and play it.</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="en QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="Pei-lQ-d68">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chameleon ios" translatesAutoresizingMaskIntoConstraints="NO" id="Pei-lQ-d68">
                                         <rect key="frame" x="97" y="605.5" width="180" height="180"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -390,10 +390,10 @@ To ensure the ads effect, we provide the preview tool, which currently is the UN
     <resources>
         <image name="Category" width="20" height="20"/>
         <image name="QRCode" width="20" height="20"/>
-        <image name="en QRCode" width="140" height="140"/>
+        <image name="chameleon ios" width="300" height="300"/>
         <image name="scanning" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kWr-GK-uDQ"/>
+        <segue reference="dj1-Rd-cDa"/>
     </inferredMetricsTieBreakers>
 </document>

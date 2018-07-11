@@ -15,9 +15,17 @@ DEPENDENCIES:
   - PlayableAdsPreviewerDemo (from `../`)
   - TSMessages
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bugly
+    - HexColors
+    - MBProgressHUD
+    - PlayableAdsPreviewer
+    - TSMessages
+
 EXTERNAL SOURCES:
   PlayableAdsPreviewerDemo:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
@@ -29,4 +37,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ea9f94ee27c5bd997abf5af53df83eb3ba767cdd
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

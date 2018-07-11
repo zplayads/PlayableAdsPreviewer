@@ -12,7 +12,6 @@
 
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
-static   NSString  * firstCheckCameraPermission = @"first_checkCameraPermission";
 
 @interface PAQRCodeViewController () <AVCaptureMetadataOutputObjectsDelegate,
 UINavigationControllerDelegate,
@@ -37,7 +36,6 @@ UIImagePickerControllerDelegate> {
 @property(nonatomic, strong) MBProgressHUD *hud;
 @property(nonatomic) BOOL needsScanAnnimation;
 @property(nonatomic) BOOL isReading;
-@property (nonatomic,assign)   BOOL isFirstAuth;
 @property(nonatomic, strong) UILabel *coverLabel;
 @end
 
@@ -53,12 +51,9 @@ UIImagePickerControllerDelegate> {
     self.captureSession = nil;
     self.videoPreviewLayer = nil;
     self.lineImage = nil;
-    
 }
 
 - (void)setupNotifications {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
-    
     if (!_observers) {
         _observers = [NSMutableArray array];
     }
@@ -129,37 +124,23 @@ UIImagePickerControllerDelegate> {
 }
 
 - (void)checkCameraPermission {
-    AVAuthorizationStatus authStatus =
-    [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    if (authStatus == AVAuthorizationStatusAuthorized) {
-        BOOL atLeastOne = NO;
-        NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-        for (AVCaptureDevice *device in devices) {
-            if (device) {
-                atLeastOne = YES;
+    [self authorizeWithCompletion:^(BOOL granted, BOOL firstTime) {
+        if (granted) {
+            BOOL atLeastOne = NO;
+            NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+            for (AVCaptureDevice *device in devices) {
+                if (device) {
+                    atLeastOne = YES;
+                }
             }
-        }
-        if (!atLeastOne) {
-            authStatus = AVAuthorizationStatusRestricted;
-        }
-    } else {
-        // 第一次检测相机先弹出选择框，需要在applicationDidBecomeActive 中去操作
-        if (![[NSUserDefaults standardUserDefaults] objectForKey:firstCheckCameraPermission]){
-            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-            [userDefaults setObject:@"1" forKey:firstCheckCameraPermission];
-            [userDefaults synchronize];
-            self.isFirstAuth = YES;
-            return;
-        }else if(!self.isFirstAuth){
+        }else if (!firstTime){
             self.hud.mode = MBProgressHUDModeText;
             self.hud.label.text = NSLocalizedString(@"缺少相机权限", nil);
             self.hud.hidden = NO;
             [self.hud hideAnimated:YES afterDelay:5];
             self.hud = nil;
         }
-        
-    }
-    
+    }];
 }
 
 - (BOOL)iPhoneX {
@@ -823,24 +804,38 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     return [UIImage imageWithCIImage:transformedImage];
 }
 
-#pragma mark - UIApplicationNotification
-
-- (void)applicationDidBecomeActive:(NSNotification *)notification{
-    
-    if([[NSUserDefaults standardUserDefaults] objectForKey:firstCheckCameraPermission] && self.isFirstAuth){
-        self.isFirstAuth = NO;
-        AVAuthorizationStatus authStatus =
+- (void)authorizeWithCompletion:(void(^)(BOOL granted,BOOL firstTime))completion
+{
+    if ([AVCaptureDevice respondsToSelector:@selector(authorizationStatusForMediaType:)]) {
+        AVAuthorizationStatus permission =
         [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
         
-        if (authStatus != AVAuthorizationStatusAuthorized || authStatus != AVAuthorizationStatusNotDetermined) {
-            self.hud.mode = MBProgressHUDModeText;
-            self.hud.label.text = NSLocalizedString(@"缺少相机权限", nil);
-            self.hud.hidden = NO;
-            [self.hud hideAnimated:YES afterDelay:5];
-            self.hud = nil;
+        switch (permission) {
+            case AVAuthorizationStatusAuthorized:
+                completion(YES,NO);
+                break;
+            case AVAuthorizationStatusDenied:
+            case AVAuthorizationStatusRestricted:
+                completion(NO,NO);
+                break;
+            case AVAuthorizationStatusNotDetermined:
+            {
+                [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo
+                                         completionHandler:^(BOOL granted) {
+                                             if (completion) {
+                                                 dispatch_async(dispatch_get_main_queue(), ^{
+                                                     completion(granted,YES);
+                                                 });
+                                             }
+                                         }];
+                
+            }
+                break;
         }
+    } else {
+        // Prior to iOS 8 all apps were authorized.
+        completion(YES,NO);
     }
-    
 }
 
 @end

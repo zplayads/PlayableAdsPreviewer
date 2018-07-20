@@ -42,28 +42,6 @@
     self.qrVC = [[PAQRCodeViewController alloc] initWithCompletion:^(BOOL succeeded, NSString *result) {
         if (succeeded) {
             weakSelf.appID = result;
-            NSString *str = @"CABFFBFF-C5D6-D9B0-8A5C-60417538FC51";
-            if (self.appID.length != str.length ) {
-                [TSMessage showNotificationInViewController:weakSelf
-                                                      title:@"Error"
-                                                   subtitle:NSLocalizedString(@"解析二维码失败", nil)
-                                                      image:nil
-                                                       type:TSMessageNotificationTypeError
-                                                   duration:TSMessageNotificationDurationAutomatic
-                                                   callback:nil
-                                                buttonTitle:nil
-                                             buttonCallback:nil
-                                                 atPosition:TSMessageNotificationPositionTop
-                                       canBeDismissedByUser:YES];
-                [self.qrVC cancel];
-                dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2*NSEC_PER_SEC));
-                dispatch_queue_t queue = dispatch_get_main_queue();
-                dispatch_after(time, queue, ^{
-                    weakSelf.qrVC = nil;
-                    [weakSelf startScan];
-                });
-                return;
-            }
             
             self.hud.label.text = NSLocalizedString(@"正在加载中...", nil);
             self.hud.hidden = NO;
@@ -125,18 +103,16 @@
                                                                                      subtitle:NSLocalizedString(@"图片加载失败", nil)
                                                                                         image:nil
                                                                                          type:TSMessageNotificationTypeError
-                                                                                     duration:TSMessageNotificationDurationAutomatic
+                                                                                     duration:TSMessageNotificationDurationEndless
                                                                                      callback:nil
                                                                                   buttonTitle:nil
                                                                                buttonCallback:nil
                                                                                    atPosition:TSMessageNotificationPositionTop
                                                                          canBeDismissedByUser:YES];
-                                                  dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2*NSEC_PER_SEC));
-                                                  dispatch_queue_t queue = dispatch_get_main_queue();
-                                                  dispatch_after(time, queue, ^{
+                                                  [TSMessage dismissActiveNotificationWithCompletion:^{
                                                       weakSelf.qrVC = nil;
                                                       [weakSelf startScan];
-                                                  });
+                                                  }];
                                               }];
     });
 }

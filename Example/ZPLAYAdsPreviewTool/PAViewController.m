@@ -100,7 +100,7 @@
                                               failure:^(NSError *_Nonnull error) {
                                                   [TSMessage showNotificationInViewController:weakSelf
                                                                                         title:@"Error"
-                                                                                     subtitle:NSLocalizedString(@"图片加载失败", nil)
+                                                                                     subtitle:NSLocalizedString(@"广告加载失败", nil)
                                                                                         image:nil
                                                                                          type:TSMessageNotificationTypeError
                                                                                      duration:TSMessageNotificationDurationEndless
@@ -110,8 +110,11 @@
                                                                                    atPosition:TSMessageNotificationPositionTop
                                                                          canBeDismissedByUser:YES];
                                                   [TSMessage dismissActiveNotificationWithCompletion:^{
-                                                      weakSelf.qrVC = nil;
-                                                      [weakSelf startScan];
+                                                      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)),
+                                                                     dispatch_get_main_queue(), ^{
+                                                                         weakSelf.qrVC = nil;
+                                                                         [weakSelf startScan];
+                                                                     });
                                                   }];
                                               }];
     });

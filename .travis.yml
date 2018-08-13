@@ -10,6 +10,7 @@ install:
 - bundle update
 - pod repo update
 script:
+- sh ./fastlane/decrypt_p12.sh
 - fastlane beta
 notifications:
   slack: yumimobi:wCaD46mZfHIPfiI6guogLeWB

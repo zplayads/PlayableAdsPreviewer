@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1214C569D0A95E0DB927A9D6 /* libPods-ZPLAYAdsPreviewTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE701F0584FD80EE827EF68 /* libPods-ZPLAYAdsPreviewTool.a */; };
+		2988C6ADB23A1B50F64535D9 /* libPods-ZPLAYAdsPreviewTool_beta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C80510BCF730C9C4F6885DF /* libPods-ZPLAYAdsPreviewTool_beta.a */; };
 		37F9231447FA54DA78216EEB /* libPods-ZPLAYAdsPreviewTool_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D729384C404707A2776D2577 /* libPods-ZPLAYAdsPreviewTool_Tests.a */; };
 		5B04C03C1F9ED6E000C9AD42 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B04C03E1F9ED6E000C9AD42 /* Localizable.strings */; };
 		5B9C6B491F7DFE680024D699 /* PAUIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C6B481F7DFE680024D699 /* PAUIView+CornerRadius.m */; };
@@ -20,7 +22,6 @@
 		5B9F91AA2121349F0063F2AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		5B9F91AB2121349F0063F2AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		5B9F91AC2121349F0063F2AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		5B9F91AD2121349F0063F2AA /* libPods-ZPLAYAdsPreviewTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE701F0584FD80EE827EF68 /* libPods-ZPLAYAdsPreviewTool.a */; };
 		5B9F91AF2121349F0063F2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C766D0E71FCBED1F0066B77B /* Main.storyboard */; };
 		5B9F91B02121349F0063F2AA /* img_animation_scan_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA36981F8DC92E00D4F404 /* img_animation_scan_line.png */; };
 		5B9F91B12121349F0063F2AA /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BF11F7E1D7A00826D90 /* TSMessagesDefaultDesign.json */; };
@@ -97,9 +98,10 @@
 
 /* Begin PBXFileReference section */
 		2979BCCCA93194CA469E0A6B /* Pods-ZPLAYAdsPreviewTool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_Example/Pods-ZPLAYAdsPreviewTool_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2E1AF3DD8E6BE7F5DCD5F42F /* Pods-ZPLAYAdsPreviewTool_beta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool_beta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_beta/Pods-ZPLAYAdsPreviewTool_beta.debug.xcconfig"; sourceTree = "<group>"; };
 		31AF390F357EF5B15A5135A4 /* Pods-ZPLAYAdsPreviewTool_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_Tests/Pods-ZPLAYAdsPreviewTool_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D16ECDE9E5FB00D8740FF69 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		5717494D720207BAC16535B0 /* Pods-ZPLAYAdsPreviewTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool/Pods-ZPLAYAdsPreviewTool.release.xcconfig"; sourceTree = "<group>"; };
+		539FA174B4298CE117C33724 /* Pods-ZPLAYAdsPreviewTool_beta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool_beta.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_beta/Pods-ZPLAYAdsPreviewTool_beta.release.xcconfig"; sourceTree = "<group>"; };
 		5B04C02E1F9ED4E000C9AD42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		5B04C02F1F9ED4E000C9AD42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		5B04C0301F9ED4E000C9AD42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -165,8 +167,11 @@
 		75B2F8830D9A4B5E06F6E683 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		85AB64EA3D26C0DD4ADBA152 /* ZPLAYAdsPreviewToolDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZPLAYAdsPreviewToolDemo.podspec; path = ../ZPLAYAdsPreviewToolDemo.podspec; sourceTree = "<group>"; };
 		8BE701F0584FD80EE827EF68 /* libPods-ZPLAYAdsPreviewTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZPLAYAdsPreviewTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C80510BCF730C9C4F6885DF /* libPods-ZPLAYAdsPreviewTool_beta.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZPLAYAdsPreviewTool_beta.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E568F9D9B6E459A8D5B9BE5 /* Pods-ZPLAYAdsPreviewTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_Example/Pods-ZPLAYAdsPreviewTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		94C6A30676BD2FC4B33CC0FB /* Pods_ZPLAYAdsPreviewTool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZPLAYAdsPreviewTool_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D4A80CD982FD4DBB8054959 /* Pods-ZPLAYAdsPreviewTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool/Pods-ZPLAYAdsPreviewTool.debug.xcconfig"; sourceTree = "<group>"; };
+		BB1007EEEC1FBEEABACFABB4 /* Pods-ZPLAYAdsPreviewTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool/Pods-ZPLAYAdsPreviewTool.release.xcconfig"; sourceTree = "<group>"; };
 		C3D97EC1A4A154F2B975840E /* Pods-ZPLAYAdsPreviewTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_Tests/Pods-ZPLAYAdsPreviewTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C766D0E21FCA67B40066B77B /* RightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		C766D0E31FCA67B40066B77B /* RightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
@@ -175,7 +180,6 @@
 		C7C755551FCBF5FF00E047E0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		C7C755561FCBF61A00E047E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D729384C404707A2776D2577 /* libPods-ZPLAYAdsPreviewTool_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZPLAYAdsPreviewTool_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAFAE688FE870094132B51D8 /* Pods-ZPLAYAdsPreviewTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPLAYAdsPreviewTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool/Pods-ZPLAYAdsPreviewTool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +190,7 @@
 				5B9F91AA2121349F0063F2AA /* CoreGraphics.framework in Frameworks */,
 				5B9F91AB2121349F0063F2AA /* UIKit.framework in Frameworks */,
 				5B9F91AC2121349F0063F2AA /* Foundation.framework in Frameworks */,
-				5B9F91AD2121349F0063F2AA /* libPods-ZPLAYAdsPreviewTool.a in Frameworks */,
+				2988C6ADB23A1B50F64535D9 /* libPods-ZPLAYAdsPreviewTool_beta.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +202,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				7C3654926198122D49820EB9 /* libPods-ZPLAYAdsPreviewTool.a in Frameworks */,
+				1214C569D0A95E0DB927A9D6 /* libPods-ZPLAYAdsPreviewTool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,8 +227,10 @@
 				2979BCCCA93194CA469E0A6B /* Pods-ZPLAYAdsPreviewTool_Example.release.xcconfig */,
 				31AF390F357EF5B15A5135A4 /* Pods-ZPLAYAdsPreviewTool_Tests.debug.xcconfig */,
 				C3D97EC1A4A154F2B975840E /* Pods-ZPLAYAdsPreviewTool_Tests.release.xcconfig */,
-				FAFAE688FE870094132B51D8 /* Pods-ZPLAYAdsPreviewTool.debug.xcconfig */,
-				5717494D720207BAC16535B0 /* Pods-ZPLAYAdsPreviewTool.release.xcconfig */,
+				9D4A80CD982FD4DBB8054959 /* Pods-ZPLAYAdsPreviewTool.debug.xcconfig */,
+				BB1007EEEC1FBEEABACFABB4 /* Pods-ZPLAYAdsPreviewTool.release.xcconfig */,
+				2E1AF3DD8E6BE7F5DCD5F42F /* Pods-ZPLAYAdsPreviewTool_beta.debug.xcconfig */,
+				539FA174B4298CE117C33724 /* Pods-ZPLAYAdsPreviewTool_beta.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -293,6 +300,7 @@
 				94C6A30676BD2FC4B33CC0FB /* Pods_ZPLAYAdsPreviewTool_Example.framework */,
 				8BE701F0584FD80EE827EF68 /* libPods-ZPLAYAdsPreviewTool.a */,
 				D729384C404707A2776D2577 /* libPods-ZPLAYAdsPreviewTool_Tests.a */,
+				8C80510BCF730C9C4F6885DF /* libPods-ZPLAYAdsPreviewTool_beta.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -372,11 +380,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B9F91C82121349F0063F2AA /* Build configuration list for PBXNativeTarget "ZPLAYAdsPreviewTool_beta" */;
 			buildPhases = (
-				5B9F91A02121349F0063F2AA /* [CP] Check Pods Manifest.lock */,
+				C9066A2B5256A2B1FDD3D613 /* [CP] Check Pods Manifest.lock */,
 				5B9F91A12121349F0063F2AA /* Sources */,
 				5B9F91A92121349F0063F2AA /* Frameworks */,
 				5B9F91AE2121349F0063F2AA /* Resources */,
-				5B9F91C72121349F0063F2AA /* [CP] Copy Pods Resources */,
+				47CFE781452836F807E0B373 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -547,31 +555,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5B9F91A02121349F0063F2AA /* [CP] Check Pods Manifest.lock */ = {
+		47CFE781452836F807E0B373 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZPLAYAdsPreviewTool-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5B9F91C72121349F0063F2AA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool/Pods-ZPLAYAdsPreviewTool-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_beta/Pods-ZPLAYAdsPreviewTool_beta-resources.sh",
 				"${PODS_ROOT}/PlayableAdsPreviewer/Resources/ZplayMuteListener.bundle",
 				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError.png",
 				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError@2x.png",
@@ -614,7 +604,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool/Pods-ZPLAYAdsPreviewTool-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool_beta/Pods-ZPLAYAdsPreviewTool_beta-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		77F941C5FFE7875F735763A2 /* [CP] Check Pods Manifest.lock */ = {
@@ -647,6 +637,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ZPLAYAdsPreviewTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9066A2B5256A2B1FDD3D613 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZPLAYAdsPreviewTool_beta-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -818,7 +826,7 @@
 /* Begin XCBuildConfiguration section */
 		5B9F91C92121349F0063F2AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAFAE688FE870094132B51D8 /* Pods-ZPLAYAdsPreviewTool.debug.xcconfig */;
+			baseConfigurationReference = 2E1AF3DD8E6BE7F5DCD5F42F /* Pods-ZPLAYAdsPreviewTool_beta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -846,7 +854,7 @@
 		};
 		5B9F91CA2121349F0063F2AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5717494D720207BAC16535B0 /* Pods-ZPLAYAdsPreviewTool.release.xcconfig */;
+			baseConfigurationReference = 539FA174B4298CE117C33724 /* Pods-ZPLAYAdsPreviewTool_beta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -949,7 +957,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAFAE688FE870094132B51D8 /* Pods-ZPLAYAdsPreviewTool.debug.xcconfig */;
+			baseConfigurationReference = 9D4A80CD982FD4DBB8054959 /* Pods-ZPLAYAdsPreviewTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -977,7 +985,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5717494D720207BAC16535B0 /* Pods-ZPLAYAdsPreviewTool.release.xcconfig */;
+			baseConfigurationReference = BB1007EEEC1FBEEABACFABB4 /* Pods-ZPLAYAdsPreviewTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

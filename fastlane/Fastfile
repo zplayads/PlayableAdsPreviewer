@@ -38,8 +38,5 @@ platform :ios do
       commit_sha: ENV["TRAVIS_COMMIT"],
       notes: ENV["TRAVIS_COMMIT_MESSAGE"],
     )
-
-
-
-
+  end
 end

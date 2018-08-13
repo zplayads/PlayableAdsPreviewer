@@ -1,0 +1,16 @@
+osx_image: xcode9.1
+rvm: 2.2
+language: objective-c
+cache:
+- cocoapods
+- bundler
+before_install:
+- gem install bundler
+install:
+- bundle update
+- pod repo update
+- pod repo add Specs git@github.com:yumimobi/Specs.git
+script:
+- fastlane beta
+notifications:
+    slack: yumimobi:wCaD46mZfHIPfiI6guogLeWB

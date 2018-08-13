@@ -18,6 +18,27 @@ default_platform(:ios)
 platform :ios do
   desc "Submit a new Beta Build to HockeyApp"
   lane :beta do
+    cocoapods(podfile: "Example", repo_update: true)
+    
+    keychain_name = "PlayableAdsPreviewer-iOS-certs"
+    keychain_password = SecureRandom.base64
+
+    create_keychain(
+      name: keychain_name,
+      default_keychain: true,
+      unlock: true,
+      password: keychain_password,
+      timeout: 3600
+    )
+
+    import_certificate(
+      log_output: true,
+      certificate_path: "fastlane/Certificates/ZplayAds_Distribute.p12",
+      certificate_password: ENV["KEY_PASSWORD"],
+      keychain_name: keychain_name,
+      keychain_password: keychain_password
+    )
+
     # Build
     gym(
       scheme: "ZPLAYAdsPreviewTool_beta",
@@ -36,6 +57,10 @@ platform :ios do
       status: "2",
       commit_sha: ENV["TRAVIS_COMMIT"],
       notes: ENV["TRAVIS_COMMIT_MESSAGE"],
+    )
+
+    delete_keychain(
+      name: keychain_name
     )
   end
 end

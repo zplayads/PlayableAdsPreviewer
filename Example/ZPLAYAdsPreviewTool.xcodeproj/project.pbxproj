@@ -10,6 +10,41 @@
 		37F9231447FA54DA78216EEB /* libPods-ZPLAYAdsPreviewTool_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D729384C404707A2776D2577 /* libPods-ZPLAYAdsPreviewTool_Tests.a */; };
 		5B04C03C1F9ED6E000C9AD42 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B04C03E1F9ED6E000C9AD42 /* Localizable.strings */; };
 		5B9C6B491F7DFE680024D699 /* PAUIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C6B481F7DFE680024D699 /* PAUIView+CornerRadius.m */; };
+		5B9F91A22121349F0063F2AA /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C766D0E31FCA67B40066B77B /* RightViewController.m */; };
+		5B9F91A32121349F0063F2AA /* PAUIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C6B481F7DFE680024D699 /* PAUIView+CornerRadius.m */; };
+		5B9F91A42121349F0063F2AA /* PAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* PAAppDelegate.m */; };
+		5B9F91A52121349F0063F2AA /* PAQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA36931F8DC3A200D4F404 /* PAQRCodeViewController.m */; };
+		5B9F91A62121349F0063F2AA /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C797FF641FC7EF5D00540338 /* LeftViewController.m */; };
+		5B9F91A72121349F0063F2AA /* PAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* PAViewController.m */; };
+		5B9F91A82121349F0063F2AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		5B9F91AA2121349F0063F2AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		5B9F91AB2121349F0063F2AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		5B9F91AC2121349F0063F2AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		5B9F91AD2121349F0063F2AA /* libPods-ZPLAYAdsPreviewTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE701F0584FD80EE827EF68 /* libPods-ZPLAYAdsPreviewTool.a */; };
+		5B9F91AF2121349F0063F2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C766D0E71FCBED1F0066B77B /* Main.storyboard */; };
+		5B9F91B02121349F0063F2AA /* img_animation_scan_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA36981F8DC92E00D4F404 /* img_animation_scan_line.png */; };
+		5B9F91B12121349F0063F2AA /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BF11F7E1D7A00826D90 /* TSMessagesDefaultDesign.json */; };
+		5B9F91B22121349F0063F2AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		5B9F91B32121349F0063F2AA /* NotificationButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BEF1F7E1D7A00826D90 /* NotificationButtonBackground.png */; };
+		5B9F91B42121349F0063F2AA /* NotificationBackgroundSuccessIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BEA1F7E1D7A00826D90 /* NotificationBackgroundSuccessIcon@2x.png */; };
+		5B9F91B52121349F0063F2AA /* NotificationBackgroundWarningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BEE1F7E1D7A00826D90 /* NotificationBackgroundWarningIcon@2x.png */; };
+		5B9F91B62121349F0063F2AA /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE11F7E1D7A00826D90 /* NotificationBackgroundError.png */; };
+		5B9F91B72121349F0063F2AA /* NotificationBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BED1F7E1D7A00826D90 /* NotificationBackgroundWarningIcon.png */; };
+		5B9F91B82121349F0063F2AA /* NotificationBackgroundSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE71F7E1D7A00826D90 /* NotificationBackgroundSuccess.png */; };
+		5B9F91B92121349F0063F2AA /* NotificationBackgroundWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BEB1F7E1D7A00826D90 /* NotificationBackgroundWarning.png */; };
+		5B9F91BA2121349F0063F2AA /* NotificationBackgroundSuccessIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE91F7E1D7A00826D90 /* NotificationBackgroundSuccessIcon.png */; };
+		5B9F91BB2121349F0063F2AA /* NotificationBackgroundMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE61F7E1D7A00826D90 /* NotificationBackgroundMessage@2x.png */; };
+		5B9F91BC2121349F0063F2AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B04C03E1F9ED6E000C9AD42 /* Localizable.strings */; };
+		5B9F91BD2121349F0063F2AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		5B9F91BE2121349F0063F2AA /* NotificationBackgroundError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE21F7E1D7A00826D90 /* NotificationBackgroundError@2x.png */; };
+		5B9F91BF2121349F0063F2AA /* img_animation_scan_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA36991F8DC92E00D4F404 /* img_animation_scan_pic.png */; };
+		5B9F91C02121349F0063F2AA /* NotificationBackgroundErrorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE41F7E1D7A00826D90 /* NotificationBackgroundErrorIcon@2x.png */; };
+		5B9F91C12121349F0063F2AA /* NotificationBackgroundErrorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE31F7E1D7A00826D90 /* NotificationBackgroundErrorIcon.png */; };
+		5B9F91C22121349F0063F2AA /* NotificationButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BF01F7E1D7A00826D90 /* NotificationButtonBackground@2x.png */; };
+		5B9F91C32121349F0063F2AA /* NotificationBackgroundSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE81F7E1D7A00826D90 /* NotificationBackgroundSuccess@2x.png */; };
+		5B9F91C42121349F0063F2AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		5B9F91C52121349F0063F2AA /* NotificationBackgroundWarning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BEC1F7E1D7A00826D90 /* NotificationBackgroundWarning@2x.png */; };
+		5B9F91C62121349F0063F2AA /* NotificationBackgroundMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB4BE51F7E1D7A00826D90 /* NotificationBackgroundMessage.png */; };
 		5BAA36951F8DC3A200D4F404 /* PAQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA36931F8DC3A200D4F404 /* PAQRCodeViewController.m */; };
 		5BAA369A1F8DC92E00D4F404 /* img_animation_scan_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA36981F8DC92E00D4F404 /* img_animation_scan_line.png */; };
 		5BAA369B1F8DC92E00D4F404 /* img_animation_scan_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA36991F8DC92E00D4F404 /* img_animation_scan_pic.png */; };
@@ -84,6 +119,8 @@
 		5B04C0421F9ED6E800C9AD42 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5B9C6B471F7DFE680024D699 /* PAUIView+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PAUIView+CornerRadius.h"; sourceTree = "<group>"; };
 		5B9C6B481F7DFE680024D699 /* PAUIView+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PAUIView+CornerRadius.m"; sourceTree = "<group>"; };
+		5B9F91CB2121349F0063F2AA /* ZPLAYAdsPreviewTool_beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZPLAYAdsPreviewTool_beta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9F91CC212134A00063F2AA /* ZPLAYAdsPreviewTool_beta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ZPLAYAdsPreviewTool_beta.plist; path = "/Users/throwexception/Desktop/Zplay/PlayableAdsPreviewer-iOS/Example/ZPLAYAdsPreviewTool_beta.plist"; sourceTree = "<absolute>"; };
 		5BAA36921F8DC3A200D4F404 /* PAQRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAQRCodeViewController.h; sourceTree = "<group>"; };
 		5BAA36931F8DC3A200D4F404 /* PAQRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAQRCodeViewController.m; sourceTree = "<group>"; };
 		5BAA36981F8DC92E00D4F404 /* img_animation_scan_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_animation_scan_line.png; sourceTree = "<group>"; };
@@ -142,6 +179,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5B9F91A92121349F0063F2AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9F91AA2121349F0063F2AA /* CoreGraphics.framework in Frameworks */,
+				5B9F91AB2121349F0063F2AA /* UIKit.framework in Frameworks */,
+				5B9F91AC2121349F0063F2AA /* Foundation.framework in Frameworks */,
+				5B9F91AD2121349F0063F2AA /* libPods-ZPLAYAdsPreviewTool.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F587195388D20070C39A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +278,7 @@
 			children = (
 				6003F58A195388D20070C39A /* ZPLAYAdsPreviewTool.app */,
 				6003F5AE195388D20070C39A /* ZPLAYAdsPreviewTool_Tests.xctest */,
+				5B9F91CB2121349F0063F2AA /* ZPLAYAdsPreviewTool_beta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,6 +326,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B9F91CC212134A00063F2AA /* ZPLAYAdsPreviewTool_beta.plist */,
 				6003F595195388D20070C39A /* ZPLAYAdsPreviewTool-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -318,6 +368,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5B9F919F2121349F0063F2AA /* ZPLAYAdsPreviewTool_beta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B9F91C82121349F0063F2AA /* Build configuration list for PBXNativeTarget "ZPLAYAdsPreviewTool_beta" */;
+			buildPhases = (
+				5B9F91A02121349F0063F2AA /* [CP] Check Pods Manifest.lock */,
+				5B9F91A12121349F0063F2AA /* Sources */,
+				5B9F91A92121349F0063F2AA /* Frameworks */,
+				5B9F91AE2121349F0063F2AA /* Resources */,
+				5B9F91C72121349F0063F2AA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZPLAYAdsPreviewTool_beta;
+			productName = ZPLAYAdsPreviewTool;
+			productReference = 5B9F91CB2121349F0063F2AA /* ZPLAYAdsPreviewTool_beta.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6003F589195388D20070C39A /* ZPLAYAdsPreviewTool */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ZPLAYAdsPreviewTool" */;
@@ -366,6 +435,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "wzy2010416033@163.com";
 				TargetAttributes = {
+					5B9F919F2121349F0063F2AA = {
+						DevelopmentTeam = L5UE3EGW93;
+						ProvisioningStyle = Manual;
+					};
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = YEB8KNJQ29;
 						LastSwiftMigration = 0900;
@@ -395,11 +468,43 @@
 			targets = (
 				6003F589195388D20070C39A /* ZPLAYAdsPreviewTool */,
 				6003F5AD195388D20070C39A /* ZPLAYAdsPreviewTool_Tests */,
+				5B9F919F2121349F0063F2AA /* ZPLAYAdsPreviewTool_beta */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5B9F91AE2121349F0063F2AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9F91AF2121349F0063F2AA /* Main.storyboard in Resources */,
+				5B9F91B02121349F0063F2AA /* img_animation_scan_line.png in Resources */,
+				5B9F91B12121349F0063F2AA /* TSMessagesDefaultDesign.json in Resources */,
+				5B9F91B22121349F0063F2AA /* LaunchScreen.storyboard in Resources */,
+				5B9F91B32121349F0063F2AA /* NotificationButtonBackground.png in Resources */,
+				5B9F91B42121349F0063F2AA /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
+				5B9F91B52121349F0063F2AA /* NotificationBackgroundWarningIcon@2x.png in Resources */,
+				5B9F91B62121349F0063F2AA /* NotificationBackgroundError.png in Resources */,
+				5B9F91B72121349F0063F2AA /* NotificationBackgroundWarningIcon.png in Resources */,
+				5B9F91B82121349F0063F2AA /* NotificationBackgroundSuccess.png in Resources */,
+				5B9F91B92121349F0063F2AA /* NotificationBackgroundWarning.png in Resources */,
+				5B9F91BA2121349F0063F2AA /* NotificationBackgroundSuccessIcon.png in Resources */,
+				5B9F91BB2121349F0063F2AA /* NotificationBackgroundMessage@2x.png in Resources */,
+				5B9F91BC2121349F0063F2AA /* Localizable.strings in Resources */,
+				5B9F91BD2121349F0063F2AA /* Images.xcassets in Resources */,
+				5B9F91BE2121349F0063F2AA /* NotificationBackgroundError@2x.png in Resources */,
+				5B9F91BF2121349F0063F2AA /* img_animation_scan_pic.png in Resources */,
+				5B9F91C02121349F0063F2AA /* NotificationBackgroundErrorIcon@2x.png in Resources */,
+				5B9F91C12121349F0063F2AA /* NotificationBackgroundErrorIcon.png in Resources */,
+				5B9F91C22121349F0063F2AA /* NotificationButtonBackground@2x.png in Resources */,
+				5B9F91C32121349F0063F2AA /* NotificationBackgroundSuccess@2x.png in Resources */,
+				5B9F91C42121349F0063F2AA /* InfoPlist.strings in Resources */,
+				5B9F91C52121349F0063F2AA /* NotificationBackgroundWarning@2x.png in Resources */,
+				5B9F91C62121349F0063F2AA /* NotificationBackgroundMessage.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F588195388D20070C39A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,6 +547,76 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5B9F91A02121349F0063F2AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZPLAYAdsPreviewTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B9F91C72121349F0063F2AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool/Pods-ZPLAYAdsPreviewTool-resources.sh",
+				"${PODS_ROOT}/PlayableAdsPreviewer/Resources/ZplayMuteListener.bundle",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundMessage.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundMessage@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccess.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccess@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarning.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarning@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarningIcon.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarningIcon@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationButtonBackground.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationButtonBackground@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/TSMessagesDefaultDesign.json",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZplayMuteListener.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundError.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundError@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundErrorIcon.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundErrorIcon@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundMessage.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundMessage@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundSuccess.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundSuccess@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundSuccessIcon.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundSuccessIcon@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundWarning.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundWarning@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundWarningIcon.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationBackgroundWarningIcon@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationButtonBackground.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationButtonBackground@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TSMessagesDefaultDesign.json",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZPLAYAdsPreviewTool/Pods-ZPLAYAdsPreviewTool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		77F941C5FFE7875F735763A2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,6 +708,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5B9F91A12121349F0063F2AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9F91A22121349F0063F2AA /* RightViewController.m in Sources */,
+				5B9F91A32121349F0063F2AA /* PAUIView+CornerRadius.m in Sources */,
+				5B9F91A42121349F0063F2AA /* PAAppDelegate.m in Sources */,
+				5B9F91A52121349F0063F2AA /* PAQRCodeViewController.m in Sources */,
+				5B9F91A62121349F0063F2AA /* LeftViewController.m in Sources */,
+				5B9F91A72121349F0063F2AA /* PAViewController.m in Sources */,
+				5B9F91A82121349F0063F2AA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F586195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -627,6 +816,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5B9F91C92121349F0063F2AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAFAE688FE870094132B51D8 /* Pods-ZPLAYAdsPreviewTool.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = L5UE3EGW93;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Prefix.pch";
+				INFOPLIST_FILE = ZPLAYAdsPreviewTool_beta.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayadsDis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9f445f8f-ab1c-4958-b506-0257824d3d39";
+				PROVISIONING_PROFILE_SPECIFIER = "Dis-zplay*";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5B9F91CA2121349F0063F2AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5717494D720207BAC16535B0 /* Pods-ZPLAYAdsPreviewTool.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = L5UE3EGW93;
+				ENABLE_BITCODE = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool-Prefix.pch";
+				INFOPLIST_FILE = ZPLAYAdsPreviewTool_beta.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.zplayadsDis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9f445f8f-ab1c-4958-b506-0257824d3d39";
+				PROVISIONING_PROFILE_SPECIFIER = "Dis-zplay*";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZPLAYAdsPreviewTool/ZPLAYAdsPreviewTool_Example-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -805,6 +1050,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5B9F91C82121349F0063F2AA /* Build configuration list for PBXNativeTarget "ZPLAYAdsPreviewTool_beta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B9F91C92121349F0063F2AA /* Debug */,
+				5B9F91CA2121349F0063F2AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6003F585195388D10070C39A /* Build configuration list for PBXProject "ZPLAYAdsPreviewTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

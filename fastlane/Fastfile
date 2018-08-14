@@ -18,49 +18,50 @@ default_platform(:ios)
 platform :ios do
   desc "Submit a new Beta Build to HockeyApp"
   lane :beta do
-    cocoapods(podfile: "Example", repo_update: true)
+  next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "beta"
+  cocoapods(podfile: "Example", repo_update: true)
     
-    keychain_name = "PlayableAdsPreviewer-iOS-certs"
-    keychain_password = SecureRandom.base64
+  keychain_name = "PlayableAdsPreviewer-iOS-certs"
+  keychain_password = SecureRandom.base64
 
-    create_keychain(
-      name: keychain_name,
-      default_keychain: true,
-      unlock: true,
-      password: keychain_password,
-      timeout: 3600
-    )
+  create_keychain(
+    name: keychain_name,
+    default_keychain: true,
+    unlock: true,
+    password: keychain_password,
+    timeout: 3600
+  )
 
-    import_certificate(
-      log_output: true,
-      certificate_path: "fastlane/Certificates/ZplayAds_Distribute.p12",
-      certificate_password: ENV["KEY_PASSWORD"],
-      keychain_name: keychain_name,
-      keychain_password: keychain_password
-    )
+  import_certificate(
+    log_output: true,
+    certificate_path: "fastlane/Certificates/ZplayAds_Distribute.p12",
+    certificate_password: ENV["KEY_PASSWORD"],
+    keychain_name: keychain_name,
+    keychain_password: keychain_password
+  )
 
-    # Build
-    gym(
-      scheme: "ZPLAYAdsPreviewTool_beta",
-      workspace: "Example/ZPLAYAdsPreviewTool.xcworkspace",
-      configuration: "Release",
-      clean: true,
-      include_symbols: true,
-      export_method: "enterprise"
-    )
+  # Build
+  gym(
+    scheme: "ZPLAYAdsPreviewTool_beta",
+    workspace: "Example/ZPLAYAdsPreviewTool.xcworkspace",
+    configuration: "Release",
+    clean: true,
+    include_symbols: true,
+    export_method: "enterprise"
+  )
 
-    # Push to HockeyApp
-    hockey(
-      api_token: "b23874100f5346cdb613ca63c57393eb",
-      public_identifier: 'd2edc6e9420244a38e3702437a168c55',
-      notify: "1",
-      status: "2",
-      commit_sha: ENV["TRAVIS_COMMIT"],
-      notes: ENV["TRAVIS_COMMIT_MESSAGE"],
-    )
+  # Push to HockeyApp
+  hockey(
+    api_token: "b23874100f5346cdb613ca63c57393eb",
+    public_identifier: 'd2edc6e9420244a38e3702437a168c55',
+    notify: "1",
+    status: "2",
+    commit_sha: ENV["TRAVIS_COMMIT"],
+    notes: ENV["TRAVIS_COMMIT_MESSAGE"],
+  )
 
-    delete_keychain(
-      name: keychain_name
-    )
+  delete_keychain(
+    name: keychain_name
+  )
   end
 end

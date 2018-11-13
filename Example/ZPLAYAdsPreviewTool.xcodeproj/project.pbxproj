@@ -308,6 +308,7 @@
 		6003F593195388D20070C39A /* Example for ZPLAYAdsPreviewTool */ = {
 			isa = PBXGroup;
 			children = (
+				6D91D5BC219ABC2B0048AE0F /* Utils */,
 				5BAA36971F8DC92E00D4F404 /* QRCodeResources */,
 				5BFB4BE01F7E1D7A00826D90 /* TSMessageAssets */,
 				5BAA36921F8DC3A200D4F404 /* PAQRCodeViewController.h */,
@@ -322,8 +323,6 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				5B9C6B471F7DFE680024D699 /* PAUIView+CornerRadius.h */,
-				5B9C6B481F7DFE680024D699 /* PAUIView+CornerRadius.m */,
 				6003F59C195388D20070C39A /* PAAppDelegate.h */,
 				6003F59D195388D20070C39A /* PAAppDelegate.m */,
 			);
@@ -371,6 +370,15 @@
 				4D16ECDE9E5FB00D8740FF69 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		6D91D5BC219ABC2B0048AE0F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B9C6B471F7DFE680024D699 /* PAUIView+CornerRadius.h */,
+				5B9C6B481F7DFE680024D699 /* PAUIView+CornerRadius.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

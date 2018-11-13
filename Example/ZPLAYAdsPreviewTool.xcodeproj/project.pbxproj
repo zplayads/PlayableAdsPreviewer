@@ -79,7 +79,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		6D91D5C0219ABD7B0048AE0F /* PAToolUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D91D5BF219ABD7B0048AE0F /* PAToolUtils.m */; };
+		6D91D5C3219ACBBC0048AE0F /* PAToolUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D91D5C2219ACBBC0048AE0F /* PAToolUtils.m */; };
+		6D91D5C4219ACBBC0048AE0F /* PAToolUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D91D5C2219ACBBC0048AE0F /* PAToolUtils.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7C3654926198122D49820EB9 /* libPods-ZPLAYAdsPreviewTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE701F0584FD80EE827EF68 /* libPods-ZPLAYAdsPreviewTool.a */; };
 		C766D0E41FCA67B40066B77B /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C766D0E31FCA67B40066B77B /* RightViewController.m */; };
@@ -164,8 +165,8 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6D91D5BE219ABD7B0048AE0F /* PAToolUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAToolUtils.h; sourceTree = "<group>"; };
-		6D91D5BF219ABD7B0048AE0F /* PAToolUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAToolUtils.m; sourceTree = "<group>"; };
+		6D91D5C1219ACBBC0048AE0F /* PAToolUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAToolUtils.h; sourceTree = "<group>"; };
+		6D91D5C2219ACBBC0048AE0F /* PAToolUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAToolUtils.m; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75B2F8830D9A4B5E06F6E683 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		85AB64EA3D26C0DD4ADBA152 /* ZPLAYAdsPreviewToolDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZPLAYAdsPreviewToolDemo.podspec; path = ../ZPLAYAdsPreviewToolDemo.podspec; sourceTree = "<group>"; };
@@ -378,10 +379,10 @@
 		6D91D5BC219ABC2B0048AE0F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6D91D5C1219ACBBC0048AE0F /* PAToolUtils.h */,
+				6D91D5C2219ACBBC0048AE0F /* PAToolUtils.m */,
 				5B9C6B471F7DFE680024D699 /* PAUIView+CornerRadius.h */,
 				5B9C6B481F7DFE680024D699 /* PAUIView+CornerRadius.m */,
-				6D91D5BE219ABD7B0048AE0F /* PAToolUtils.h */,
-				6D91D5BF219ABD7B0048AE0F /* PAToolUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -733,6 +734,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D91D5C4219ACBBC0048AE0F /* PAToolUtils.m in Sources */,
 				5B9F91A22121349F0063F2AA /* RightViewController.m in Sources */,
 				5B9F91A32121349F0063F2AA /* PAUIView+CornerRadius.m in Sources */,
 				5B9F91A42121349F0063F2AA /* PAAppDelegate.m in Sources */,
@@ -747,7 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D91D5C0219ABD7B0048AE0F /* PAToolUtils.m in Sources */,
+				6D91D5C3219ACBBC0048AE0F /* PAToolUtils.m in Sources */,
 				C766D0E41FCA67B40066B77B /* RightViewController.m in Sources */,
 				5B9C6B491F7DFE680024D699 /* PAUIView+CornerRadius.m in Sources */,
 				6003F59E195388D20070C39A /* PAAppDelegate.m in Sources */,

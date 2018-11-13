@@ -8,12 +8,17 @@
 
 #import "PAAppDelegate.h"
 #import <Bugly/Bugly.h>
+#import "PAToolUtils.h"
 
 @implementation PAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [Bugly startWithAppId:@"5955ae02d6"];
+    
+    //delete SDK cache
+    [[PAToolUtils shareToolUtils] deletePlayableAdsSDKCache];
+    
     return YES;
 }
 

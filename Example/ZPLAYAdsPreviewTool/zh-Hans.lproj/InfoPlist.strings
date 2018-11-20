@@ -1,5 +1,6 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleDisplayName = "ZPLAY Ads 预览工具";
-NSCameraUsageDescription = "以便扫描二维码预览广告";
-NSPhotoLibraryUsageDescription = "以便扫描二维码预览广告";
+NSCameraUsageDescription = "此APP需要使用您的相机，用于扫描二维码";
+NSPhotoLibraryAddUsageDescription = "此APP需要使用您的相册，用于保存生成的二维码";
+NSPhotoLibraryUsageDescription = "此APP需要使用您的相册，用于扫描相册中保存的二维码";

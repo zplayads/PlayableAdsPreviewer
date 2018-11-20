@@ -1,6 +1,6 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleDisplayName = "ZPLAY Ads プレビューツール";
-NSCameraUsageDescription = "このアプリは、生成されたQRコードを保存するためにフォトアルバムを使用する必要があります";
-NSPhotoLibraryAddUsageDescription = "このアプリはアルバムに保存されているQRコードをスキャンするためにフォトアルバムを使用する必要があります";
-NSPhotoLibraryUsageDescription = "このアプリはあなたのカメラがQRコードをスキャンする必要があります";
+NSPhotoLibraryAddUsageDescription = "このアプリは、生成されたQRコードを保存するためにフォトアルバムを使用する必要があります";
+NSPhotoLibraryUsageDescription = "このアプリはアルバムに保存されているQRコードをスキャンするためにフォトアルバムを使用する必要があります";
+NSCameraUsageDescription = "このアプリはあなたのカメラがQRコードをスキャンする必要があります";

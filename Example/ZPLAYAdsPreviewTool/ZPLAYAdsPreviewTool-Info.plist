@@ -30,11 +30,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>For scanning QR codes to preview the ads</string>
+	<string>Enable this APP to access your camera to scan QR Code</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string></string>
+	<string>Enable this APP to access your album to scan the QR Code saved in the album</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>For scanning QR codes to preview the ads</string>
+	<string>Enable this APP to access your album to save QR Code</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

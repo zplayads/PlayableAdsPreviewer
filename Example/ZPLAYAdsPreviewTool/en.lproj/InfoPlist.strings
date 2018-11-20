@@ -1,5 +1,6 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleDisplayName = "ZPLAY Ads Preview Tool";
-NSCameraUsageDescription = "For scanning QR codes to preview the ads";
-NSPhotoLibraryUsageDescription = "For scanning QR codes to preview the ads";
+NSCameraUsageDescription = "Enable this APP to access your camera to scan QR Code";
+NSPhotoLibraryAddUsageDescription = "Enable this APP to access your album to save QR Code";
+NSPhotoLibraryUsageDescription = "Enable this APP to access your album to scan the QR Code saved in the album";

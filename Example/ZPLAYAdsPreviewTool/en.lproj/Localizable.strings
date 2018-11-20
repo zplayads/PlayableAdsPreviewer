@@ -27,7 +27,3 @@
 "官网连接" = "https://www.zplayads.com";
 "广告加载失败" = "Ad loading failed";
 
-"NSCameraUsageDescription" = "Enable this APP to access your camera to scan QR Code";
-"NSPhotoLibraryAddUsageDescription" = "Enable this APP to access your album to save QR Code";
-"NSPhotoLibraryUsageDescription" = "Enable this APP to access your album to scan the QR Code saved in the album";
-

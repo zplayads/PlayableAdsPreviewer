@@ -2,5 +2,5 @@
 
 CFBundleDisplayName = "ZPLAY Ads 預覽工具";
 NSPhotoLibraryAddUsageDescription = "此APP需要使用您的相冊，用於保存生成的二維碼";
-NSPhotoLibraryUsageDescription = "此APP需要使用您的相冊，用於掃描相冊中保存的二維碼";
+NSPhotoLibraryUsageDescription = "此APP需要使用您的相冊，用於保存生成的二維碼或掃描相冊中的二維碼";
 NSCameraUsageDescription = "此APP需要使用您的相機，用於掃描二維碼";

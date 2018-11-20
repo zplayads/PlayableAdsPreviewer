@@ -3,4 +3,4 @@
 CFBundleDisplayName = "ZPLAY Ads Preview Tool";
 NSCameraUsageDescription = "Enable this APP to access your camera to scan QR Code";
 NSPhotoLibraryAddUsageDescription = "Enable this APP to access your album to save QR Code";
-NSPhotoLibraryUsageDescription = "Enable this APP to access your album to scan the QR Code saved in the album";
+NSPhotoLibraryUsageDescription = "Enable this APP to access your album to save QR Code or scan the QR Code saved in the album";

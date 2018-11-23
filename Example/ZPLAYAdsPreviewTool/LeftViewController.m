@@ -42,7 +42,7 @@
     
 }
 - (IBAction)gotoDetail:(id)sender {
-     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:NSLocalizedString(@"官网连接", nil)]];
+//     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:NSLocalizedString(@"官网连接", nil)]];
 }
 
 - (void)didReceiveMemoryWarning {

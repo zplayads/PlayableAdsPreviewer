@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tue-of-qqM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tue-of-qqM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,21 +43,7 @@
                                         <rect key="frame" x="8" y="8" width="359" height="125"/>
                                         <gestureRecognizers/>
                                         <attributedString key="attributedText">
-                                            <fragment content="一、在线获取。您需要">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="登录">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="ZPLAY Ads网站，选择“广告主登录”，进入系统后，选择菜单中“应用管理”可查看账号下所有应用，若想看某个应用广告二维码，点击应用名称在广告列表中点击“广告预览”即可获得，点击右上角“相机”扫描二维码。">
+                                            <fragment content="一、在线获取。您需要登录ZPLAY Ads网站，选择“广告主登录”，进入系统后，选择菜单中“应用管理”可查看账号下所有应用，若想看某个应用广告二维码，点击应用名称在广告列表中点击“广告预览”即可获得，点击右上角“相机”扫描二维码。">
                                                 <attributes>
                                                     <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
@@ -86,7 +70,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chameleon ios" translatesAutoresizingMaskIntoConstraints="NO" id="Pei-lQ-d68">
-                                        <rect key="frame" x="97" y="372" width="180" height="180"/>
+                                        <rect key="frame" x="97.5" y="372" width="180" height="180"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="i4Y-lz-b4G"/>
@@ -222,31 +206,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lV-cF-7sb">
-                                        <rect key="frame" x="8" y="523" width="359" height="26"/>
+                                        <rect key="frame" x="8" y="523" width="359" height="0.0"/>
                                         <gestureRecognizers/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="想了解更多关于ZPLAY Ads，">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="点击了解详情">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="。">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="15" name="STHeitiSC-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <attributedString key="attributedText"/>
                                         <nil key="highlightedColor"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="76a-k0-c31" appends="YES" id="lzr-ca-Jsy"/>
@@ -347,10 +309,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Category" width="20" height="20"/>
-        <image name="QRCode" width="20" height="20"/>
-        <image name="chameleon ios" width="300" height="300"/>
-        <image name="scanning" width="20" height="20"/>
+        <image name="Category" width="40" height="40"/>
+        <image name="QRCode" width="40" height="40"/>
+        <image name="chameleon ios" width="280" height="280"/>
+        <image name="scanning" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dj1-Rd-cDa"/>

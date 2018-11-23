@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tue-of-qqM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tue-of-qqM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -59,9 +57,9 @@ Step1: You need to log into the </string>
                                                     <real key="NSStrokeWidth" value="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="ZPLAY Ads">
+                                            <fragment content="ZPLAY Ads ">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="15" name="Helvetica"/>
                                                     <real key="NSKern" value="0.0"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="6" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -72,7 +70,7 @@ Step1: You need to log into the </string>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content"> website and choose "Advertiser Login".
+                                                <string key="content">website and choose "Advertiser Login".
 Step2: Application list of your account will display in Application Management, choose one application and click it. 
 Step3: Once access an application, you can click "Preview Ad", the QR Code will display. 
 Step4: Open camera on the upper right corner and scan the QR Code.
@@ -113,7 +111,7 @@ Step5: The playable ads will popout. Check and play it.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chameleon ios" translatesAutoresizingMaskIntoConstraints="NO" id="Pei-lQ-d68">
-                                        <rect key="frame" x="97" y="605.5" width="180" height="180"/>
+                                        <rect key="frame" x="97.5" y="605.5" width="180" height="180"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="i4Y-lz-b4G"/>
@@ -248,46 +246,9 @@ To ensure the ads effect, we provide the preview tool, which currently is the UN
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lV-cF-7sb">
-                                        <rect key="frame" x="8" y="377.5" width="359" height="17.5"/>
+                                        <rect key="frame" x="8" y="377.5" width="359" height="0.0"/>
                                         <gestureRecognizers/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Tap to learn more about ">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="15" name="Helvetica"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="ZPLAY Ads">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="15" name="Helvetica"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=".">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="15" name="Helvetica"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <attributedString key="attributedText"/>
                                         <nil key="highlightedColor"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="76a-k0-c31" appends="YES" id="lzr-ca-Jsy"/>
@@ -388,10 +349,10 @@ To ensure the ads effect, we provide the preview tool, which currently is the UN
         </scene>
     </scenes>
     <resources>
-        <image name="Category" width="20" height="20"/>
-        <image name="QRCode" width="20" height="20"/>
-        <image name="chameleon ios" width="300" height="300"/>
-        <image name="scanning" width="20" height="20"/>
+        <image name="Category" width="40" height="40"/>
+        <image name="QRCode" width="40" height="40"/>
+        <image name="chameleon ios" width="280" height="280"/>
+        <image name="scanning" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dj1-Rd-cDa"/>

@@ -12,9 +12,7 @@ install:
   - pod repo update
 script:
   - sh ./fastlane/decrypt_p12.sh
-  - bundle exec fastlane release
   - bundle exec fastlane beta
-  - bundle exec fastlane release_previewer
 notifications:
   slack: yumimobi:wCaD46mZfHIPfiI6guogLeWB
 env:

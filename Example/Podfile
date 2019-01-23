@@ -1,10 +1,12 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
+source "https://github.com/CocoaPods/Specs"
+source "https://github.com/yumimobi/Specs"
 
 target 'ZPLAYAdsPreviewTool' do
   pod 'PlayableAdsPreviewerDemo', :path => '../'
   pod 'TSMessages'
-  pod 'PlayableAdsPreviewer' ,'2.3.0'
+  pod 'PlayableAdsPreviewer' ,'2.4.0'
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'Bugly'
 
@@ -16,7 +18,7 @@ end
 target 'ZPLAYAdsPreviewTool_beta' do
   pod 'PlayableAdsPreviewerDemo', :path => '../'
   pod 'TSMessages'
-  pod 'PlayableAdsPreviewer' ,'2.3.0'
+  pod 'PlayableAdsPreviewer' ,'2.4.0'
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'Bugly'
 end

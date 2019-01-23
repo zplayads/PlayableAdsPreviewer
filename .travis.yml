@@ -1,17 +1,20 @@
 osx_image: xcode9.1
-rvm: 2.2
+rvm: 2.3
 language: objective-c
 cache:
-- cocoapods
-- bundler
+  - cocoapods
+  - bundler
 before_install:
-- gem install bundler
+  - gem update --system
+  - gem install bundler
 install:
-- bundle update
-- pod repo update
+  - bundle update
+  - pod repo update
 script:
-- sh ./fastlane/decrypt_p12.sh
-- fastlane beta
+  - sh ./fastlane/decrypt_p12.sh
+  - bundle exec fastlane release
+  - bundle exec fastlane beta
+  - bundle exec fastlane release_previewer
 notifications:
   slack: yumimobi:wCaD46mZfHIPfiI6guogLeWB
 env:

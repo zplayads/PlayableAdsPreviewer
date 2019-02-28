@@ -20,9 +20,8 @@ SPEC REPOS:
     - Bugly
     - HexColors
     - MBProgressHUD
-    - TSMessages
-  https://github.com/yumimobi/Specs.git:
     - PlayableAdsPreviewer
+    - TSMessages
 
 EXTERNAL SOURCES:
   PlayableAdsPreviewerDemo:
@@ -32,10 +31,10 @@ SPEC CHECKSUMS:
   Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  PlayableAdsPreviewer: 1a60840a01e7b95ebd184c0591f6997d00ed6b03
+  PlayableAdsPreviewer: ce3c6b9ea80c3e8f93f95007b7a5fd8d2cb01607
   PlayableAdsPreviewerDemo: dc4a962f2379d5e920b53e352f316c13e108dc3f
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
 
-PODFILE CHECKSUM: 52715067497c8a90cf69a5ffb2f24fccded9c3dd
+PODFILE CHECKSUM: 5e9f15a5b30479886b21dbd9fec39340b9bb0d01
 
 COCOAPODS: 1.5.3

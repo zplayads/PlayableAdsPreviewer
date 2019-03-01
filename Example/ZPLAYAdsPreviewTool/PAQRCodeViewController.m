@@ -145,7 +145,12 @@ UIImagePickerControllerDelegate> {
 
 - (BOOL)iPhoneX {
     if ([[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
-        return (int)[[UIScreen mainScreen] nativeBounds].size.height == 2436;
+        // iPhone X / XS
+        CGFloat iphonXHeight = 812.0;
+        // iPhone XR / XS MAX
+        CGFloat iphonXRHeight = 896.0;
+    
+        return [UIScreen mainScreen].bounds.size.height == iphonXHeight || [UIScreen mainScreen].bounds.size.height == iphonXRHeight;
     }
     return NO;
 }
